@@ -1,0 +1,44 @@
+@import "./../../styles.scss";
+
+section{
+    background-color: $bgColor1;
+    @include dFlex($jc: space-around);
+    color: white;
+    padding: 0 32px;
+}
+
+.portraitImg{
+    position: relative;
+    height: 450px;
+    width: 450px;
+    border: 4px solid $color1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-text{
+    @include dFlex($fd: column, $ai: flex-start, $g: 32px);
+    width: 40%;
+}
+
+.line{
+    @extend .blueLine;
+    background-color: $color1 !important;
+    width: 300px;
+}
+
+.textAndImg{
+    @include dFlex($g: 16px);
+}
+
+h1{
+    font-size: 90px;
+    font-weight: 700;
+    color: white;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}

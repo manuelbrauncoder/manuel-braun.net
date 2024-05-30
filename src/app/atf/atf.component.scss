@@ -1,0 +1,75 @@
+@import "./../../styles.scss";
+
+main {
+  height: 100vh;
+  background-color: $bgColor1;
+  background-image: url(./../../assets/img/atf-bg-shape.png);
+  background-position: center;
+  background-size: cover;
+  @include dFlex($fd: column, $jc: space-between, $g: 32px);
+  padding: 100px 32px 0 32px;
+}
+
+section {
+  @include dFlex($jc: space-around);
+  padding: 32px 0 0 0;
+}
+
+.atfImg {
+  height: 700px;
+}
+
+.introduction {
+  @include dFlex($fd: column, $g: 32px);
+}
+
+.name {
+  @include dFlex();
+  div {
+    @include dFlex($fd: column);
+  }
+  span:first-of-type {
+    color: white;
+    font-weight: 700;
+    font-size: 90px;
+  }
+  span:nth-of-type(2) {
+    color: rgba(75, 71, 255, 1);
+    font-weight: 400;
+    font-size: 58px;
+  }
+}
+
+.rotate-span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 400;
+  font-size: 64px;
+  color: white;
+}
+
+nav {
+  padding: 0 32px 16px 0;
+  @include dFlex($jc: space-between, $ai: flex-end);
+  width: 100%;
+  div:first-of-type {
+    @include dFlex($jc: flex-start, $g: 32px);
+  }
+  div:nth-of-type(2) {
+    @include dFlex($fd: column, $g: 3px);
+    img {
+      width: 16px;
+      height: 16px;
+    }
+    span {
+      color: white;
+      writing-mode: vertical-lr;
+      font-size: 23px;
+      font-weight: 400;
+    }
+  }
+}
+
+.btn-container{
+    position: relative;
+}
