@@ -6,11 +6,13 @@ main {
   background-image: url(./../../assets/img/atf-bg-shape.png);
   background-position: center;
   background-size: cover;
-  @include dFlex($fd: column);
+  @include dFlex($fd: column, $jc: space-between, $g: 32px);
+  padding-inline: 32px;
 }
 
-section{
-    @include dFlex($jc: space-around)
+section {
+  @include dFlex($jc: space-around);
+  padding: 32px 0 0 0;
 }
 
 .atfImg {
@@ -46,7 +48,24 @@ section{
   color: white;
 }
 
-nav{
-    @include dFlex($jc: flex-start);
-    width: 100%;
+nav {
+  padding: 0 32px 16px 0;
+  @include dFlex($jc: space-between, $ai: flex-end);
+  width: 100%;
+  div:first-of-type {
+    @include dFlex($jc: flex-start, $g: 32px);
+  }
+  div:nth-of-type(2) {
+    @include dFlex($fd: column, $g: 3px);
+    img {
+      width: 16px;
+      height: 16px;
+    }
+    span {
+      color: white;
+      writing-mode: vertical-lr;
+      font-size: 23px;
+      font-weight: 400;
+    }
+  }
 }
