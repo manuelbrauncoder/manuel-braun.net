@@ -1,0 +1,16 @@
+@import './../../../styles.scss';
+
+header{
+    min-height: 100px;
+    
+    padding: 0 64px;
+    background-color: $bgColor2;
+    @include dFlex($jc: space-between);
+    color: white;
+    
+    nav{
+        @include dFlex($g: 32px);
+    }
+    
+}
+

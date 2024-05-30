@@ -1,0 +1,52 @@
+@import "./../../styles.scss";
+
+main {
+  height: calc(100vh - 100px);
+  background-color: $bgColor1;
+  background-image: url(./../../assets/img/atf-bg-shape.png);
+  background-position: center;
+  background-size: cover;
+  @include dFlex($fd: column);
+}
+
+section{
+    @include dFlex($jc: space-around)
+}
+
+.atfImg {
+  height: 600px;
+}
+
+.introduction {
+  @include dFlex($fd: column);
+}
+
+.name {
+  @include dFlex();
+  div {
+    @include dFlex($fd: column);
+  }
+  span:first-of-type {
+    color: white;
+    font-weight: 700;
+    font-size: 90px;
+  }
+  span:nth-of-type(2) {
+    color: rgba(75, 71, 255, 1);
+    font-weight: 400;
+    font-size: 58px;
+  }
+}
+
+.rotate-span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 400;
+  font-size: 64px;
+  color: white;
+}
+
+nav{
+    @include dFlex($jc: flex-start);
+    width: 100%;
+}
