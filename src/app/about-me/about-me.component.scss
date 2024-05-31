@@ -8,7 +8,6 @@ section{
 }
 
 .portraitImg{
-    position: relative;
     height: 450px;
     width: 450px;
     border: 4px solid $color1;
@@ -28,7 +27,16 @@ section{
 }
 
 .textAndImg{
-    @include dFlex($g: 16px);
+    @include dFlex($g: 16px, $jc: flex-start);
+    p{
+        max-width: 500px;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+        object-fit: scale-down;
+        flex-shrink: 0;
+    }
 }
 
 h1{

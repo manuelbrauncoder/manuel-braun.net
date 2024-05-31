@@ -1,1 +1,17 @@
-<p>skills works!</p>
+<section>
+    <div class="icons">
+        @for (skill of skills.skills; track $index) {
+        <div>
+            <img src="assets/img/{{skill.icon}}" alt="">
+            <p>{{skill.title}}</p>
+        </div>
+        }
+    </div>
+    <div class="description">
+        <h1>My skills</h1>
+        <p>I have grown my frontend development skills that have allowed
+            me to create different real projects.
+        </p>
+        <button class="defaultBtn1">Get in touch</button>
+    </div>
+</section>
