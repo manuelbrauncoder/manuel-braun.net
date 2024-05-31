@@ -1,1 +1,33 @@
-<p>portfolio works!</p>
+<section>
+    <div class="headline">
+        <hr class="blueLine">
+        <h1>Portfolio</h1>
+        <hr class="blueLine">
+    </div>
+    <p>Explore a selection of my work here -
+        interact with projects to see my
+        skills in action.
+    </p>
+
+
+
+    <app-project>
+        <ng-container ngProjectAs="headline">Join</ng-container>
+        <ng-container ngProjectAs="technologies">JavaScript | HTML | CSS</ng-container>
+        <ng-container ngProjectAs="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
+            laudantium provident architecto iste commodi, neque suscipit blanditiis consequuntur iure est nobis sed
+            adipisci debitis assumenda velit hic ipsam necessitatibus exercitationem.</ng-container>
+    </app-project>
+
+    <app-project>
+        <ng-container ngProjectAs="headline">El Pollo Loco</ng-container>
+        <ng-container ngProjectAs="technologies">JavaScript | HTML | CSS</ng-container>
+        <ng-container ngProjectAs="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a
+            veritatis officia earum nemo tempore, beatae voluptatibus, esse quas nam ea molestias similique itaque
+            blanditiis corporis culpa perspiciatis odio distinctio!</ng-container>
+        <ng-container ngProjectAs="liveTest"><a href="">Live test</a></ng-container>
+        
+        <a ngProjectAs="gitHub" href="">Github</a>
+    </app-project>
+
+</section>
