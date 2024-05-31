@@ -1,41 +1,50 @@
 @import "./../../styles.scss";
 
-section{
-    background-color: $bgColor1;
+section {
+  background-color: $bgColor1;
+  @include dFlex();
+  height: 800px;
+}
+
+.skill{
     @include dFlex();
-    height: 800px
+    width: 100px;
+    height: 100px;
+    text-align: center;
 }
 
-.icons{
-    border: 1px solid green;
-    @include dFlex($g: 120px, $jc: flex-start);
-    flex-wrap: wrap;
-    width: 40%;
-    img{
-        width: 50px;
-        height: 50px;
+.icons {
+  @include dFlex($g: 120px, $jc: flex-start);
+  flex-wrap: wrap;
+  width: 50%;
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  > div {
+    @include dFlex($fd: column, $g: 10px);
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
     }
-    >div{
-        @include dFlex($fd: column, $g: 10px);
-        p{
-            font-size: 16px;
-            font-weight: 700;
-            color: white;
-        }
-    }
+  }
 }
 
-.description{
-    border: 1px solid red;
-    width: 30%;
-    color: white;
+.description {
+  width: 30%;
+  color: white;
+  @include dFlex($fd: column, $g: 34px);
+  > div {
     @include dFlex($fd: column, $g: 34px, $ai: flex-end);
-    h1{
-        font-size: 90px;
-        font-weight: 700;
+    text-align: end;
+    h1 {
+      font-size: 90px;
+      font-weight: 700;
     }
-    p{
-        font-size: 16px;
-        font-weight: 400;
+    span {
+      font-size: 16px;
+      font-weight: 400;
     }
+  }
 }

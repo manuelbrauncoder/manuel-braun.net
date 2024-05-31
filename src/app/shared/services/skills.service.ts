@@ -9,46 +9,44 @@ export class SkillsService {
 
   skills = [
     {
-      title: 'angular',
+      title: 'Angular',
       icon: 'angular.png',
     },
     {
-      title: 'typescript',
+      title: 'TypeScript',
       icon: 'typescript.png',
     },
     {
-      title: 'javascript',
+      title: 'JavaScript',
       icon: 'javascript.png',
     },
     {
-      title: 'material',
-      icon: 'material.png',
-    },
-
-    {
-      title: 'firebase',
-      icon: 'firebase.png',
-    },
-
-    {
-      title: 'scrum',
-      icon: 'scrum.png',
-    },
-    {
-      title: 'html',
+      title: 'HTML',
       icon: 'html.png',
     },
     {
-      title: 'css',
-      icon: 'css.png',
+      title: 'Firebase',
+      icon: 'firebase.png',
     },
     {
-      title: 'git',
+      title: 'GIT',
       icon: 'git.png',
     },
     {
-      title: 'api',
+      title: 'CSS',
+      icon: 'css.png',
+    },
+    {
+      title: 'Rest-Api',
       icon: 'api.png',
+    },
+    {
+      title: 'Scrum',
+      icon: 'scrum.png',
+    },
+    {
+      title: 'Material design',
+      icon: 'material.png',
     },
   ];
 }
