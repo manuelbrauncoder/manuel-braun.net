@@ -2,21 +2,23 @@
 
 section {
   background-color: $bgColor1;
-  @include dFlex($fd: column);
-  padding: 0 32px;
+  @include dFlex($fd: column, $ai: normal);
+  padding: 0 64px;
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
     margin-right: auto;
   }
-  >div{
+  > div {
     @include dFlex($jc: space-between);
   }
 }
 
 .description {
-  border: 1px solid green;
-  width: 40%;
-  @include dFlex($fd: column, $g: 32px);
+  height: 100%;
+  margin-bottom: auto;
+  margin-top: 32px;
+  max-width: 600px;
+  @include dFlex($fd: column, $g: 32px, $ai: flex-start);
 
   h2 {
     @include fontPoppins($fs: 32px, $fw: 700);
@@ -24,10 +26,60 @@ section {
   p {
     @include fontPoppins($fs: 16px, $fw: 400);
   }
+  span {
+    @include fontPoppins($fs: 16px, $fw: 700);
+  }
+}
+
+::placeholder {
+  color: white;
 }
 
 .contactForm {
-  border: 1px solid blue;
-  width: 40%;
-  @include dFlex($fd: column);
+  > form {
+    @include dFlex($fd: column, $g: 32px);
+    span {
+      @include fontPoppins($fs: 14px, $fw: 400);
+    }
+    a {
+      @include fontPoppins($fs: 14px, $fw: 400, $c: $blue);
+    }
+
+    input,
+    textarea {
+      background-color: $bgColor1;
+      border: 1px solid $blue;
+      border-radius: 10px;
+      width: 100%;
+      padding: 15px 25px;
+      @include fontPoppins($fs: 16px, $fw: 400);
+    }
+
+    textarea {
+      min-height: 200px;
+      resize: vertical;
+    }
+  }
+}
+
+::-webkit-resizer {
+  display: none;
+}
+
+.checkbox {
+  @include dFlex($g: 12px);
+  input {
+    width: fit-content !important;
+  }
+}
+
+.textareaWrapper {
+  position: relative;
+  width: 100%;
+
+  img {
+    position: absolute;
+    bottom: 12px;
+    right: 8px;
+  }
 }

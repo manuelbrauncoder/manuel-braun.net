@@ -2,23 +2,35 @@
     <h1>Contact</h1>
     <div>
         <div class="description">
-            <div>
-                <h2>Got a problem to solve?</h2>
-                <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
-                    contributing to
-                    your projects with my work.</p>
-                <p>
-                    Need a Frontend developer? Contact me
-                </p>
-            </div>
-
+            <h2>Got a problem to solve?</h2>
+            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
+                contributing to
+                your projects with my work.</p>
+            <p>
+                Need a Frontend developer? <span>Contact me</span>
+            </p>
         </div>
         <div class="contactForm">
-            <input type="text" placeholder="Your name">
-            <input type="text" placeholder="Your email">
-            <textarea name="" id="" placeholder="Your message"></textarea>
-            <label for="privacy">Privacy</label>
-            <input id="privacy" type="checkbox">
+            <form (ngSubmit)="onSubmit(contactForm)" name="emailForm" #contactForm="ngForm">
+                <input [(ngModel)]="contactData.name" required id="name" name="name" type="text" placeholder="Your name">
+                <input [(ngModel)]="contactData.email" required id="email" name="email" type="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                <div class="textareaWrapper">
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message" placeholder="Your message"></textarea>
+                    <img src="assets/img/textarea_resizer.png" alt="">
+                    @if(!message.valid && message.touched){
+                        <span>Please enter a message</span>
+                    }
+                </div>
+                <div class="checkbox">
+                    <input id="privacy" type="checkbox">
+                    <label for="privacy">
+                        <span>I've read the </span>
+                        <a href="">privacy policy </a>
+                        <span>and agree to the processing of my data as outlined.</span>
+                    </label>
+                </div>
+                <button class="defaultBtn1">Send message :)</button>
+            </form>
         </div>
     </div>
 </section>
