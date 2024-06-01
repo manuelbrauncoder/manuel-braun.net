@@ -29,23 +29,17 @@ section {
     @include dFlex($fd: column);
   }
   span:first-of-type {
-    color: white;
-    font-weight: 700;
-    font-size: 90px;
+    @include fontPoppins($fs: 90px, $fw: 700);
   }
   span:nth-of-type(2) {
-    color: rgba(75, 71, 255, 1);
-    font-weight: 400;
-    font-size: 58px;
+    @include fontPoppins($fs: 58px, $fw: 400, $c: $blue);
   }
 }
 
 .rotate-span {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-weight: 400;
-  font-size: 64px;
-  color: white;
+  @include fontPoppins($fs: 64px, $fw: 400);
 }
 
 nav {
@@ -62,14 +56,8 @@ nav {
       height: 16px;
     }
     span {
-      color: white;
       writing-mode: vertical-lr;
-      font-size: 23px;
-      font-weight: 400;
+      @include fontPoppins($fs: 23px, $fw: 400);
     }
   }
-}
-
-.btn-container{
-    position: relative;
 }

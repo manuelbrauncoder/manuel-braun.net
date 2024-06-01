@@ -1,26 +1,32 @@
-@import './../../styles.scss';
+@import "./../../styles.scss";
 
-section{
-    @include dFlex($fd: column);
-    color: white;
-    background-color: $bgColor1;
+section {
+  @include dFlex($fd: column);
+  background-color: $bgColor1;
+  p {
+    @include fontPoppins($fs: 16px, $fw: 400);
+  }
 }
 
-.headline{
-    @include dFlex($g: 10px);
-    h1{
-        font-size: 90px;
-        font-weight: 700;
-    }
-    p{
-        font-size: 16px;
-        font-weight: 400;
-    }
-    hr:first-of-type{
-        width: 110px;
-    }
-    hr:nth-of-type(2){
-        width: 700px;
-        margin: 0;
-    }
+.headline {
+  @include dFlex($g: 10px);
+  h1 {
+    @include fontPoppins($fs: 90px, $fw: 700);
+  }
+
+  hr:first-of-type {
+    width: 110px;
+  }
+  hr:nth-of-type(2) {
+    width: 700px;
+    margin: 0;
+  }
+}
+
+.projectImg{
+    width: 500px;
+}
+
+app-project{
+    @include dFlex($g: 35px);
 }

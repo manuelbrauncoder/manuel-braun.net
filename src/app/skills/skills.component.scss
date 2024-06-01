@@ -24,9 +24,7 @@ section {
   > div {
     @include dFlex($fd: column, $g: 10px);
     p {
-      font-size: 16px;
-      font-weight: 700;
-      color: white;
+      @include fontPoppins($fs: 16px, $fw: 700);
     }
   }
 }
@@ -39,12 +37,10 @@ section {
     @include dFlex($fd: column, $g: 34px, $ai: flex-end);
     text-align: end;
     h1 {
-      font-size: 90px;
-      font-weight: 700;
+      @include fontPoppins($fs: 90px, $fw: 700);
     }
     span {
-      font-size: 16px;
-      font-weight: 400;
+      @include fontPoppins($fs: 16px, $fw: 400);
     }
   }
 }

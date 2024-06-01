@@ -1,26 +1,28 @@
 
-
-
-<div>
-    <h1>
-        <ng-content select="headline" />
-    </h1>
-    
-    <h2>
-        <ng-content select="technologies" />
-    </h2>
-    
-    <p>
-        <ng-content select="description" />
-    </p>
-
-    <div>
-        <button class=".defaultBtn1">
-            <ng-content select="liveTest" />
-        </button>
-
-        <button class=".defaultBtn1">
-            <ng-content select="gitHub" />
-        </button>
+    <div class="images">
+        <ng-content select="[projectImg]" />
     </div>
-</div>
+
+    <div class="portfolioDescription">
+        <h1>
+            <ng-content select="[headline]" />
+        </h1>
+
+        <h2>
+            <ng-content select="[technologies]" />
+        </h2>
+
+        <p>
+            <ng-content select="[description]" />
+        </p>
+
+        <div class="btns">
+            <button class="defaultBtn1">
+                <ng-content select="[liveTest]" />
+            </button>
+
+            <button class="defaultBtn1">
+                <ng-content select="[gitHub]" />
+            </button>
+        </div>
+    </div>
