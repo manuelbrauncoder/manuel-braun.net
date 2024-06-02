@@ -84,7 +84,7 @@ section {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -151,9 +151,29 @@ select:-webkit-autofill:focus {
 
 .submitBtn:disabled {
   cursor: not-allowed !important;
-  filter: grayscale(1.5);
+  background-color: rgba(182, 182, 182, 1);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   &:hover {
     transform: none;
-    background-color: rgba(0, 190, 232, 1);
+  }
+}
+
+.scrollUp {
+  margin-top: 32px;
+  margin-left: auto;
+}
+
+.scrollUpBtn {
+  height: 39px;
+  width: 39px;
+  cursor: pointer;
+  &:hover {
+    rect {
+      stroke: $cyan-blue;
+    }
+    path {
+      stroke: $cyan-blue;
+      fill: $cyan-blue;
+    }
   }
 }

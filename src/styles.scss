@@ -23,6 +23,10 @@ $hoverGreen: rgba(28, 230, 182, 1);
   font-weight: $fw;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
