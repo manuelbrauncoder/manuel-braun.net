@@ -12,24 +12,62 @@
         </div>
         <div class="contactForm">
             <form (ngSubmit)="onSubmit(contactForm)" name="emailForm" #contactForm="ngForm">
-                <input [(ngModel)]="contactData.name" required id="name" name="name" type="text" placeholder="Your name">
-                <input [(ngModel)]="contactData.email" required id="email" name="email" type="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-                <div class="textareaWrapper">
-                    <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message" placeholder="Your message"></textarea>
-                    <img src="assets/img/textarea_resizer.png" alt="">
-                    @if(!message.valid && message.touched){
-                        <span>Please enter a message</span>
+
+                <div class="nameWrapper">
+                    <input
+                        [ngStyle]="{'border-color': !name.valid && name.touched ? '#e61c40' : name.valid ? '#70e61c' : '#4b47ff'}"
+                        #name="ngModel" [(ngModel)]="contactData.name" required id="name" name="name" type="text"
+                        placeholder="Your name" minlength="2">
+                    @if(!name.valid && name.touched){
+                    <span>Your name is required</span>
+                    <img class="sign" src="assets/img/errorSign.png" alt="">
+                    } @else if (name.valid) {
+                    <img class="sign" src="assets/img/doneSign.png" alt="">
                     }
                 </div>
+
+                <!-- pattern for email: pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
+                <div class="emailWrapper">
+                    <input
+                        [ngStyle]="{'border-color': !email.valid && email.touched ? '#e61c40' : email.valid ? '#70e61c' : '#4b47ff'}"
+                        #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email" type="email"
+                        placeholder="Your email">
+                    @if(!email.valid && email.touched){
+                    <span>Your email is required</span>
+                    <img class="sign" src="assets/img/errorSign.png" alt="">
+                    } @else if (email.valid) {
+                    <img class="sign" src="assets/img/doneSign.png" alt="">
+                    }
+                </div>
+
+                <div class="textareaWrapper">
+                    <textarea
+                        [ngStyle]="{'border-color': !message.valid && message.touched ? '#e61c40' : message.valid ? '#70e61c' : '#4b47ff'}"
+                        #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message"
+                        placeholder="Your message" minlength="4"></textarea>
+                    <img class="resizer" src="assets/img/textarea_resizer.png" alt="">
+                    @if(!message.valid && message.touched){
+                    <span>Your message is empty</span>
+                    <img class="signTextArea" src="assets/img/errorSign.png" alt="">
+                    } @else if (message.valid) {
+                    <img class="signTextArea" src="assets/img/doneSign.png" alt="">
+                    }
+                </div>
+
                 <div class="checkbox">
-                    <input id="privacy" type="checkbox">
+                    <input #checkbox="ngModel" [(ngModel)]="contactData.privacy" id="privacy" type="checkbox"
+                        name="privacy" required>
+                    @if(!checkbox.valid && !checkbox.disabled){
+                        <span class="unchecked">Please accept the privacy policy.</span>
+                    }
                     <label for="privacy">
                         <span>I've read the </span>
                         <a href="">privacy policy </a>
                         <span>and agree to the processing of my data as outlined.</span>
                     </label>
                 </div>
-                <button class="defaultBtn1">Send message :)</button>
+
+                <button type="submit" name="submitBtn" [disabled]="!contactForm.valid" class="defaultBtn1 submitBtn">Send message :)</button>
             </form>
         </div>
     </div>

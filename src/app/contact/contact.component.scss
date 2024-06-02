@@ -53,6 +53,9 @@ section {
       width: 100%;
       padding: 15px 25px;
       @include fontPoppins($fs: 16px, $fw: 400);
+      &:focus {
+        outline: none;
+      }
     }
 
     textarea {
@@ -68,18 +71,60 @@ section {
 
 .checkbox {
   @include dFlex($g: 12px);
+  position: relative;
   input {
     width: fit-content !important;
   }
+  .unchecked{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    @include fontPoppins($fs: 14px, $fw: 400);
+    color: $errorRed !important;
+  }
 }
 
-.textareaWrapper {
+.textareaWrapper,
+.nameWrapper,
+.emailWrapper {
   position: relative;
   width: 100%;
 
-  img {
+  .sign {
+    width: 25px;
+    height: 25px;
     position: absolute;
-    bottom: 12px;
-    right: 8px;
+    bottom: 50%;
+    right: 12px;
+    transform: translateY(50%);
+  }
+
+  span {
+    color: $errorRed !important;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    @include fontPoppins($fs: 14px, $fw: 400);
+  }
+}
+
+.resizer {
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+}
+
+.signTextArea{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.submitBtn:disabled{
+  cursor: not-allowed !important;
+  filter: grayscale(1.5);
+  &:hover{
+    transform: none;
+    background-color: rgba(0, 190, 232, 1);
   }
 }
