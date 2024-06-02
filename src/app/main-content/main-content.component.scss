@@ -1,1 +1,7 @@
+@import './../../styles.scss';
 
+div{
+    @include dFlex($fd: column, $g: 120px);
+    background-color: $bgColor1;
+    padding-bottom: 120px;
+}

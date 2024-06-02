@@ -2,6 +2,7 @@
 
 main {
   height: 100vh;
+  width: 100vw;
   background-color: $bgColor1;
   background-image: url(./../../assets/img/atf-bg-shape.png);
   background-position: center;
@@ -11,6 +12,7 @@ main {
 }
 
 section {
+  width: 100%;
   @include dFlex($jc: space-around);
   padding: 32px 0 0 0;
 }

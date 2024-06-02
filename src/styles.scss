@@ -56,6 +56,31 @@ a {
   }
 }
 
+.defaultBtn2{
+  background-color: $bgColor1;
+  border: unset;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 10px;
+  @include fontPoppins($fs: 23px, $fw: 400);
+  border: 1px solid $cyan-blue;
+  &:hover{
+    background-color: $cyan-blue;
+  }
+}
+
+.defaultBtn3{
+  background-color: $blue;
+  border: unset;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 10px;
+  @include fontPoppins($fs: 23px, $fw: 400);
+  &:hover{
+    background-color: $cyan-blue;
+  }
+}
+
 .blueLine{
   background-color: rgba(75, 71, 255, 1);
   width: 100px;
