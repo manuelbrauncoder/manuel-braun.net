@@ -12,11 +12,12 @@
         </div>
         <div class="contactForm">
             <form (ngSubmit)="onSubmit(contactForm)" name="emailForm" #contactForm="ngForm">
-
                 <div class="nameWrapper">
-                    <input
-                        [ngStyle]="{'border-color': !name.valid && name.touched ? '#e61c40' : name.valid ? '#70e61c' : '#4b47ff'}"
-                        #name="ngModel" [(ngModel)]="contactData.name" required id="name" name="name" type="text"
+                    <input [ngClass]="{
+                        'inputError': !name.valid && name.touched,
+                        'inputDone': name.valid,
+                        'inputNormal': name.untouched
+                        }" #name="ngModel" [(ngModel)]="contactData.name" required id="name" name="name" type="text"
                         placeholder="Your name" minlength="2">
                     @if(!name.valid && name.touched){
                     <span>Your name is required</span>
@@ -28,10 +29,12 @@
 
                 <!-- pattern for email: pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
                 <div class="emailWrapper">
-                    <input
-                        [ngStyle]="{'border-color': !email.valid && email.touched ? '#e61c40' : email.valid ? '#70e61c' : '#4b47ff'}"
-                        #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email" type="email"
-                        placeholder="Your email">
+                    <input [ngClass]="{
+                    'inputError': !email.valid && email.touched,
+                    'inputDone': email.valid,
+                    'inputNormal': email.untouched
+                    }" #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email" type="email"
+                        placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                     @if(!email.valid && email.touched){
                     <span>Your email is required</span>
                     <img class="sign" src="assets/img/errorSign.png" alt="">
@@ -42,7 +45,11 @@
 
                 <div class="textareaWrapper">
                     <textarea
-                        [ngStyle]="{'border-color': !message.valid && message.touched ? '#e61c40' : message.valid ? '#70e61c' : '#4b47ff'}"
+                    [ngClass]="{
+                        'inputError': !message.valid && message.touched,
+                        'inputDone': message.valid,
+                        'inputNormal': message.untouched
+                        }"
                         #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message"
                         placeholder="Your message" minlength="4"></textarea>
                     <img class="resizer" src="assets/img/textarea_resizer.png" alt="">
@@ -57,8 +64,8 @@
                 <div class="checkbox">
                     <input #checkbox="ngModel" [(ngModel)]="contactData.privacy" id="privacy" type="checkbox"
                         name="privacy" required>
-                    @if(!checkbox.valid && !checkbox.disabled){
-                        <span class="unchecked">Please accept the privacy policy.</span>
+                    @if(!checkbox.valid && message.valid && email.valid && name.valid){
+                    <span class="unchecked">Please accept the privacy policy.</span>
                     }
                     <label for="privacy">
                         <span>I've read the </span>
@@ -67,7 +74,8 @@
                     </label>
                 </div>
 
-                <button type="submit" name="submitBtn" [disabled]="!contactForm.valid" class="defaultBtn1 submitBtn">Send message :)</button>
+                <button type="submit" name="submitBtn" [disabled]="!contactForm.valid"
+                    class="defaultBtn1 submitBtn">Send message :)</button>
             </form>
         </div>
     </div>

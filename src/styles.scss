@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-$bgColor1: #1b2539;
-$bgColor2: #141d2f;
-$cyan-blue: #00bee8;
-$blue: #4b47ff;
-$errorRed: #e61c40;
-$doneGreen: #70e61c;
+$bgColor1: rgb(27, 37, 57);
+$bgColor2: rgb(20, 29, 47);
+$cyan-blue: rgb(0, 190, 232);
+$blue: rgb(74, 71, 255);
+$errorRed: rgb(230, 28, 64);
+$doneGreen: rgb(112, 230, 28);
+$hoverGreen: rgba(28, 230, 182, 1);
 
 @mixin dFlex($fd: row, $jc: center, $ai: center, $g: 0) {
   display: flex;
@@ -39,7 +40,7 @@ a {
 }
 
 .defaultBtn1 {
-  background-color: rgba(0, 190, 232, 1);
+  background-color: $cyan-blue;
   border: unset;
   cursor: pointer;
   color: white;

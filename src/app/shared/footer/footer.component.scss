@@ -1,0 +1,30 @@
+@import "./../../../styles.scss";
+
+section {
+  border-top: 4px solid $cyan-blue;
+  min-height: 290px;
+  background-color: $bgColor1;
+  @include dFlex($jc: space-between);
+  padding: 0 64px;
+  div:nth-of-type(1) {
+    @include dFlex($fd: column, $ai: flex-start);
+    h1 {
+      @include fontPoppins($fs: 40px, $fw: 700);
+    }
+    a {
+      @include fontPoppins($fs: 16px, $fw: 400);
+    }
+  }
+  div:nth-of-type(2) {
+    span {
+      @include fontPoppins($fs: 23px, $fw: 400);
+    }
+  }
+  nav {
+    @include dFlex($g: 32px);
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

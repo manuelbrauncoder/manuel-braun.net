@@ -48,7 +48,6 @@ section {
     input,
     textarea {
       background-color: $bgColor1;
-      border: 1px solid $blue;
       border-radius: 10px;
       width: 100%;
       padding: 15px 25px;
@@ -65,8 +64,38 @@ section {
   }
 }
 
+.inputError {
+  border: 1px solid $errorRed;
+}
+
+.inputDone {
+  border: 1px solid $doneGreen !important;
+}
+
+.inputNormal {
+  border: 1px solid $blue;
+  &:hover {
+    border-color: $hoverGreen;
+  }
+}
+
 ::-webkit-resizer {
   display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid $blue;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px $bgColor1 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .checkbox {
@@ -75,7 +104,7 @@ section {
   input {
     width: fit-content !important;
   }
-  .unchecked{
+  .unchecked {
     position: absolute;
     bottom: -20px;
     left: 0;
@@ -114,16 +143,16 @@ section {
   right: 8px;
 }
 
-.signTextArea{
+.signTextArea {
   position: absolute;
   top: 12px;
   right: 12px;
 }
 
-.submitBtn:disabled{
+.submitBtn:disabled {
   cursor: not-allowed !important;
   filter: grayscale(1.5);
-  &:hover{
+  &:hover {
     transform: none;
     background-color: rgba(0, 190, 232, 1);
   }
