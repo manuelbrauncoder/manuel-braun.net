@@ -16,14 +16,14 @@ $hoverGreen: rgba(28, 230, 182, 1);
   gap: $g;
 }
 
-@mixin fontPoppins($c: white, $fs: 18px, $fw: 400){
-  font-family: 'Poppins';
+@mixin fontPoppins($c: white, $fs: 18px, $fw: 400) {
+  font-family: "Poppins";
   color: $c;
   font-size: $fs;
   font-weight: $fw;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,49 +39,44 @@ a {
   cursor: pointer;
 }
 
-.defaultBtn1 {
-  background-color: $cyan-blue;
+.defaultBtn {
+  @extend .defaultBtn;
   border: unset;
   cursor: pointer;
-  color: white;
   padding: 15px 30px;
   border-radius: 10px;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   @include fontPoppins($fs: 23px, $fw: 400);
-  transition: transform 175ms ease;
+}
 
-  &:hover{
+.defaultBtn1 {
+  @extend .defaultBtn;
+  background-color: $cyan-blue;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: transform 175ms ease;
+  &:hover {
     background-color: rgba(75, 71, 255, 1);
     transform: scaleX(1.1) scaleY(1.2);
   }
 }
 
-.defaultBtn2{
+.defaultBtn2 {
+  @extend .defaultBtn;
   background-color: $bgColor1;
-  border: unset;
-  cursor: pointer;
-  padding: 15px 30px;
-  border-radius: 10px;
-  @include fontPoppins($fs: 23px, $fw: 400);
   border: 1px solid $cyan-blue;
-  &:hover{
+  &:hover {
     background-color: $cyan-blue;
   }
 }
 
-.defaultBtn3{
+.defaultBtn3 {
+  @extend .defaultBtn;
   background-color: $blue;
-  border: unset;
-  cursor: pointer;
-  padding: 15px 30px;
-  border-radius: 10px;
-  @include fontPoppins($fs: 23px, $fw: 400);
-  &:hover{
+  &:hover {
     background-color: $cyan-blue;
   }
 }
 
-.blueLine{
+.blueLine {
   background-color: rgba(75, 71, 255, 1);
   width: 100px;
   height: 4px;
