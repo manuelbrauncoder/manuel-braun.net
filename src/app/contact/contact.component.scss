@@ -10,6 +10,9 @@ section {
   }
   > div {
     @include dFlex($jc: space-between);
+    @media(max-width: 1299px){
+      @include dFlex($fd: column, $g: 40px);
+    }
   }
 }
 
@@ -104,7 +107,7 @@ select:-webkit-autofill:focus {
   input {
     width: fit-content !important;
   }
-  .unchecked {
+  .isUncheckedText {
     position: absolute;
     bottom: -20px;
     left: 0;

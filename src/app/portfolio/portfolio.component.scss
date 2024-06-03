@@ -12,6 +12,9 @@ section {
   @include dFlex($g: 10px);
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
+    @media (max-width: 899px) {
+      @include fontPoppins($fs: 45px, $fw: 700);
+    }
   }
 
   hr:first-of-type {
@@ -23,10 +26,21 @@ section {
   }
 }
 
-.projectImg{
-    width: 500px;
+.projectImg {
+  width: 500px;
 }
 
-app-project{
+.projects {
+  app-project:nth-child(even) {
     @include dFlex($g: 35px);
+    @media (max-width: 1299px) {
+      @include dFlex($fd: column);
+    }
+  }
+  app-project:first-child{
+    @include dFlex($fd: row-reverse, $g: 35px);
+    @media (max-width: 1299px) {
+      @include dFlex($fd: column);
+    }
+  }
 }

@@ -9,16 +9,27 @@ main {
   background-size: cover;
   @include dFlex($fd: column, $jc: space-between, $g: 32px);
   padding: 100px 32px 0 32px;
+  @media (max-width: 599px) {
+    padding: 100px 16px 0 16px;
+  }
 }
 
 section {
   width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
   @include dFlex($jc: space-around);
   padding: 32px 0 0 0;
+  @media (max-width: 899px) {
+    @include dFlex($fd: column, $g: 32px);
+  }
 }
 
 .atfImg {
   height: 700px;
+  @media (max-width: 1299px) {
+    height: 400px;
+  }
 }
 
 .introduction {
@@ -30,18 +41,40 @@ section {
   div {
     @include dFlex($fd: column);
   }
-  span:first-of-type {
+  .manbra {
     @include fontPoppins($fs: 90px, $fw: 700);
+    @media (max-width: 1299px) {
+      font-size: 64px;
+    }
+    @media (max-width: 599px) {
+      font-size: 32px;
+    }
   }
-  span:nth-of-type(2) {
+  .frontEnd {
     @include fontPoppins($fs: 58px, $fw: 400, $c: $blue);
+    letter-spacing: 1px;
+    @media (max-width: 1299px) {
+      font-size: 40px;
+    }
+    @media (max-width: 599px) {
+      font-size: 20px;
+    }
   }
 }
 
 .rotate-span {
   writing-mode: vertical-rl;
+  letter-spacing: 9px;
   transform: rotate(180deg);
   @include fontPoppins($fs: 64px, $fw: 400);
+  @media (max-width: 1299px) {
+    font-size: 48px;
+    letter-spacing: 5px;
+  }
+  @media (max-width: 599px) {
+    font-size: 25px;
+    letter-spacing: 0;
+  }
 }
 
 nav {
@@ -50,6 +83,11 @@ nav {
   width: 100%;
   div:first-of-type {
     @include dFlex($jc: flex-start, $g: 32px);
+    a:nth-of-type(4) {
+      @media (max-width: 899px) {
+        display: none;
+      }
+    }
   }
   div:nth-of-type(2) {
     @include dFlex($fd: column, $g: 3px);
@@ -60,6 +98,9 @@ nav {
     span {
       writing-mode: vertical-lr;
       @include fontPoppins($fs: 23px, $fw: 400);
+    }
+    @media (max-width: 899px) {
+      display: none;
     }
   }
 }

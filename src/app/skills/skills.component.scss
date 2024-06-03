@@ -2,29 +2,50 @@
 
 section {
   background-color: $bgColor1;
-  @include dFlex();
+  @include dFlex($fd: row-reverse, $jc: space-around);
   height: 800px;
+  padding: 0 64px 0 64px;
+  @media (max-width: 1299px) {
+    @include dFlex($fd: column, $g: 64px);
+    height: auto;
+  }
+  @media (max-width: 899px) {
+    padding: 0 16px 0 16px;
+  }
 }
 
-.skill{
-    @include dFlex();
-    width: 100px;
-    height: 100px;
-    text-align: center;
+.skill {
+  @include dFlex();
+  width: 100px;
+  height: 100px;
+  text-align: center;
 }
 
 .icons {
   @include dFlex($g: 120px, $jc: flex-start);
   flex-wrap: wrap;
   width: 50%;
+  @media (max-width: 1299px) {
+    width: 100%;
+    gap: 80px;
+  }
+  @media (max-width: 899px) {
+    gap: 32px;
+  }
   img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    @media(max-width: 899px){
+      
+    }
   }
   > div {
     @include dFlex($fd: column, $g: 10px);
     p {
       @include fontPoppins($fs: 16px, $fw: 700);
+      @media(max-width: 899px){
+        @include fontPoppins($fs: 14px, $fw: 700);
+      }
     }
   }
 }
@@ -33,14 +54,32 @@ section {
   width: 30%;
   color: white;
   @include dFlex($fd: column, $g: 34px);
+  @media (max-width: 1299px) {
+    width: 100%;
+  }
   > div {
     @include dFlex($fd: column, $g: 34px, $ai: flex-end);
     text-align: end;
     h1 {
       @include fontPoppins($fs: 90px, $fw: 700);
+      @media (max-width: 899px) {
+        @include fontPoppins($fs: 45px, $fw: 700);
+      }
     }
     span {
       @include fontPoppins($fs: 16px, $fw: 400);
     }
+  }
+}
+
+.mobileBtn {
+  @media (min-width: 1300px) {
+    display: none;
+  }
+}
+
+.desktopBtn {
+  @media (max-width: 1299px) {
+    display: none;
   }
 }

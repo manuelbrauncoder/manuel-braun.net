@@ -63,7 +63,7 @@
                     <input #checkbox="ngModel" [(ngModel)]="contactData.privacy" id="privacy" type="checkbox"
                         name="privacy" required>
                     @if(!checkbox.valid && message.valid && email.valid && name.valid){
-                    <span class="unchecked">Please accept the privacy policy.</span>
+                    <span class="isUncheckedText">Please accept the privacy policy.</span>
                     }
                     <label for="privacy">
                         <span>I've read the </span>
