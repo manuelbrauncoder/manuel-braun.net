@@ -89,6 +89,22 @@ a {
   margin-left: -40px;
 }
 
+.logoName{
+  @include dFlex();
+}
+
+.firstLetter{
+  @include fontPoppins($fs: 32px, $fw: 900, $c: $blue);
+  letter-spacing: 2px;
+}
+.other{
+  @include fontPoppins($fs: 28px, $fw: 700);
+  letter-spacing: 2px;
+}
+.lastLetter{
+  @include fontPoppins($fs: 32px, $fw: 900, $c: $cyan-blue);
+}
+
 /* poppins-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

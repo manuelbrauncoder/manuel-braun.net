@@ -20,15 +20,5 @@ header {
       }
     }
   }
-  .firstLetter{
-    @include fontPoppins($fs: 32px, $fw: 900, $c: $blue);
-    letter-spacing: 2px;
-  }
-  .other{
-    @include fontPoppins($fs: 28px, $fw: 700);
-    letter-spacing: 2px;
-  }
-  .lastLetter{
-    @include fontPoppins($fs: 32px, $fw: 900, $c: $cyan-blue);
-  }
+  
 }
