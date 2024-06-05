@@ -1,14 +1,15 @@
-
-
 @if(isHandsetPortrait){
-    <h1>isHandsetPortrait</h1>
-    <!-- implement mobile header here -->
+<h1>isHandsetPortrait</h1>
+<!-- implement mobile header here -->
 } @else if (!isHandsetPortrait) {
-    <app-header></app-header>
+<app-header></app-header>
 }
 
 
 
 <router-outlet />
+@if (isHandsetPortrait) {
+<app-footer-mobile></app-footer-mobile>
+} @else if (!isHandsetPortrait) {
 <app-footer></app-footer>
-
+}

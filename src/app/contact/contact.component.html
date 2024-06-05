@@ -59,9 +59,17 @@
                     }
                 </div>
 
+                <!-- custom icon pos absolute, default icon opacity 0 -->
+
                 <div class="checkbox">
                     <input #checkbox="ngModel" [(ngModel)]="contactData.privacy" id="privacy" type="checkbox"
                         name="privacy" required>
+                        <span class="customCheckIcon"></span>
+                        <!-- @if(checkbox.valid){
+                            <img class="customCheckIcon" src="assets/img/check_box_checked.png" alt="">
+                        } @else if (checkbox.invalid) {
+                            <img class="customCheckIcon" src="/assets/img/check_box_outline_blank.png" alt="">
+                        } -->
                     @if(!checkbox.valid && message.valid && email.valid && name.valid){
                     <span class="isUncheckedText">Please accept the privacy policy.</span>
                     }

@@ -4,20 +4,15 @@ section {
   border-top: 4px solid $cyan-blue;
   min-height: 290px;
   background-color: $bgColor1;
-  @include dFlex($jc: space-between);
-  padding: 0 64px;
-  .nameAndImprint {
-    @include dFlex($fd: column, $ai: flex-start);
-    a {
-      @include fontPoppins($fs: 16px, $fw: 400);
-    }
+  @include dFlex($fd: column, $g: 64px);
+  padding: 64px 16px;
+  .logoName {
+    @include dFlex();
+    
   }
   div:nth-of-type(2) {
     span {
       @include fontPoppins($fs: 23px, $fw: 400);
-    }
-    @media(max-width: 899px){
-      display: none;
     }
   }
   nav {
@@ -26,5 +21,8 @@ section {
       height: 30px;
       width: 30px;
     }
+  }
+  a {
+    @include fontPoppins($fs: 16px, $fw: 400);
   }
 }

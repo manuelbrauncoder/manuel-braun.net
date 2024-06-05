@@ -10,6 +10,7 @@ header {
   background-color: $bgColor2;
   @include dFlex($jc: space-between);
   color: white;
+  z-index: 3;
 
   nav {
     @include dFlex($g: 32px);

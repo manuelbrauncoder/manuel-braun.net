@@ -7,11 +7,13 @@ import {
   BreakpointObserver,
   BreakpointState,
 } from '@angular/cdk/layout';
+import { FooterMobileComponent } from './shared/footer-mobile/footer-mobile.component';
+import { HeaderMobileComponent } from './shared/header-mobile/header-mobile.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, FooterMobileComponent, HeaderMobileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
