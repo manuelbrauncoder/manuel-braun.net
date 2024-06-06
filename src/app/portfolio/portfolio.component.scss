@@ -3,8 +3,12 @@
 section {
   @include dFlex($fd: column);
   background-color: $bgColor1;
+  padding: 0 32px;
   p {
     @include fontPoppins($fs: 16px, $fw: 400);
+  }
+  @media (max-width: 599px) {
+    padding: 0 16px;
   }
 }
 
@@ -28,6 +32,9 @@ section {
 
 .projectImg {
   width: 500px;
+  @media (max-width: 899px) {
+    width: calc(100% - 32px);
+  }
 }
 
 .projects {
@@ -37,7 +44,7 @@ section {
       @include dFlex($fd: column);
     }
   }
-  app-project:first-child{
+  app-project:first-child {
     @include dFlex($fd: row-reverse, $g: 35px);
     @media (max-width: 1299px) {
       @include dFlex($fd: column);

@@ -1,6 +1,6 @@
 @import './../../styles.scss';
 
-div{
+section{
     @include dFlex($fd: column, $g: 120px);
     background-color: $bgColor1;
     padding-bottom: 120px;

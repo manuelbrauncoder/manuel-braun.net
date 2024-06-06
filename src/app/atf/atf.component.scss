@@ -1,13 +1,13 @@
 @import "./../../styles.scss";
 
-main {
+.outerDiv {
   height: 100vh;
   width: 100vw;
   background-color: $bgColor1;
   background-image: url(./../../assets/img/atf-bg-shape.png);
   background-position: center;
   background-size: cover;
-  @include dFlex($fd: column, $jc: space-between, $g: 32px);
+  @include dFlex($fd: column, $jc: space-between);
   padding: 100px 32px 0 32px;
   @media (max-width: 599px) {
     padding: 100px 16px 0 16px;
@@ -15,6 +15,7 @@ main {
 }
 
 section {
+  height: 100%;
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
@@ -28,7 +29,7 @@ section {
 .atfImg {
   height: 700px;
   @media (max-width: 1299px) {
-    height: 400px;
+    height: 350px;
   }
 }
 

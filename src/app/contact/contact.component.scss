@@ -7,10 +7,13 @@ section {
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
     margin-right: auto;
+    @media (max-width: 599px) {
+      @include fontPoppins($fs: 45px, $fw: 700);
+    }
   }
   > div {
     @include dFlex($jc: space-between);
-    @media(max-width: 1299px){
+    @media (max-width: 1299px) {
       @include dFlex($fd: column, $g: 40px);
     }
   }
@@ -109,16 +112,16 @@ select:-webkit-autofill:focus {
     z-index: 2;
     opacity: 0;
     cursor: pointer;
-    &:invalid + .customCheckIcon{
-     background-image: url(./../../assets/img/check_box_outline_blank.png);
+    &:invalid + .customCheckIcon {
+      background-image: url(./../../assets/img/check_box_outline_blank.png);
     }
-    &:valid + .customCheckIcon{
+    &:valid + .customCheckIcon {
       background-image: url(./../../assets/img/check_box_checked.png);
     }
-    &:invalid:hover + .customCheckIcon{
+    &:invalid:hover + .customCheckIcon {
       background-image: url(./../../assets/img/check_box_invalid_hover.png);
     }
-    &:valid:hover + .customCheckIcon{
+    &:valid:hover + .customCheckIcon {
       background-image: url(./../../assets/img/check_box_valid_hover.png);
     }
   }
@@ -131,7 +134,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-.customCheckIcon{
+.customCheckIcon {
   position: absolute;
   left: 0;
   width: 18px;

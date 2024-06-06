@@ -3,6 +3,9 @@
 .portfolioDescription {
   width: 40%;
   @include dFlex($fd: column, $ai: flex-start, $g: 35px);
+  @media(max-width: 899px){
+    width: 100%;
+  }
 
   h1 {
     @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
