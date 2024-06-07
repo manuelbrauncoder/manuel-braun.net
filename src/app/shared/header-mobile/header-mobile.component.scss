@@ -1,25 +1,72 @@
-@import './../../../styles.scss';
+@import "./../../../styles.scss";
 
-section{
-   background-color: $bgColor1;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   min-height: 100px;
-   padding: 0 16px;
-   @include dFlex($jc: space-between);
+section {
+  background-color: $bgColor1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  padding: 0 16px;
+  @include dFlex($jc: space-between);
 }
 
-.burgerMenu{
-    width: 30px;
-    height: 30px;
-    @include dFlex($fd: column, $jc: space-around);
+.d-none {
+  display: none;
 }
 
-.line{
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: white;
+.sidebar {
+  z-index: 3;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 29, 47, 0.8);
+  padding: 0 32px 0 0;
+  nav {
+    @include dFlex($fd: column, $g: 29px);
+    margin-top: auto;
+    height: 50%;
+    a {
+      @include fontPoppins($fs: 23px, $fw: 400);
+    }
+  }
+}
+
+.burgerMenu {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  &:hover .middle {
+    width: 50%;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.top {
+  position: absolute;
+  left: 0;
+  top: 25%;
+}
+
+.middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  transition-duration: 175ms;
+}
+
+.bottom {
+  position: absolute;
+  left: 0;
+  top: 75%;
 }
