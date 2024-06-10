@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { ScrollToAnchorService } from './../services/scroll-to-anchor.service';
 
 @Component({
   selector: 'app-header-mobile',
@@ -12,7 +12,14 @@ import { CommonModule } from '@angular/common';
 export class HeaderMobileComponent {
   showSidebar: boolean = false;
 
-  toggleSidebar(){
+  constructor(private ScrollToAnchorService: ScrollToAnchorService) {}
+
+  scrollToElement(element: string) {
+    this.ScrollToAnchorService.scrollToAnchor(element, -100);
+    this.toggleSidebar();
+  }
+
+  toggleSidebar() {
     if (this.showSidebar) {
       this.showSidebar = false;
     } else {

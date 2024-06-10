@@ -28,8 +28,9 @@ section {
     @include dFlex($fd: column, $g: 29px);
     margin-top: auto;
     height: 50%;
-    a {
+    span {
       @include fontPoppins($fs: 23px, $fw: 400);
+      cursor: pointer;
     }
   }
 }
@@ -75,8 +76,6 @@ section {
   }
 }
 
-
-
 .burgerMenuClosed {
   width: 30px;
   height: 30px;
@@ -119,5 +118,3 @@ section {
     transform: rotate(45deg);
   }
 }
-
-

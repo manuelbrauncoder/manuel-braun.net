@@ -11,10 +11,10 @@
     @if (showSidebar) {
     <div class="sidebar">
         <nav>
-            <a href="">About me</a>
-            <a href="">My Skills</a>
-            <a href="">Portfolio</a>
-            <a href="">Contact</a>
+            <span (click)="scrollToElement('aboutMe')">About me</span>
+            <span (click)="scrollToElement('skills')">My Skills</span>
+            <span (click)="scrollToElement('portfolio')">Portfolio</span>
+            <span (click)="scrollToElement('contact')">Contact</span>
         </nav>
     </div>
     }
