@@ -14,8 +14,9 @@ header {
 
   nav {
     @include dFlex($g: 32px);
-    a {
+    span {
       @include fontPoppins($fs: 23px, $fw: 400);
+      cursor: pointer;
       &:hover {
         color: $cyan-blue;
       }
