@@ -42,31 +42,82 @@ section {
   &:hover .middle {
     width: 50%;
   }
+  .top {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+  }
+
+  .middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    transition-duration: 175ms;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+  }
+
+  .bottom {
+    position: absolute;
+    left: 0;
+    top: 75%;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+  }
 }
 
-.line {
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: white;
+
+
+.burgerMenuClosed {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+
+  .top {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    animation-duration: 175ms;
+    transform: rotate(-45deg);
+  }
+
+  .middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    transition-duration: 175ms;
+    width: 0 !important;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+  }
+
+  .bottom {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    animation-duration: 175ms;
+    transform: rotate(45deg);
+  }
 }
 
-.top {
-  position: absolute;
-  left: 0;
-  top: 25%;
-}
 
-.middle {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%);
-  transition-duration: 175ms;
-}
-
-.bottom {
-  position: absolute;
-  left: 0;
-  top: 75%;
-}

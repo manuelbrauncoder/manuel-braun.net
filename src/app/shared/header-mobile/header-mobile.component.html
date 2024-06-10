@@ -2,11 +2,13 @@
     <div>
         <span class="firstLetter">M</span><span class="other">anue</span><span class="lastLetter">l</span>
     </div>
-    <div class="burgerMenu">
-        <span class="line top"></span>
-        <span class="line middle"></span>
-        <span class="line bottom"></span>
+    <div (click)="toggleSidebar()" class="burgerMenu" [ngClass]="!showSidebar ? 'burgerMenu' : 'burgerMenuClosed'">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
     </div>
+
+    @if (showSidebar) {
     <div class="sidebar">
         <nav>
             <a href="">About me</a>
@@ -14,6 +16,7 @@
             <a href="">Portfolio</a>
             <a href="">Contact</a>
         </nav>
-
     </div>
+    }
+
 </section>
