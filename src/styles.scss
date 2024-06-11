@@ -79,6 +79,10 @@ a {
   }
 }
 
+.noLineBreak{
+  white-space: nowrap;
+}
+
 .blueLine {
   background-color: rgba(75, 71, 255, 1);
   width: 100px;

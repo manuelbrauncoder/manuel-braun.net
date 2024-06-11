@@ -20,4 +20,7 @@
 
 .btns {
   @include dFlex($g: 86px);
+  @media(max-width: 599px){
+    gap: 24px;
+  }
 }

@@ -4,6 +4,9 @@ section {
   background-color: $bgColor1;
   @include dFlex($fd: column, $ai: normal);
   padding: 0 64px;
+  @media (max-width: 599px) {
+    padding: 0 16px;
+  }
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
     margin-right: auto;
