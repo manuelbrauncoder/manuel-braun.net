@@ -1,40 +1,44 @@
-<section>
-    <div class="headline">
-        <!-- <hr class="blueLine"> -->
-        <h1>Portfolio</h1>
-        <!-- <hr class="blueLine"> -->
-    </div>
-    <p>Explore a selection of my work here -
-        interact with projects to see my
-        skills in action.
-    </p>
+<div class="background">
+    <section>
+        <div class="headline">
+            <!-- <hr class="blueLine"> -->
+            <h1>Portfolio</h1>
+            <!-- <hr class="blueLine"> -->
+        </div>
+        <p>Explore a selection of my work here -
+            interact with projects to see my
+            skills in action.
+        </p>
+        <div class="projects">
+            <app-project>
+                <ng-container ngProjectAs="[projectImg]"><img class="projectImg" src="assets/img/join_2.png"
+                        alt=""></ng-container>
+                <ng-container ngProjectAs="[headline]">Join</ng-container>
+                <ng-container ngProjectAs="[technologies]">JavaScript | HTML | CSS</ng-container>
+                <ng-container ngProjectAs="[description]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Vitae
+                    laudantium provident architecto iste commodi, neque suscipit blanditiis consequuntur iure est nobis
+                    sed
+                    adipisci debitis assumenda velit hic ipsam necessitatibus exercitationem.</ng-container>
+                <ng-container ngProjectAs="[liveTest]"><a class="noLineBreak" href="https://join.manuel-braun.net/"
+                        target="_blank">Live
+                        test</a></ng-container>
+                <ng-container ngProjectAs="[gitHub]"><a href="">Github</a></ng-container>
+            </app-project>
 
-    <div class="projects">
-        <app-project>
-            <ng-container ngProjectAs="[projectImg]"><img class="projectImg" src="assets/img/join_2.png"
-                    alt=""></ng-container>
-            <ng-container ngProjectAs="[headline]">Join</ng-container>
-            <ng-container ngProjectAs="[technologies]">JavaScript | HTML | CSS</ng-container>
-            <ng-container ngProjectAs="[description]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
-                laudantium provident architecto iste commodi, neque suscipit blanditiis consequuntur iure est nobis sed
-                adipisci debitis assumenda velit hic ipsam necessitatibus exercitationem.</ng-container>
-            <ng-container ngProjectAs="[liveTest]"><a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">Live
-                    test</a></ng-container>
-            <ng-container ngProjectAs="[gitHub]"><a href="">Github</a></ng-container>
-        </app-project>
-
-        <app-project>
-            <ng-container ngProjectAs="[projectImg]"><img class="projectImg" src="assets/img/epl_2.png"
-                    alt=""></ng-container>
-            <ng-container ngProjectAs="[headline]">El Pollo Loco</ng-container>
-            <ng-container ngProjectAs="[technologies]">JavaScript | HTML | CSS</ng-container>
-            <ng-container ngProjectAs="[description]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a
-                veritatis officia earum nemo tempore, beatae voluptatibus, esse quas nam ea molestias similique itaque
-                blanditiis corporis culpa perspiciatis odio distinctio!</ng-container>
-            <ng-container ngProjectAs="[liveTest]"><a class="noLineBreak" href="">Live test</a></ng-container>
-            <ng-container ngProjectAs="[gitHub]"><a href="">Github</a></ng-container>
-        </app-project>
-
-    </div>
-
-</section>
+            <app-project>
+                <ng-container ngProjectAs="[projectImg]"><img class="projectImg" src="assets/img/epl_2.png"
+                        alt=""></ng-container>
+                <ng-container ngProjectAs="[headline]">El Pollo Loco</ng-container>
+                <ng-container ngProjectAs="[technologies]">JavaScript | HTML | CSS</ng-container>
+                <ng-container ngProjectAs="[description]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Placeat a
+                    veritatis officia earum nemo tempore, beatae voluptatibus, esse quas nam ea molestias similique
+                    itaque
+                    blanditiis corporis culpa perspiciatis odio distinctio!</ng-container>
+                <ng-container ngProjectAs="[liveTest]"><a class="noLineBreak" href="">Live test</a></ng-container>
+                <ng-container ngProjectAs="[gitHub]"><a href="">Github</a></ng-container>
+            </app-project>
+        </div>
+    </section>
+</div>

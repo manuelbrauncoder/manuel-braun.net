@@ -1,14 +1,19 @@
 @import "./../../styles.scss";
 
-section {
-  @include dFlex($fd: column);
+.background {
   background-color: $bgColor1;
-  padding: 0 32px;
-  p {
-    @include fontPoppins($fs: 16px, $fw: 400);
-  }
+  padding: 0 64px;
   @media (max-width: 599px) {
     padding: 0 16px;
+  }
+}
+
+section {
+  max-width: $contentLimit;
+  margin-inline: auto;
+  @include dFlex($fd: column);
+  p {
+    @include fontPoppins($fs: 16px, $fw: 400);
   }
 }
 

@@ -1,16 +1,21 @@
 @import "./../../styles.scss";
 
-section {
+.background {
   background-color: $bgColor1;
-  @include dFlex($fd: row-reverse, $jc: space-around);
+  padding: 0 64px;
+  @media (max-width: 899px) {
+    padding: 0 16px 0 16px;
+  }
+}
+
+section {
+  max-width: $contentLimit;
+  margin-inline: auto;
+  @include dFlex($fd: row-reverse, $jc: space-between);
   height: 800px;
-  padding: 0 64px 0 64px;
   @media (max-width: 1299px) {
     @include dFlex($fd: column, $g: 64px);
     height: auto;
-  }
-  @media (max-width: 899px) {
-    padding: 0 16px 0 16px;
   }
 }
 
@@ -36,15 +41,14 @@ section {
   img {
     width: 40px;
     height: 40px;
-    @media(max-width: 899px){
-      
+    @media (max-width: 899px) {
     }
   }
   > div {
     @include dFlex($fd: column, $g: 10px);
     p {
       @include fontPoppins($fs: 16px, $fw: 700);
-      @media(max-width: 899px){
+      @media (max-width: 899px) {
         @include fontPoppins($fs: 14px, $fw: 700);
       }
     }

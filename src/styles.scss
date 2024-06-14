@@ -7,6 +7,8 @@ $errorRed: rgb(230, 28, 64);
 $doneGreen: rgb(112, 230, 28);
 $hoverGreen: rgba(28, 230, 182, 1);
 
+$contentLimit: 1440px;
+
 @mixin dFlex($fd: row, $jc: center, $ai: center, $g: 0) {
   display: flex;
   flex-direction: $fd;

@@ -1,11 +1,19 @@
 @import "./../../../styles.scss";
 
-section {
-  border-top: 4px solid $cyan-blue;
-  min-height: 290px;
+.background {
   background-color: $bgColor1;
-  @include dFlex($jc: space-between);
+  border-top: 4px solid $cyan-blue;
   padding: 0 64px;
+  @media (max-width: 599px) {
+    padding: 0 16px;
+  }
+}
+
+section {
+  max-width: $contentLimit;
+  margin-inline: auto;
+  min-height: 290px;
+  @include dFlex($jc: space-between);
   .nameAndImprint {
     @include dFlex($fd: column, $ai: flex-start);
     a {
@@ -16,7 +24,7 @@ section {
     span {
       @include fontPoppins($fs: 23px, $fw: 400);
     }
-    @media(max-width: 899px){
+    @media (max-width: 899px) {
       display: none;
     }
   }

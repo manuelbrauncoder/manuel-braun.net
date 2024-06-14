@@ -1,21 +1,23 @@
-<section>
-    
-    <div class="description">
-        <div>
-            <h1>My skills</h1>
-            <span>I have grown my frontend development skills that have allowed
-                me to create different real projects.
-            </span>
+<div class="background">
+    <section>
+
+        <div class="description">
+            <div>
+                <h1>My skills</h1>
+                <span>I have grown my frontend development skills that have allowed
+                    me to create different real projects.
+                </span>
+            </div>
+            <button class="defaultBtn1 desktopBtn">Get in touch</button>
         </div>
-        <button class="defaultBtn1 desktopBtn">Get in touch</button>
-    </div>
-    <div class="icons">
-        @for (skill of skills.skills; track $index) {
-        <div class="skill">
-            <img src="assets/img/{{skill.icon}}" alt="">
-            <p>{{skill.title}}</p>
+        <div class="icons">
+            @for (skill of skills.skills; track $index) {
+            <div class="skill">
+                <img src="assets/img/{{skill.icon}}" alt="">
+                <p>{{skill.title}}</p>
+            </div>
+            }
         </div>
-        }
-    </div>
-    <button class="defaultBtn1 mobileBtn">Get in touch</button>
-</section>
+        <button class="defaultBtn1 mobileBtn">Get in touch</button>
+    </section>
+</div>

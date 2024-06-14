@@ -1,98 +1,100 @@
-<section>
-    <h1>Contact</h1>
-    <div>
-        <div class="description">
-            <h2>Got a problem to solve?</h2>
-            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
-                contributing to
-                your projects with my work.</p>
-            <p>
-                Need a Frontend developer? <span>Contact me</span>
-            </p>
-        </div>
-        <div class="contactForm">
-            <form (ngSubmit)="onSubmit(contactForm)" name="emailForm" #contactForm="ngForm">
-                <div class="nameWrapper">
-                    <input [ngClass]="{
+<div class="background">
+    <section>
+        <h1>Contact</h1>
+        <div>
+            <div class="description">
+                <h2>Got a problem to solve?</h2>
+                <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
+                    contributing to
+                    your projects with my work.</p>
+                <p>
+                    Need a Frontend developer? <span>Contact me</span>
+                </p>
+            </div>
+            <div class="contactForm">
+                <form (ngSubmit)="onSubmit(contactForm)" name="emailForm" #contactForm="ngForm">
+                    <div class="nameWrapper">
+                        <input [ngClass]="{
                         'inputError': !name.valid && name.touched,
                         'inputDone': name.valid,
                         'inputNormal': name.untouched
                         }" #name="ngModel" [(ngModel)]="contactData.name" required id="name" name="name" type="text"
-                        placeholder="Your name" minlength="2">
-                    @if(!name.valid && name.touched){
-                    <span>Your name is required</span>
-                    <img class="sign" src="assets/img/errorSign.png" alt="">
-                    } @else if (name.valid) {
-                    <img class="sign" src="assets/img/doneSign.png" alt="">
-                    }
-                </div>
+                            placeholder="Your name" minlength="2">
+                        @if(!name.valid && name.touched){
+                        <span>Your name is required</span>
+                        <img class="sign" src="assets/img/errorSign.png" alt="">
+                        } @else if (name.valid) {
+                        <img class="sign" src="assets/img/doneSign.png" alt="">
+                        }
+                    </div>
 
-                <!-- pattern for email: pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
-                <div class="emailWrapper">
-                    <input [ngClass]="{
+                    <!-- pattern for email: pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
+                    <div class="emailWrapper">
+                        <input [ngClass]="{
                     'inputError': !email.valid && email.touched,
                     'inputDone': email.valid,
                     'inputNormal': email.untouched
                     }" #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email" type="email"
-                        placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-                    @if(!email.valid && email.touched){
-                    <span>Your email is required</span>
-                    <img class="sign" src="assets/img/errorSign.png" alt="">
-                    } @else if (email.valid) {
-                    <img class="sign" src="assets/img/doneSign.png" alt="">
-                    }
-                </div>
+                            placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                        @if(!email.valid && email.touched){
+                        <span>Your email is required</span>
+                        <img class="sign" src="assets/img/errorSign.png" alt="">
+                        } @else if (email.valid) {
+                        <img class="sign" src="assets/img/doneSign.png" alt="">
+                        }
+                    </div>
 
-                <div class="textareaWrapper">
-                    <textarea [ngClass]="{
+                    <div class="textareaWrapper">
+                        <textarea [ngClass]="{
                         'inputError': !message.valid && message.touched,
                         'inputDone': message.valid,
                         'inputNormal': message.untouched
                         }" #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message"
-                        placeholder="Your message" minlength="4"></textarea>
-                    <img class="resizer" src="assets/img/textarea_resizer.png" alt="">
-                    @if(!message.valid && message.touched){
-                    <span>Your message is empty</span>
-                    <img class="signTextArea" src="assets/img/errorSign.png" alt="">
-                    } @else if (message.valid) {
-                    <img class="signTextArea" src="assets/img/doneSign.png" alt="">
-                    }
-                </div>
+                            placeholder="Your message" minlength="4"></textarea>
+                        <img class="resizer" src="assets/img/textarea_resizer.png" alt="">
+                        @if(!message.valid && message.touched){
+                        <span>Your message is empty</span>
+                        <img class="signTextArea" src="assets/img/errorSign.png" alt="">
+                        } @else if (message.valid) {
+                        <img class="signTextArea" src="assets/img/doneSign.png" alt="">
+                        }
+                    </div>
 
-                <!-- custom icon pos absolute, default icon opacity 0 -->
+                    <!-- custom icon pos absolute, default icon opacity 0 -->
 
-                <div class="checkbox">
-                    <input #checkbox="ngModel" [(ngModel)]="contactData.privacy" id="privacy" type="checkbox"
-                        name="privacy" required>
+                    <div class="checkbox">
+                        <input #checkbox="ngModel" [(ngModel)]="contactData.privacy" id="privacy" type="checkbox"
+                            name="privacy" required>
                         <span class="customCheckIcon"></span>
                         <!-- @if(checkbox.valid){
                             <img class="customCheckIcon" src="assets/img/check_box_checked.png" alt="">
                         } @else if (checkbox.invalid) {
                             <img class="customCheckIcon" src="/assets/img/check_box_outline_blank.png" alt="">
                         } -->
-                    @if(!checkbox.valid && message.valid && email.valid && name.valid){
-                    <span class="isUncheckedText">Please accept the privacy policy.</span>
-                    }
-                    <label for="privacy">
-                        <span>I've read the </span>
-                        <a href="">privacy policy </a>
-                        <span>and agree to the processing of my data as outlined.</span>
-                    </label>
-                </div>
+                        @if(!checkbox.valid && message.valid && email.valid && name.valid){
+                        <span class="isUncheckedText">Please accept the privacy policy.</span>
+                        }
+                        <label for="privacy">
+                            <span>I've read the </span>
+                            <a href="">privacy policy </a>
+                            <span>and agree to the processing of my data as outlined.</span>
+                        </label>
+                    </div>
 
-                <button type="submit" name="submitBtn" [disabled]="!contactForm.valid"
-                    class="defaultBtn1 submitBtn">Send message :)</button>
-            </form>
+                    <button type="submit" name="submitBtn" [disabled]="!contactForm.valid"
+                        class="defaultBtn1 submitBtn">Send message :)</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <a class="scrollUp" href="#top">
-        <svg class="scrollUpBtn" width="39" height="39" viewBox="0 0 39 39" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
-            <path
-                d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
-                fill="white" />
-        </svg>
-    </a>
+        <a class="scrollUp" href="#top">
+            <svg class="scrollUpBtn" width="39" height="39" viewBox="0 0 39 39" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+                <path
+                    d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+                    fill="white" />
+            </svg>
+        </a>
 
-</section>
+    </section>
+</div>
