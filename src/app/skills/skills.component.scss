@@ -8,6 +8,19 @@
   }
 }
 
+.invisible{
+  visibility: hidden;
+  transform: translateX(-500px);
+}
+
+.visible{
+  visibility: visible;
+  transform: translateX(0);
+  transition-property: transform, visibility;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+
 section {
   max-width: $contentLimit;
   margin-inline: auto;

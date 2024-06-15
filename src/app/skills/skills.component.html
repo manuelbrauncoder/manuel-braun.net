@@ -1,5 +1,8 @@
 <div class="background">
-    <section>
+    <section #slideInDiv [ngClass]="{
+        'visible': elementVisible,
+        'invisible': !elementVisible
+    }">
 
         <div class="description">
             <div>
