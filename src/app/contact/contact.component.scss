@@ -1,14 +1,26 @@
 @import "./../../styles.scss";
 
 .background {
-  background-color: $bgColor1;
+  z-index: 0;
+  position: relative;
+  background-color: $bgColor2;
   padding: 0 64px;
   @media (max-width: 599px) {
     padding: 0 16px;
   }
+  .shadow{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    width: 400px;
+    height: 400px;
+  }
 }
 
 section {
+  z-index: 2;
   max-width: $contentLimit;
   margin-inline: auto;
   @include dFlex($fd: column, $ai: normal);

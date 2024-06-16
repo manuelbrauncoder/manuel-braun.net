@@ -1,24 +1,25 @@
 @import "./../../styles.scss";
 
 .background {
-  background-color: $bgColor1;
+  background-color: $bgColor2;
   padding: 0 64px;
   @media (max-width: 899px) {
     padding: 0 16px 0 16px;
   }
 }
 
-.invisible{
+.invisible {
   visibility: hidden;
   transform: translateX(-500px);
+  @media(max-width: 599px){
+    transform: translateX(-300px);
+  }
 }
 
-.visible{
+.visible {
   visibility: visible;
   transform: translateX(0);
-  transition-property: transform, visibility;
-  transition-duration: 500ms;
-  transition-timing-function: ease-in-out;
+  transition: transform 500ms ease-out;
 }
 
 section {

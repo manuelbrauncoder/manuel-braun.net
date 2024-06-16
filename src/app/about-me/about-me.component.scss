@@ -1,11 +1,14 @@
 @import "./../../styles.scss";
 
 .background{
-  background-color: $bgColor1;
+  position: relative;
+  background-color: $bgColor2;
   padding: 0 64px;
+  z-index: 2;
 }
 
 section {
+  z-index: inherit;
   max-width: $contentLimit;
   margin-inline: auto;
   @include dFlex($jc: space-between);
