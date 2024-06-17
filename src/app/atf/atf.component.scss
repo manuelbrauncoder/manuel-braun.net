@@ -7,7 +7,6 @@
 }
 
 .shape {
-  z-index: 1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -28,22 +27,23 @@
 }
 
 section {
-  z-index: 2;
   //height: 100%;
+  height: 100dvh;
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
   @include dFlex($jc: space-around);
   padding: 32px 0 0 0;
   @media (max-width: 899px) {
-    @include dFlex($fd: column, $g: 32px);
+    @include dFlex($fd: column, $g: 32px, $jc: space-evenly);
   }
 }
 
 .myImg {
   position: relative;
-  height: 700px;
-  @media (max-width: 1299px) {
+  width: 300px;
+  //height: 700px;
+  @media (max-width: 599px) {
     height: 200px;
   }
 }
@@ -55,7 +55,7 @@ section {
   right: 0;
   width: 300px;
   transform: translate(-12%, -5%);
-  @media(max-width: 599px){
+  @media (max-width: 599px) {
     width: 230px;
   }
 }
@@ -67,15 +67,17 @@ section {
   left: 0;
   width: 300px;
   transform: translate(20%, 0);
-  @media(max-width: 599px){
+  @media (max-width: 599px) {
     width: 230px;
   }
 }
 
 .atfImg {
-  position: inherit;
-  z-index: 2;
-  max-height: 70%;
+  width: 300px;
+  height: auto;
+  @media (max-width: 599px) {
+    width: 200px;
+  }
 }
 
 .introduction {
@@ -124,7 +126,7 @@ section {
 }
 
 nav {
-  z-index: 2;
+  // z-index: 2;
   padding: 0 32px 16px 0;
   @include dFlex($jc: space-between, $ai: flex-end);
   width: 100%;
