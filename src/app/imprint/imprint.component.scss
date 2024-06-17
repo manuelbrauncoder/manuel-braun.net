@@ -1,0 +1,16 @@
+@import './../../styles.scss';
+
+.background{
+    background-color: $bgColor2;
+    padding: 100px 64px;
+    @media(max-width: 599px){
+        padding: 100px 16px;
+    }
+}
+
+section{
+    max-width: $contentLimit;
+    margin-inline: auto;
+    min-height: calc(100dvh - 200px);
+    @include fontPoppins($fs: 16px, $fw: 400);
+}
