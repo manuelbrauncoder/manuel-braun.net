@@ -36,3 +36,10 @@ section {
     }
   }
 }
+
+.socialLinks {
+  transition: transform 125ms ease-out;
+  &:hover {
+    transform: scale(1.2, 1.2) translate(5px, 5px);
+  }
+}

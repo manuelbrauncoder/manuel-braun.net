@@ -153,3 +153,10 @@ nav {
     }
   }
 }
+
+.socialLinks {
+  transition: transform 125ms ease-out;
+  &:hover {
+    transform: scale(1.2, 1.2) translateX(5px);
+  }
+}
