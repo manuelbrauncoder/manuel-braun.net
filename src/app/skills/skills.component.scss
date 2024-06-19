@@ -66,8 +66,8 @@ section {
       width: 45px;
       height: 45px;
     }
-    &:hover{
-      animation: logoAnimations 300ms ease-in-out;
+    &:hover {
+      animation: logoAnimations 225ms ease-in-out;
     }
   }
   > div {
@@ -81,24 +81,16 @@ section {
   }
 }
 
-@keyframes logoAnimations{
-  0%{
+@keyframes logoAnimations {
+  0% {
     transform: translate(0, 0);
   }
 
-  25%{
-    transform: translate(0, -7px);
+  50% {
+    transform: translate(0, -9px);
   }
 
-  50%{
-    transform: translate(0, 0);
-  }
-
-  75%{
-    transform: translate(0, -7px);
-  }
-
-  100%{
+  100% {
     transform: translate(0, 0);
   }
 }

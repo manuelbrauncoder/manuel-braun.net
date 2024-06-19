@@ -3,9 +3,9 @@
 .background {
   position: relative;
   background-color: $bgColor2;
-  width: calc(100vw - 24px);
+  //width: calc(100vw - 24px);
   @media(max-width: 599px){
-    width: 100vw;
+    //width: 100vw;
   }
 }
 

@@ -44,13 +44,13 @@ section {
 
 .projects {
   app-project:nth-child(even) {
-    @include dFlex($g: 35px);
+    @include dFlex($g: 35px, $jc: space-around);
     @media (max-width: 1299px) {
       @include dFlex($fd: column);
     }
   }
   app-project:first-child {
-    @include dFlex($fd: row-reverse, $g: 35px);
+    @include dFlex($fd: row-reverse, $g: 35px, $jc: space-around);
     @media (max-width: 1299px) {
       @include dFlex($fd: column);
     }

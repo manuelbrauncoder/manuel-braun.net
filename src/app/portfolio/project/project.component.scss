@@ -23,4 +23,9 @@
   @media(max-width: 599px){
     gap: 24px;
   }
+  button{
+    @media(max-width: 599px){
+      padding: 10px 20px;
+    }
+  }
 }
