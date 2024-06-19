@@ -4,7 +4,7 @@
   position: relative;
   background-color: $bgColor2;
   //width: calc(100vw - 24px);
-  @media(max-width: 599px){
+  @media (max-width: 599px) {
     //width: 100vw;
   }
 }
@@ -77,9 +77,13 @@ section {
 
 .atfImg {
   width: 500px;
-  height: auto;
+  height: 500px;
+  border-radius: 50%;
+  border: 3px solid $cyan-blue;
+  filter: brightness(0.9);
   @media (max-width: 599px) {
     width: 200px;
+    height: 200px;
   }
 }
 
