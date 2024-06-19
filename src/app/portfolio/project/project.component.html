@@ -1,28 +1,2 @@
 
-    <div class="images">
-        <ng-content select="[projectImg]" />
-    </div>
-
-    <div class="portfolioDescription">
-        <h1>
-            <ng-content select="[headline]" />
-        </h1>
-
-        <h2>
-            <ng-content select="[technologies]" />
-        </h2>
-
-        <p>
-            <ng-content select="[description]" />
-        </p>
-
-        <div class="btns">
-            <button class="defaultBtn3">
-                <ng-content select="[liveTest]" />
-            </button>
-
-            <button class="defaultBtn2">
-                <ng-content select="[gitHub]" />
-            </button>
-        </div>
-    </div>
+    <ng-content></ng-content>

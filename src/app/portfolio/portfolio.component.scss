@@ -48,11 +48,47 @@ section {
     @media (max-width: 1299px) {
       @include dFlex($fd: column);
     }
+    .project {
+      @include dFlex($fd: column, $ai: flex-end, $g: 35px);
+    }
   }
   app-project:first-child {
     @include dFlex($fd: row-reverse, $g: 35px, $jc: space-around);
+    .project {
+      @include dFlex($fd: column, $ai: flex-start, $g: 35px);
+    }
     @media (max-width: 1299px) {
       @include dFlex($fd: column);
+    }
+  }
+}
+
+.portfolioDescription {
+  width: 40%;
+  @include dFlex($fd: column, $ai: flex-start, $g: 35px);
+  @media (max-width: 899px) {
+    width: 100%;
+  }
+
+  h1 {
+    @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
+  }
+  h2 {
+    @include fontPoppins($c: $cyan-blue, $fs: 23px, $fw: 400);
+  }
+  p {
+    @include fontPoppins($fs: 16px, $fw: 400);
+  }
+}
+
+.btns {
+  @include dFlex($g: 86px);
+  @media (max-width: 599px) {
+    gap: 24px;
+  }
+  button {
+    @media (max-width: 599px) {
+      padding: 10px 20px;
     }
   }
 }
