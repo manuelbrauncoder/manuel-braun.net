@@ -3,7 +3,9 @@
     <section>
         <h1>Contact</h1>
         <div>
+            
             <div class="description">
+                
                 <h2>Got a problem to solve?</h2>
                 <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
                     contributing to
@@ -29,7 +31,6 @@
                         }
                     </div>
 
-                    <!-- pattern for email: pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
                     <div class="emailWrapper">
                         <input [ngClass]="{
                     'inputError': !email.valid && email.touched,
@@ -61,23 +62,17 @@
                         }
                     </div>
 
-                    <!-- custom icon pos absolute, default icon opacity 0 -->
 
                     <div class="checkbox">
                         <input #checkbox="ngModel" [(ngModel)]="contactData.privacy" id="privacy" type="checkbox"
                             name="privacy" required>
                         <span class="customCheckIcon"></span>
-                        <!-- @if(checkbox.valid){
-                            <img class="customCheckIcon" src="assets/img/check_box_checked.png" alt="">
-                        } @else if (checkbox.invalid) {
-                            <img class="customCheckIcon" src="/assets/img/check_box_outline_blank.png" alt="">
-                        } -->
                         @if(!checkbox.valid && message.valid && email.valid && name.valid){
                         <span class="isUncheckedText">Please accept the privacy policy.</span>
                         }
                         <label for="privacy">
                             <span>I've read the </span>
-                            <a href="">privacy policy </a>
+                            <a href="privacy">privacy policy </a>
                             <span>and agree to the processing of my data as outlined.</span>
                         </label>
                     </div>

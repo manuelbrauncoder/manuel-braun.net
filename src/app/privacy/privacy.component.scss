@@ -1,0 +1,10 @@
+@import './../../styles.scss';
+
+.background{
+    background-color: $bgColor2;
+    padding: 100px 64px;
+}
+
+section{
+    @include fontPoppins($fs: 16px, $fw: 400);
+}

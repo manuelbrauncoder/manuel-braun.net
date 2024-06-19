@@ -21,7 +21,7 @@ export class ContactComponent {
     privacy: false
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://manuel-braun.net/sendMail.php',

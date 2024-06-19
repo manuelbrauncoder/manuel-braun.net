@@ -11,7 +11,7 @@
 .invisible {
   visibility: hidden;
   transform: translateX(-500px);
-  @media(max-width: 599px){
+  @media (max-width: 599px) {
     transform: translateX(-300px);
   }
 }
@@ -26,11 +26,20 @@ section {
   max-width: $contentLimit;
   margin-inline: auto;
   @include dFlex($fd: row-reverse, $jc: space-between);
-  height: 800px;
+  //height: 800px;
   @media (max-width: 1299px) {
     @include dFlex($fd: column, $g: 64px);
-    height: auto;
+    //height: auto;
   }
+}
+
+.line {
+  background-color: $blue;
+  height: 4px;
+  border-radius: 4px;
+  border: unset;
+  flex: 1;
+  min-width: 58px;
 }
 
 .skill {
@@ -80,6 +89,7 @@ section {
     @include dFlex($fd: column, $g: 34px, $ai: flex-end);
     text-align: end;
     h1 {
+      white-space: nowrap;
       @include fontPoppins($fs: 90px, $fw: 700);
       @media (max-width: 899px) {
         @include fontPoppins($fs: 45px, $fw: 700);
@@ -87,6 +97,9 @@ section {
     }
     span {
       @include fontPoppins($fs: 16px, $fw: 400);
+    }
+    div {
+      @include dFlex($g: 64px);
     }
   }
 }

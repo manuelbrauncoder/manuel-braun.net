@@ -1,6 +1,6 @@
 @import "./../../styles.scss";
 
-.background{
+.background {
   position: relative;
   background-color: $bgColor2;
   padding: 0 64px;
@@ -12,9 +12,14 @@ section {
   margin-inline: auto;
   @include dFlex($jc: space-between);
   color: white;
-  @media(max-width: 1299px){
+  @media (max-width: 1299px) {
     @include dFlex($jc: center);
+  }
 }
+
+.imgAndLine{
+  // position: relative;
+  @include dFlex();
 }
 
 .portraitImg {
@@ -31,13 +36,17 @@ section {
 .info-text {
   @include dFlex($fd: column, $ai: flex-start, $g: 32px);
   width: 40%;
-  @media(max-width: 1299px){
+  @media (max-width: 1299px) {
     width: 100%;
-}
+  }
 }
 
 .line {
+  // position: absolute;
+  // top: 50%;
+  // right: 0;
   @extend .blueLine;
+  margin-left: -2px !important;
   background-color: $cyan-blue !important;
   width: 300px;
   @media (max-width: 1299px) {
@@ -60,7 +69,7 @@ section {
 
 h1 {
   @include fontPoppins($fs: 90px, $fw: 700);
-  @media(max-width: 899px){
+  @media (max-width: 899px) {
     @include fontPoppins($fs: 45px, $fw: 700);
   }
 }
