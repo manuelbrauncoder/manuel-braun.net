@@ -9,6 +9,7 @@ import {
 } from '@angular/cdk/layout';
 import { FooterMobileComponent } from './shared/footer-mobile/footer-mobile.component';
 import { HeaderMobileComponent } from './shared/header-mobile/header-mobile.component';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,12 @@ export class AppComponent implements OnInit {
       } else if (!result.matches) {
         this.isHandsetPortrait = false;
       }
+    });
+    AOS.init({
+      duration: 500,
+      delay: 400,
+      easing: 'ease-out',
+      once: true
     });
   }
 }
