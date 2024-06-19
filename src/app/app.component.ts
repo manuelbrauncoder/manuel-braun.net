@@ -26,6 +26,11 @@ export class AppComponent implements OnInit {
   constructor(private responsive: BreakpointObserver) {}
 
   ngOnInit() {
+    this.initObserver();
+    this.initAos();
+  }
+
+  initObserver(){
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
       if (result.matches) {
         console.log('screens matches HandsetLandscape');
@@ -34,6 +39,9 @@ export class AppComponent implements OnInit {
         this.isHandsetPortrait = false;
       }
     });
+  }
+
+  initAos(){
     AOS.init({
       duration: 500,
       delay: 400,
