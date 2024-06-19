@@ -3,7 +3,10 @@
 .background {
   position: relative;
   background-color: $bgColor2;
-  width: 100vw;
+  width: calc(100vw - 24px);
+  @media(max-width: 599px){
+    width: 100vw;
+  }
 }
 
 .shape {
@@ -73,7 +76,7 @@ section {
 }
 
 .atfImg {
-  width: 300px;
+  width: 500px;
   height: auto;
   @media (max-width: 599px) {
     width: 200px;

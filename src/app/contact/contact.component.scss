@@ -14,8 +14,8 @@
     bottom: 0;
     left: 0;
     transform: translate(-50%, 50%);
-    width: 400px;
-    height: 400px;
+    width: 800px;
+    height: 800px;
   }
 }
 
@@ -23,7 +23,7 @@ section {
   z-index: 2;
   max-width: $contentLimit;
   margin-inline: auto;
-  @include dFlex($fd: column, $ai: normal);
+  @include dFlex($fd: column, $ai: normal, $g: 64px);
 
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
@@ -43,7 +43,6 @@ section {
 .description {
   height: 100%;
   margin-bottom: auto;
-  margin-top: 32px;
   max-width: 600px;
   @include dFlex($fd: column, $g: 32px, $ai: flex-start);
 
@@ -70,6 +69,9 @@ section {
     }
     a {
       @include fontPoppins($fs: 14px, $fw: 400, $c: $blue);
+      &:hover{
+        text-decoration: underline;
+      }
     }
 
     input,

@@ -25,11 +25,9 @@
 section {
   max-width: $contentLimit;
   margin-inline: auto;
-  @include dFlex($fd: row-reverse, $jc: space-between);
-  //height: 800px;
+  @include dFlex($fd: row-reverse, $g: 32px);
   @media (max-width: 1299px) {
     @include dFlex($fd: column, $g: 64px);
-    //height: auto;
   }
 }
 
@@ -62,9 +60,14 @@ section {
     justify-content: center;
   }
   img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     @media (max-width: 899px) {
+      width: 45px;
+      height: 45px;
+    }
+    &:hover{
+      animation: logoAnimations 300ms ease-in-out;
     }
   }
   > div {
@@ -75,6 +78,28 @@ section {
         @include fontPoppins($fs: 14px, $fw: 700);
       }
     }
+  }
+}
+
+@keyframes logoAnimations{
+  0%{
+    transform: translate(0, 0);
+  }
+
+  25%{
+    transform: translate(0, -7px);
+  }
+
+  50%{
+    transform: translate(0, 0);
+  }
+
+  75%{
+    transform: translate(0, -7px);
+  }
+
+  100%{
+    transform: translate(0, 0);
   }
 }
 

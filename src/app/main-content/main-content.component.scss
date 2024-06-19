@@ -4,4 +4,5 @@ section{
     @include dFlex($fd: column, $g: 120px);
     background-color: $bgColor2;
     padding-bottom: 120px;
+    width: 100vw;
 }

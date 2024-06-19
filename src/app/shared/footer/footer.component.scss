@@ -16,8 +16,14 @@ section {
   @include dFlex($jc: space-between);
   .nameAndImprint {
     @include dFlex($fd: column, $ai: flex-start);
-    a {
+    a:nth-of-type(2) {
       @include fontPoppins($fs: 16px, $fw: 400);
+      &:hover{
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $cyan-blue;
+      }
     }
   }
   div:nth-of-type(2) {
