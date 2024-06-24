@@ -64,6 +64,11 @@ section {
     height: 50px;
     object-fit: scale-down;
     flex-shrink: 0;
+    transition-duration: 150ms;
+    &:hover{
+      transform: scale(1.1, 1.1) translate(0, 5px);
+      transition-duration: 150ms;
+    }
   }
 }
 
