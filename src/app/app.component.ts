@@ -21,7 +21,7 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'portfolio';
 
-  isHandsetPortrait: boolean = false;
+  isMobilePortrait: boolean = false;
 
   constructor(private responsive: BreakpointObserver) {}
 
@@ -31,12 +31,11 @@ export class AppComponent implements OnInit {
   }
 
   initObserver(){
-    this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
+    this.responsive.observe([Breakpoints.TabletPortrait, Breakpoints.HandsetPortrait]).subscribe((result) => {
       if (result.matches) {
-        console.log('screens matches HandsetLandscape');
-        this.isHandsetPortrait = true;
+        this.isMobilePortrait = true;
       } else if (!result.matches) {
-        this.isHandsetPortrait = false;
+        this.isMobilePortrait = false;
       }
     });
   }

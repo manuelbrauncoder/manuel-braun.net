@@ -1,24 +1,26 @@
 <div class="background">
-    
+
     <div class="outerDiv">
 
-        
+
 
         <section>
-            
-                <img class="atfImg" src="assets/img/atf.png" alt="">
-            
+
+            <img class="atfImg" src="assets/img/atf.png" alt="">
+
 
             <div class="introduction">
                 <div data-aos="fade-left" class="name">
-                    <span class="rotate-span">I am</span>
+                    <span
+                        [ngClass]="{'rotate-spanEN': currentLanguage === 'en', 'rotate-spanDE': currentLanguage === 'de'}"
+                        class="rotate-span">{{ 'atf.iam' | translate }}</span>
                     <div>
                         <span class="manbra">Manuel Braun</span>
-                        <span class="frontEnd">FRONTEND DEVELOPER</span>
+                        <span class="frontEnd">{{ 'atf.dev' | translate }}</span>
                     </div>
                 </div>
                 <button class="defaultBtn1">
-                    <a href="#contact">Let´s talk!</a>
+                    <a href="#contact">{{ 'atf.btn' | translate }}</a>
                 </button>
             </div>
 
@@ -27,9 +29,11 @@
 
         <nav>
             <div>
-                
-                <a class="socialLinks" href="https://github.com/manuelbrauncoder" target="_blank"><img src="/assets/img/github_btn.png" alt=""></a>
-                <a class="socialLinks" href="mailto: info@manuel-braun.net"><img src="/assets/img/email_btn.png" alt=""></a>
+
+                <a class="socialLinks" href="https://github.com/manuelbrauncoder" target="_blank"><img
+                        src="/assets/img/github_btn.png" alt=""></a>
+                <a class="socialLinks" href="mailto: info@manuel-braun.net"><img src="/assets/img/email_btn.png"
+                        alt=""></a>
                 <a class="socialLinks" href=""><img src="/assets/img/linkedin_btn.png" alt=""></a>
                 <a href="#contact">info&#64;manuel-braun.net</a>
             </div>

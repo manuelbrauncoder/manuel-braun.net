@@ -80,9 +80,24 @@ section {
   }
 }
 
-.rotate-span {
+.rotate-spanEN {
   writing-mode: vertical-rl;
   letter-spacing: 9px;
+  transform: rotate(180deg);
+  @include fontPoppins($fs: 64px, $fw: 400);
+  @media (max-width: 1299px) {
+    font-size: 48px;
+    letter-spacing: 5px;
+  }
+  @media (max-width: 599px) {
+    font-size: 25px;
+    letter-spacing: 0;
+  }
+}
+
+.rotate-spanDE {
+  writing-mode: vertical-rl;
+  letter-spacing: 0;
   transform: rotate(180deg);
   @include fontPoppins($fs: 64px, $fw: 400);
   @media (max-width: 1299px) {

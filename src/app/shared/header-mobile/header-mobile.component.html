@@ -11,10 +11,17 @@
     @if (showSidebar) {
     <div class="sidebar">
         <nav>
-            <span (click)="scrollToElement('aboutMe')">About me</span>
-            <span (click)="scrollToElement('skills')">My Skills</span>
-            <span (click)="scrollToElement('portfolio')">Portfolio</span>
-            <span (click)="scrollToElement('contact')">Contact</span>
+            <span (click)="scrollToElement('aboutMe')">{{'header.about' | translate}}</span>
+            <span (click)="scrollToElement('skills')">{{'header.skills' | translate}}</span>
+            <span (click)="scrollToElement('portfolio')">{{'header.portfolio' | translate}}</span>
+            <span (click)="scrollToElement('contact')">{{'header.contact' | translate}}</span>
+            <div class="languageBtns">
+                <span [ngClass]="{'activeLangBtn': currentLanguage === 'de'}"
+                    (click)="this.translationService.changeLanguage('de')">DE</span>
+                <span>|</span>
+                <span [ngClass]="{'activeLangBtn': currentLanguage === 'en'}"
+                    (click)="this.translationService.changeLanguage('en')">EN</span>
+            </div>
         </nav>
     </div>
     }

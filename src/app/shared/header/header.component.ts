@@ -27,10 +27,4 @@ export class HeaderComponent {
   scrollToElement(element: string) {
     this.ScrollToAnchorService.scrollToAnchor(element, -100);
   }
-
-  // changeLanguage(language: string) {
-  //   this.translationService.changeLanguage(language);
-  //   console.log(this.currentLanguage);
-    
-  // }
 }

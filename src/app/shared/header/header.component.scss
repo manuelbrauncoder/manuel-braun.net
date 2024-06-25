@@ -26,6 +26,9 @@ header {
         color: $cyan-blue;
       }
     }
+    span:nth-child(3) {
+      margin-right: 16px;
+    }
   }
 
   .activeLangBtn {
@@ -37,7 +40,7 @@ header {
 
   .languageBtns {
     @include dFlex($g: 8px);
-    span{
+    span {
       @include fontPoppins($fs: 16px, $fw: 400);
     }
   }

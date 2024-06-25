@@ -1,6 +1,6 @@
-@if(isHandsetPortrait){
+@if(isMobilePortrait){
 <app-header-mobile />
-} @else if (!isHandsetPortrait) {
+} @else if (!isMobilePortrait) {
 <app-header></app-header>
 }
 
@@ -8,8 +8,8 @@
 
 
 
-@if (isHandsetPortrait) {
+@if (isMobilePortrait) {
 <app-footer-mobile></app-footer-mobile>
-} @else if (!isHandsetPortrait) {
+} @else if (!isMobilePortrait) {
 <app-footer></app-footer>
 }

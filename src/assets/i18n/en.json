@@ -2,6 +2,13 @@
     "header": {
         "about": "About me",
         "skills": "Skills",
-        "portfolio": "Portfolio"
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+    },
+
+    "atf": {
+        "iam": "I am",
+        "dev": "FRONTEND DEVELOPER",
+        "btn": "Let´s talk!"
     }
 }
