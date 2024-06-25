@@ -1,6 +1,6 @@
 @import "./../../../styles.scss";
 
-header{
+header {
   background-color: $bgColor2;
   z-index: 3;
   position: fixed;
@@ -27,5 +27,18 @@ header{
       }
     }
   }
-  
+
+  .activeLangBtn {
+    text-decoration: underline;
+    text-decoration-color: $cyan-blue;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+  }
+
+  .languageBtns {
+    @include dFlex($g: 8px);
+    span{
+      @include fontPoppins($fs: 16px, $fw: 400);
+    }
+  }
 }
