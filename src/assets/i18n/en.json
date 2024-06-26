@@ -38,5 +38,8 @@
     "text1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "text2": "Need a Frontend developer?",
     "text3": "Contact me"
+  },
+  "footer": {
+    "imprint": "Imprint"
   }
 }

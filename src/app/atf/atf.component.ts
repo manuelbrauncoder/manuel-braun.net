@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { TsNgxService } from '../shared/services/ts-ngx.service';
 
 @Component({

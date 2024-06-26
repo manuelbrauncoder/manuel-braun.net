@@ -37,5 +37,8 @@
     "text1": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
     "text2": "Benötigen Sie einen Frontend Entwickler?",
     "text3": "Kontaktieren Sie mich"
+  },
+  "footer": {
+    "imprint": "Impressum"
   }
 }

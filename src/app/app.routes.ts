@@ -4,7 +4,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { ImprintComponent } from "./imprint/imprint.component";
 
 export const routes: Routes = [
-    { path: '', component: MainContentComponent },
+    { path: '', component: MainContentComponent, title: 'Manuel Braun' },
     { path: 'imprint', component: ImprintComponent },
     { path: 'privacy', component: PrivacyComponent }
 ];
