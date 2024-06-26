@@ -129,6 +129,6 @@ section {
 .languageBtns {
   @include dFlex($g: 8px);
   span {
-    @include fontPoppins($fs: 16px, $fw: 400);
+    font-size: 16px !important;
   }
 }
