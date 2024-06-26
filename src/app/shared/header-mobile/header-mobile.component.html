@@ -17,10 +17,10 @@
             <span (click)="scrollToElement('contact')">{{'header.contact' | translate}}</span>
             <div class="languageBtns">
                 <span [ngClass]="{'activeLangBtn': currentLanguage === 'de'}"
-                    (click)="this.translationService.changeLanguage('de')">DE</span>
+                    (click)="changeLanguage('de')">DE</span>
                 <span>|</span>
                 <span [ngClass]="{'activeLangBtn': currentLanguage === 'en'}"
-                    (click)="this.translationService.changeLanguage('en')">EN</span>
+                    (click)="changeLanguage('en')">EN</span>
             </div>
         </nav>
     </div>

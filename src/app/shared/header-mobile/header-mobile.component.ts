@@ -30,6 +30,11 @@ export class HeaderMobileComponent {
     this.toggleSidebar();
   }
 
+  changeLanguage(lang: string) {
+    this.translationService.changeLanguage(lang);
+    this.toggleSidebar();
+  }
+
   toggleSidebar() {
     if (this.showSidebar) {
       this.showSidebar = false;
