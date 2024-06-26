@@ -6,14 +6,13 @@
         <div data-aos="fade-left" class="description">
             <div>
                 <div>
-                    <h1>My skills</h1>
+                    <h1>{{'skills.headline' | translate}}</h1>
                     <!-- <hr class="line"> -->
                 </div>
-                <span>I have grown my frontend development skills that have allowed
-                    me to create different real projects.
+                <span>{{'skills.text' | translate}}
                 </span>
             </div>
-            <button class="defaultBtn1 desktopBtn">Get in touch</button>
+            <button class="defaultBtn1 desktopBtn">{{'skills.btn' | translate}}</button>
         </div>
         <div class="icons">
             @for (skill of skills.skills; track $index) {

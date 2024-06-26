@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import { TsNgxService } from '../shared/services/ts-ngx.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -22,6 +24,15 @@ export class ContactComponent {
   }
 
   mailTest = false;
+
+  currentLanguage: string;
+
+  constructor(public translationService: TsNgxService) {
+    this.currentLanguage = this.translationService.currentLang;
+    this.translationService.onLangChange.subscribe((event) => {
+      this.currentLanguage = event.lang;
+    });
+  }
 
   post = {
     endPoint: 'https://manuel-braun.net/sendMail.php',
