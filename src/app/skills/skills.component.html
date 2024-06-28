@@ -1,24 +1,22 @@
 <div class="background">
     <section>
-
-        
-
+        <div class="desktopLine"><hr class="line"></div>
         <div data-aos="fade-left" class="description">
+            <div class="mobileLine"><hr class="line"></div>
             <div>
-                <div>
-                    <h1>{{'skills.headline' | translate}}</h1>
-                    <!-- <hr class="line"> -->
-                </div>
-                <span>{{'skills.text' | translate}}
-                </span>
+                
+                <h1>{{ 'skills.headline' | translate }}</h1>
+                
+                <span>{{ 'skills.text' | translate }}</span>
+                
             </div>
             <button class="defaultBtn1 desktopBtn">{{'skills.btn' | translate}}</button>
         </div>
         <div class="icons">
             @for (skill of skills.skills; track $index) {
             <div class="skill">
-                <img src="assets/img/{{skill.icon}}" alt="">
-                <p>{{skill.title}}</p>
+                <img src="assets/img/{{ skill.icon }}" alt="">
+                <p>{{ skill.title }}</p>
             </div>
             }
         </div>

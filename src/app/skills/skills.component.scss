@@ -25,20 +25,36 @@
 section {
   max-width: $contentLimit;
   margin-inline: auto;
-  @include dFlex($fd: row-reverse, $g: 32px);
+  @include dFlex($fd: row-reverse, $g: 32px, $jc: space-around);
   @media (max-width: 1299px) {
     @include dFlex($fd: column, $g: 64px);
   }
 }
 
-.line {
-  background-color: $blue;
-  height: 4px;
-  border-radius: 4px;
-  border: unset;
-  flex: 1;
-  min-width: 58px;
+.desktopLine{
+  flex-grow: 1;
+  .line {
+    background-color: $blue;
+    height: 4px;
+    border-radius: 4px;
+    border: unset;
+    width: 100%;
+    transform: translateY(-87px);
+  }
 }
+
+.mobileLine {
+  .line {
+    background-color: $blue;
+    height: 4px;
+    border-radius: 4px;
+    border: unset;
+    width: 100px;
+    transform: translateY(-26px);
+  }
+}
+
+
 
 .skill {
   @include dFlex();
@@ -100,6 +116,7 @@ section {
   color: white;
   @include dFlex($fd: column, $g: 34px);
   @media (max-width: 1299px) {
+    @include dFlex($fd: row-reverse, $g: 32px);
     width: 100%;
   }
   > div {
@@ -121,13 +138,13 @@ section {
   }
 }
 
-.mobileBtn {
+.mobileBtn, .mobileLine {
   @media (min-width: 1300px) {
-    display: none;
+    display: none !important;
   }
 }
 
-.desktopBtn {
+.desktopBtn, .desktopLine {
   @media (max-width: 1299px) {
     display: none;
   }
