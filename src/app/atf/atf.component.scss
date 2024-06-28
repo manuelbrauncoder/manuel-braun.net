@@ -144,6 +144,9 @@ nav {
   border-radius: 4px;
   background-color: $blue;
   width: 100px;
+  @media(max-width: 599px) {
+    margin-left: -16px;
+  }
 }
 
 .socialLinks {
