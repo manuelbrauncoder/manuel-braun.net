@@ -2,6 +2,7 @@
 
 .background {
   background-color: $bgColor2;
+  width: 100vw;
   padding: 0 64px;
   @media (max-width: 599px) {
     padding: 0 16px;
@@ -17,22 +18,54 @@ section {
   }
 }
 
+.headlineWrapper {
+  width: 33%;
+}
+
+.secondWrapper{
+  width: auto;
+}
+
+.firstWrapper {
+  @include dFlex($jc: flex-end);
+}
+
+.thirdWrapper{
+  @include dFlex();
+}
+
 .headline {
-  @include dFlex($g: 10px);
+  @include dFlex($jc: flex-end, $g: 32px);
+  width: 100%;
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
+    text-align: center;
     @media (max-width: 899px) {
       @include fontPoppins($fs: 45px, $fw: 700);
     }
   }
+}
 
-  hr:first-of-type {
-    width: 110px;
+.line {
+  border: unset;
+  height: 4px;
+  border-radius: 4px;
+  background-color: $blue;
+}
+
+.shortLine {
+  @extend .line;
+  width: 100px;
+  @media(max-width: 599px) {
+    width: 50px;
   }
-  hr:nth-of-type(2) {
-    width: 700px;
-    margin: 0;
-  }
+}
+
+.longLine {
+  @extend .line;
+  flex-grow: 1;
+  min-width: 100px;
+  max-width: 100%;
 }
 
 .projectImg {
@@ -50,7 +83,7 @@ section {
     }
     .project {
       @include dFlex($fd: column, $ai: flex-end, $g: 35px);
-      @media(max-width: 1299px){
+      @media (max-width: 1299px) {
         @include dFlex($fd: column, $ai: flex-start, $g: 35px);
       }
     }
@@ -61,7 +94,7 @@ section {
         width: 100%;
         align-items: center;
       }
-    
+
       h1 {
         @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
         text-align: end;
@@ -102,7 +135,7 @@ section {
         width: 100%;
         align-items: center;
       }
-    
+
       h1 {
         @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
         text-align: start;
@@ -130,11 +163,9 @@ section {
   }
 }
 
-
-
 .btns {
   @include dFlex($g: 86px);
-  @media(max-width: 1299px) {
+  @media (max-width: 1299px) {
     width: 100%;
   }
   @media (max-width: 599px) {
