@@ -138,6 +138,14 @@ nav {
   }
 }
 
+.line{
+  border: unset;
+  height: 4px;
+  border-radius: 4px;
+  background-color: $blue;
+  width: 100px;
+}
+
 .socialLinks {
   transition: transform 125ms ease-out;
   &:hover {

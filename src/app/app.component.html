@@ -1,15 +1,16 @@
-@if(!isHandsetLandscape) {
-@if(isMobilePortrait){
-<app-header-mobile />
-} @else if (!isMobilePortrait) {
-<app-header></app-header>
-}
-<router-outlet></router-outlet>
-@if (isMobilePortrait) {
-<app-footer-mobile></app-footer-mobile>
-} @else if (!isMobilePortrait) {
-<app-footer></app-footer>
-}
-} @else if (isHandsetLandscape) {
+@if(isHandsetLandscape) {
 <app-nolandscapemode></app-nolandscapemode>
-}
+
+} @else {
+    @if(isMobilePortrait){
+    <app-header-mobile />
+    } @else if (!isMobilePortrait) {
+    <app-header></app-header>
+    }
+    <router-outlet></router-outlet>
+    @if (isMobilePortrait) {
+    <app-footer-mobile></app-footer-mobile>
+    } @else if (!isMobilePortrait) {
+    <app-footer></app-footer>
+    }
+    }
