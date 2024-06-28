@@ -23,7 +23,7 @@ export class ContactComponent {
     privacy: false
   }
 
-  mailTest = false;
+  mailTest = true;
 
   currentLanguage: string;
 

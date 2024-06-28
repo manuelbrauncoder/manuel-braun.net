@@ -18,25 +18,38 @@ section {
   }
 }
 
-.headlineWrapper {
-  width: 33%;
-}
-
-.secondWrapper{
-  width: auto;
-}
-
 .firstWrapper {
+  width: 33%;
   @include dFlex($jc: flex-end);
+  @media(max-width: 599px) {
+    width: 15%;
+  }
 }
 
-.thirdWrapper{
+.secondWrapper {
+  width: 33%;
+  min-width: fit-content;
+  @media(max-width: 599px) {
+    width: 70%;
+  }
+}
+
+.thirdWrapper {
+  width: 33%;
   @include dFlex();
+  margin-right: -16px;
+  @media(max-width: 599px) {
+    width: 15%;
+    margin-left: 8px;
+  }
 }
 
 .headline {
   @include dFlex($jc: flex-end, $g: 32px);
   width: 100%;
+  @media(max-width: 599px) {
+    gap: 16px;
+  }
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
     text-align: center;
@@ -56,8 +69,8 @@ section {
 .shortLine {
   @extend .line;
   width: 100px;
-  @media(max-width: 599px) {
-    width: 50px;
+  @media (max-width: 599px) {
+    width: 30px;
   }
 }
 

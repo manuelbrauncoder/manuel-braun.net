@@ -6,9 +6,9 @@
   background-color: $bgColor2;
   padding: 0 64px;
   @media (max-width: 599px) {
-    padding: 0 16px;
+    padding: 0 32px 0 16px;
   }
-  .shadow{
+  .shadow {
     z-index: 1;
     position: absolute;
     bottom: 0;
@@ -19,23 +19,39 @@
   }
 }
 
-section {
-  z-index: 2;
-  max-width: $contentLimit;
-  margin-inline: auto;
-  @include dFlex($fd: column, $ai: normal, $g: 64px);
-
-  h1 {
-    @include fontPoppins($fs: 90px, $fw: 700);
-    margin-right: auto;
-    @media (max-width: 599px) {
-      @include fontPoppins($fs: 45px, $fw: 700);
-    }
+.line{
+  height: 4px;
+  border: unset;
+  border-radius: 4px;
+  width: 80px;
+  background-color: $blue;
+  margin: 64px 32px auto 0;
+  @media(max-width: 599px) {
+    width: 50px;
+    margin: 32px 16px auto -16px;
   }
+}
+
+section {
+  @include dFlex();
   > div {
-    @include dFlex($jc: space-between);
-    @media (max-width: 1299px) {
-      @include dFlex($fd: column, $g: 40px, $ai: flex-start);
+    z-index: 2;
+    max-width: $contentLimit;
+    margin-inline: auto;
+    @include dFlex($fd: column, $ai: normal, $g: 64px);
+
+    h1 {
+      @include fontPoppins($fs: 90px, $fw: 700);
+      margin-right: auto;
+      @media (max-width: 599px) {
+        @include fontPoppins($fs: 45px, $fw: 700);
+      }
+    }
+    > div {
+      @include dFlex($jc: space-between);
+      @media (max-width: 1299px) {
+        @include dFlex($fd: column, $g: 40px, $ai: flex-start);
+      }
     }
   }
 }
@@ -69,7 +85,7 @@ section {
     }
     a {
       @include fontPoppins($fs: 14px, $fw: 400, $c: $blue);
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
