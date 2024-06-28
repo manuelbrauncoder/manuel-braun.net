@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
+import { NolandscapemodeComponent } from "./nolandscapemode/nolandscapemode.component";
 import { FooterComponent } from './shared/footer/footer.component';
 import {
   Breakpoints,
@@ -14,14 +15,17 @@ import * as AOS from 'aos';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, FooterMobileComponent, HeaderMobileComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, FooterMobileComponent, HeaderMobileComponent, NolandscapemodeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
   title = 'portfolio';
 
+  breakpointsToObserve = [Breakpoints.TabletPortrait, Breakpoints.HandsetPortrait, Breakpoints.HandsetLandscape]
+
   isMobilePortrait: boolean = false;
+  isHandsetLandscape: boolean = false;
 
   constructor(private responsive: BreakpointObserver) {}
 
@@ -31,14 +35,21 @@ export class AppComponent implements OnInit {
   }
 
   initObserver(){
-    this.responsive.observe([Breakpoints.TabletPortrait, Breakpoints.HandsetPortrait]).subscribe((result) => {
-      if (result.matches) {
+    this.responsive.observe(this.breakpointsToObserve).subscribe((result) => {
+      if (result.breakpoints[Breakpoints.TabletPortrait] || result.breakpoints[Breakpoints.HandsetPortrait]) {
         this.isMobilePortrait = true;
-      } else if (!result.matches) {
+      } else if (!result.breakpoints[Breakpoints.TabletPortrait] || !result.breakpoints[Breakpoints.HandsetPortrait]) {
         this.isMobilePortrait = false;
+      }
+      if (result.breakpoints[Breakpoints.HandsetLandscape]) {
+        this.isHandsetLandscape = true;
+      } else if(!result.breakpoints[Breakpoints.HandsetLandscape]) {
+        this.isHandsetLandscape = false;        
       }
     });
   }
+
+  
 
   initAos(){
     AOS.init({
