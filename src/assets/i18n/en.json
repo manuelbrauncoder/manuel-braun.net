@@ -37,7 +37,18 @@
     "subheadline": "Got a problem to solve?",
     "text1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "text2": "Need a Frontend developer?",
-    "text3": "Contact me"
+    "text3": "Contact me",
+    "ph-name": "Your name",
+    "ph-email": "Your email",
+    "ph-message": "Your message",
+    "err-name": "Your name is required",
+    "err-email": "Your email is required",
+    "err-message": "Your message is empty",
+    "accept": "Please accept the privacy policy.",
+    "privacy1": "I've read the",
+    "privacy2": "privacy policy",
+    "privacy3": "and agree to the processing of my data as outlined.",
+    "submitBtn": "Send message :)"
   },
   "footer": {
     "imprint": "Imprint"

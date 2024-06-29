@@ -36,7 +36,18 @@
     "subheadline": "Gibt es ein Problem, dass ich lösen kann?",
     "text1": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
     "text2": "Benötigen Sie einen Frontend Entwickler?",
-    "text3": "Kontaktieren Sie mich"
+    "text3": "Kontaktieren Sie mich",
+    "ph-name": "Name...",
+    "ph-email": "Email...",
+    "ph-message": "Nachricht...",
+    "err-name": "Name erforderlich",
+    "err-email": "Email erforderlich",
+    "err-message": "Nachricht erforderlich",
+    "accept": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+    "privacy1": "Ich habe die",
+    "privacy2": "Datenschutzerklärung",
+    "privacy3": "gelesen und stimme zu.",
+    "submitBtn": "Nachricht senden :)"
   },
   "footer": {
     "imprint": "Impressum"
