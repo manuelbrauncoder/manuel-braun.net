@@ -53,7 +53,8 @@ section {
     transform: translateY(-26px);
     @media(max-width: 599px) {
       margin-right: -16px;
-      transform: translateY(-64px);
+      width: 32px;
+      transform: translateY(-54px);
     }
   }
 }
@@ -122,6 +123,9 @@ section {
   @media (max-width: 1299px) {
     @include dFlex($fd: row-reverse, $g: 32px);
     width: 100%;
+  }
+  @media(max-width: 599px){
+    gap: 16px;
   }
   > div {
     @include dFlex($fd: column, $g: 34px, $ai: flex-end);

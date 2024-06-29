@@ -35,8 +35,8 @@
                     'inputError': !email.valid && email.touched,
                     'inputDone': email.valid,
                     'inputNormal': email.untouched
-                    }" #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email" type="email"
-                                placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    }" #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email" 
+                                placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                             @if(!email.valid && email.touched){
                             <span>Your email is required</span>
                             <img class="sign" src="assets/img/errorSign.png" alt="">
