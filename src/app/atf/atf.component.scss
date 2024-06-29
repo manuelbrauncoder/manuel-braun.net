@@ -19,7 +19,7 @@
   transform: translateY(15%);
   max-width: 100%;
   @media (max-width: 599px) {
-    transform: translateY(-55%);
+    transform: translateY(-40%);
   }
 }
 
@@ -35,7 +35,7 @@ section {
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
-  @include dFlex($jc: space-between);
+  @include dFlex($jc: space-around);
   padding: 32px 0 0 0;
   @media (max-width: 899px) {
     width: 100vw;
@@ -125,6 +125,7 @@ nav {
   width: 100%;
   @media (max-width: 899px) {
     width: 100%;
+    padding: 0;
     justify-content: flex-start;
   }
   div:first-of-type {
