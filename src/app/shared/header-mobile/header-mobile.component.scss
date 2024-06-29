@@ -24,6 +24,7 @@ section {
   width: 100%;
   height: 100%;
   background-color: rgba(20, 29, 47, 0.8);
+  animation: slideIn 300ms ease;
   nav {
     @include dFlex($fd: column, $g: 29px);
     margin-top: auto;
@@ -32,6 +33,15 @@ section {
       @include fontPoppins($fs: 23px, $fw: 400);
       cursor: pointer;
     }
+  }
+}
+
+@keyframes slideIn{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: none;
   }
 }
 

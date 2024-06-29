@@ -25,41 +25,40 @@
 section {
   max-width: $contentLimit;
   margin-inline: auto;
-  @include dFlex($fd: row-reverse, $g: 32px, $jc: space-around);
+  @include dFlex($fd: row-reverse, $g: 32px, $jc: space-between);
   @media (max-width: 1299px) {
     @include dFlex($fd: column, $g: 64px);
   }
 }
 
-.desktopLine{
-  flex-grow: 1;
-  .line {
-    background-color: $blue;
-    height: 4px;
-    border-radius: 4px;
-    border: unset;
+.descriptionWrapper{
+  @include dFlex($fd: row-reverse, $g: 16px, $ai: flex-start);
+  max-width: 40%;
+  @media(max-width: 1299px) {
     width: 100%;
-    transform: translateY(-87px);
+    max-width: 100%;
   }
 }
 
-.mobileLine {
+.lineWrapper{
+  height: 140px;
+  display: flex;
+  align-items: center;
+  @media(max-width: 899px) {
+    height: 70px;
+  }
   .line {
     background-color: $blue;
     height: 4px;
     border-radius: 4px;
     border: unset;
-    width: 100px;
-    transform: translateY(-26px);
-    @media(max-width: 599px) {
+    width: 150px;
+    @media(max-width: 899px) {
+      width: 40px;
       margin-right: -16px;
-      width: 32px;
-      transform: translateY(-54px);
     }
   }
 }
-
-
 
 .skill {
   @include dFlex();
@@ -117,11 +116,10 @@ section {
 }
 
 .description {
-  width: 30%;
   color: white;
   @include dFlex($fd: column, $g: 34px);
   @media (max-width: 1299px) {
-    @include dFlex($fd: row-reverse, $g: 32px);
+    @include dFlex($fd: row-reverse, $g: 32px, $jc: flex-start);
     width: 100%;
   }
   @media(max-width: 599px){
@@ -132,13 +130,19 @@ section {
     text-align: end;
     h1 {
       white-space: nowrap;
+      height: 140px;
       @include fontPoppins($fs: 90px, $fw: 700);
       @media (max-width: 899px) {
+        height: 70px;
         @include fontPoppins($fs: 45px, $fw: 700);
       }
     }
     span {
       @include fontPoppins($fs: 16px, $fw: 400);
+      max-width: 70ch;
+      @media(max-width: 899px){
+        max-width: 50ch;
+      }
     }
     div {
       @include dFlex($g: 64px);
@@ -146,13 +150,13 @@ section {
   }
 }
 
-.mobileBtn, .mobileLine {
+.mobileBtn{
   @media (min-width: 1300px) {
     display: none !important;
   }
 }
 
-.desktopBtn, .desktopLine {
+.desktopBtn {
   @media (max-width: 1299px) {
     display: none;
   }

@@ -1,17 +1,25 @@
 <div class="background">
     <section>
-        <div class="desktopLine"><hr class="line"></div>
-        <div data-aos="fade-left" class="description">
-            <div class="mobileLine"><hr class="line"></div>
-            <div>
-                
-                <h1>{{ 'skills.headline' | translate }}</h1>
-                
-                <span>{{ 'skills.text' | translate }}</span>
-                
+        <div class="descriptionWrapper" data-aos="fade-left">
+            <div class="lineWrapper">
+                <hr class="line">
             </div>
-            <button (click)="scrollToElement('contact')" class="defaultBtn1 desktopBtn">{{'skills.btn' | translate}}</button>
+            <div class="description">
+                <!-- <div class="mobileLine">
+                    <hr class="line">
+                </div> -->
+                <div>
+
+                    <h1>{{ 'skills.headline' | translate }}</h1>
+
+                    <span>{{ 'skills.text' | translate }}</span>
+
+                </div>
+                <button (click)="scrollToElement('contact')" class="defaultBtn1 desktopBtn">{{'skills.btn' |
+                    translate}}</button>
+            </div>
         </div>
+
         <div class="icons">
             @for (skill of skills.skills; track $index) {
             <div class="skill">
