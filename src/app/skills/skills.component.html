@@ -10,7 +10,7 @@
                 <span>{{ 'skills.text' | translate }}</span>
                 
             </div>
-            <button class="defaultBtn1 desktopBtn">{{'skills.btn' | translate}}</button>
+            <button (click)="scrollToElement('contact')" class="defaultBtn1 desktopBtn">{{'skills.btn' | translate}}</button>
         </div>
         <div class="icons">
             @for (skill of skills.skills; track $index) {
@@ -20,6 +20,6 @@
             </div>
             }
         </div>
-        <button class="defaultBtn1 mobileBtn">Get in touch</button>
+        <button (click)="scrollToElement('contact')" class="defaultBtn1 mobileBtn">{{'skills.btn' | translate}}</button>
     </section>
 </div>
