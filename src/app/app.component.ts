@@ -38,6 +38,8 @@ export class AppComponent implements OnInit {
     this.responsive.observe(this.breakpointsToObserve).subscribe((result) => {
       if (result.breakpoints[Breakpoints.TabletPortrait] || result.breakpoints[Breakpoints.HandsetPortrait]) {
         this.isMobilePortrait = true;
+        console.log('mobile!');
+        
       } else if (!result.breakpoints[Breakpoints.TabletPortrait] || !result.breakpoints[Breakpoints.HandsetPortrait]) {
         this.isMobilePortrait = false;
       }

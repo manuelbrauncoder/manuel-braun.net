@@ -4,9 +4,9 @@
   z-index: 1;
   position: relative;
   background-color: $bgColor2;
-  padding: 0 64px;
+  padding: 100px 64px 0 64px;
   @media (max-width: 599px) {
-    padding: 0 16px;
+    padding: 100px 16px 0 16px;
   }
 }
 
@@ -18,7 +18,7 @@
   right: 0;
   transform: translateY(15%);
   max-width: 100%;
-  @media(max-width: 599px){
+  @media (max-width: 599px) {
     transform: translateY(-55%);
   }
 }
@@ -26,7 +26,7 @@
 .outerDiv {
   z-index: 2;
   max-width: $contentLimit;
-  height: 100dvh;
+  height: calc(100dvh - 100px);
   margin-inline: auto;
   @include dFlex($fd: column, $jc: space-between);
 }
@@ -38,15 +38,19 @@ section {
   @include dFlex($jc: space-between);
   padding: 32px 0 0 0;
   @media (max-width: 899px) {
+    width: 100vw;
     @include dFlex($fd: column, $g: 32px, $jc: space-around);
   }
 }
 
 .atfImg {
-  width: 40%;
-  height: auto;
+  height: 500px;
+  width: auto;
+  @media (max-width: 1299px) {
+    height: 400px;
+  }
   @media (max-width: 599px) {
-    width: 45%;
+    height: 250px;
   }
 }
 
@@ -59,7 +63,7 @@ section {
   @include dFlex();
   div {
     @include dFlex($fd: column);
-    span{
+    span {
       white-space: nowrap;
     }
   }
@@ -119,6 +123,10 @@ nav {
   padding: 0 32px 0 0;
   @include dFlex($jc: space-between, $ai: flex-end);
   width: 100%;
+  @media (max-width: 899px) {
+    width: 100%;
+    justify-content: flex-start;
+  }
   div:first-of-type {
     @include dFlex($jc: flex-start, $g: 32px);
     a:nth-of-type(4) {
@@ -143,13 +151,13 @@ nav {
   }
 }
 
-.line{
+.line {
   border: unset;
   height: 4px;
   border-radius: 4px;
   background-color: $blue;
   width: 100px;
-  @media(max-width: 599px) {
+  @media (max-width: 599px) {
     margin-left: -16px;
   }
 }
