@@ -1,6 +1,7 @@
 @import './../../styles.scss';
 
 .background{
+    @include dFlex($fd: column, $g: 32px);
     background-color: $bgColor2;
     padding: 120px 64px;
     @media(max-width: 599px){
@@ -14,3 +15,23 @@ section{
     min-height: calc(100dvh - 200px);
     @include fontPoppins($fs: 16px, $fw: 400);
 }
+
+.back{
+    margin-left: auto;
+}
+
+.backBtn {
+    transform: rotate(-90deg);
+    height: 39px;
+    width: 39px;
+    cursor: pointer;
+    &:hover {
+      rect {
+        stroke: $cyan-blue;
+      }
+      path {
+        stroke: $cyan-blue;
+        fill: $cyan-blue;
+      }
+    }
+  }
