@@ -32,7 +32,7 @@
 }
 
 section {
-  width: 100%;
+  width: 100vw;
   margin-top: auto;
   margin-bottom: auto;
   @include dFlex($jc: space-around);
@@ -167,5 +167,12 @@ nav {
   transition: transform 125ms ease-out;
   &:hover {
     transform: scale(1.2, 1.2) translateX(5px);
+  }
+}
+
+.mailLink{
+  cursor: pointer;
+  &:hover{
+    color: $cyan-blue;
   }
 }

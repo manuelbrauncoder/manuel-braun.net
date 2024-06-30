@@ -13,7 +13,7 @@
                         {{ 'contact.text2' | translate }} <span>{{ 'contact.text3' | translate }}</span>
                     </p>
                 </div>
-                <div class="contactForm">
+                <div data-aos="zoom-in" class="contactForm">
                     <form (ngSubmit)="onSubmit(contactForm)" name="emailForm" #contactForm="ngForm">
                         <div class="nameWrapper">
                             <input [ngClass]="{

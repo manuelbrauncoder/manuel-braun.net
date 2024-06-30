@@ -40,7 +40,6 @@ section {
     max-width: $contentLimit;
     margin-inline: auto;
     @include dFlex($fd: column, $ai: normal, $g: 64px);
-
     h1 {
       @include fontPoppins($fs: 90px, $fw: 700);
       margin-right: auto;
@@ -49,7 +48,7 @@ section {
       }
     }
     > div {
-      @include dFlex($jc: space-between);
+      @include dFlex($jc: space-between, $g: 16px);
       @media (max-width: 1299px) {
         @include dFlex($fd: column, $g: 40px, $ai: flex-start);
       }
@@ -79,6 +78,7 @@ section {
 }
 
 .contactForm {
+  width: 100%;
   > form {
     @include dFlex($fd: column, $g: 32px);
     span {
@@ -145,7 +145,8 @@ select:-webkit-autofill:focus {
 }
 
 .checkbox {
-  @include dFlex($g: 12px);
+  width: 100%;
+  @include dFlex($g: 12px, $jc: flex-start);
   position: relative;
   input {
     width: fit-content !important;
