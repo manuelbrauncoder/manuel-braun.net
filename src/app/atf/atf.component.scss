@@ -137,6 +137,7 @@ nav {
     }
   }
   div:nth-of-type(2) {
+    animation: upAndDown 5000ms ease;
     @include dFlex($fd: column, $g: 3px);
     img {
       width: 16px;
@@ -149,6 +150,30 @@ nav {
     @media (max-width: 899px) {
       display: none;
     }
+  }
+}
+
+@keyframes upAndDown{
+  0%{
+    transform: none;
+  }
+  15%{
+    transform: translateY(-20px);
+  }
+  30%{
+    transform: none;
+  }
+  45%{
+    transform: translateY(-20px);
+  }
+  60%{
+    transform: none;
+  }
+  80%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: none;
   }
 }
 

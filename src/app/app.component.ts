@@ -37,9 +37,7 @@ export class AppComponent implements OnInit {
   initObserver(){
     this.responsive.observe(this.breakpointsToObserve).subscribe((result) => {
       if (result.breakpoints[Breakpoints.TabletPortrait] || result.breakpoints[Breakpoints.HandsetPortrait]) {
-        this.isMobilePortrait = true;
-        console.log('mobile!');
-        
+        this.isMobilePortrait = true;        
       } else if (!result.breakpoints[Breakpoints.TabletPortrait] || !result.breakpoints[Breakpoints.HandsetPortrait]) {
         this.isMobilePortrait = false;
       }
@@ -50,8 +48,6 @@ export class AppComponent implements OnInit {
       }
     });
   }
-
-  
 
   initAos(){
     AOS.init({
