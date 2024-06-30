@@ -51,5 +51,9 @@
   },
   "footer": {
     "imprint": "Impressum"
+  },
+  "popup": {
+    "headline": "Gesendet",
+    "text": "Ihre Nachricht wurde erfolgreich abgeschickt. Sie werden in Kürze von mir hören."
   }
 }
