@@ -1,3 +1,7 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+
 $bgColor1: rgb(27, 37, 57);
 $bgColor2: rgb(20, 29, 47);
 $cyan-blue: rgb(0, 190, 232);
@@ -7,6 +11,7 @@ $doneGreen: rgb(112, 230, 28);
 $hoverGreen: rgba(28, 230, 182, 1);
 
 $contentLimit: 1440px;
+
 
 @mixin dFlex($fd: row, $jc: center, $ai: center, $g: 0) {
   display: flex;
@@ -46,7 +51,6 @@ a {
 }
 
 .defaultBtn {
-  @extend .defaultBtn;
   border: unset;
   cursor: pointer;
   padding: 15px 30px;

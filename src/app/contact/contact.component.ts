@@ -6,11 +6,20 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TsNgxService } from '../shared/services/ts-ngx.service';
 import { EmailPopupComponent} from "../email-popup/email-popup.component";
 
+import {
+  MatDialog,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogTitle,
+} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule, EmailPopupComponent],
+  imports: [FormsModule, CommonModule, TranslateModule, EmailPopupComponent, MatButtonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -29,15 +38,22 @@ export class ContactComponent {
 
   currentLanguage: string;
 
-  constructor(public translationService: TsNgxService) {
+  constructor(public translationService: TsNgxService, public dialog: MatDialog) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {
       this.currentLanguage = event.lang;
     });
   }
 
-  
-
+  showDialog() {
+    this.dialog.open(EmailPopupComponent, {
+      enterAnimationDuration: '300ms',
+      exitAnimationDuration: '300ms'
+    });
+    setTimeout(() => {
+      this.dialog.closeAll();
+    }, 4000);
+  }
 
   post = {
     endPoint: 'https://manuel-braun.net/sendMail.php',
@@ -64,6 +80,7 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.contactData.privacy) {
+      this.showDialog();
       console.log('send');
       ngForm.resetForm();
     }
