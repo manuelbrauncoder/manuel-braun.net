@@ -5,13 +5,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { TsNgxService } from '../shared/services/ts-ngx.service';
 import { EmailPopupComponent} from "../email-popup/email-popup.component";
-import {Dialog, DialogRef, DIALOG_DATA, DialogModule} from '@angular/cdk/dialog';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule, EmailPopupComponent, DialogModule],
+  imports: [FormsModule, CommonModule, TranslateModule, EmailPopupComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -30,27 +29,14 @@ export class ContactComponent {
 
   currentLanguage: string;
 
-  constructor(public translationService: TsNgxService, public dialog: Dialog) {
+  constructor(public translationService: TsNgxService) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {
       this.currentLanguage = event.lang;
     });
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open<string>(EmailPopupComponent, {
-      width: '250px',
-      height: '250px'
-    });
-
-    setTimeout(() => {
-      dialogRef.close();
-    }, 5000);
-
-    // dialogRef.closed.subscribe(result => {
-    //   console.log('The dialog was closed');
-    // });
-  }
+  
 
 
   post = {
@@ -79,7 +65,6 @@ export class ContactComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.contactData.privacy) {
       console.log('send');
-      this.openDialog();
       ngForm.resetForm();
     }
   }
