@@ -8,8 +8,7 @@
         <span class="bottom"></span>
     </div>
 
-    @if (showSidebar) {
-    <div class="sidebar">
+    <div class="sidebar" [ngClass]="{'hideSidebar': !showSidebar, 'showSidebar': showSidebar}">
         <nav>
             <span (click)="scrollToElement('aboutMe')">{{'header.about' | translate}}</span>
             <span (click)="scrollToElement('skills')">{{'header.skills' | translate}}</span>
@@ -24,6 +23,5 @@
             </div>
         </nav>
     </div>
-    }
 
 </section>
