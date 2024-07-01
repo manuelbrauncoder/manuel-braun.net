@@ -39,30 +39,10 @@ section {
 
 .hideSidebar{
   transform: translateX(100%);
-  //animation: slideOut 300ms ease;
 }
 
 .showSidebar{
   transform: none;
-  //animation: slideIn 300ms ease;
-}
-
-@keyframes slideIn{
-  from{
-    transform: translateX(100%);
-  }
-  to{
-    transform: none;
-  }
-}
-
-@keyframes slideOut{
-  from{
-    transform: none;
-  }
-  to{
-    transform: translateX(100%);
-  }
 }
 
 .burgerMenu {
@@ -70,84 +50,45 @@ section {
   height: 30px;
   position: relative;
   cursor: pointer;
-  &:hover .middle {
-    width: 50%;
-  }
-  .top {
+
+  .line {
     position: absolute;
     left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    transition: transform 175ms ease, top 175ms ease;
+  }
+
+  .top {
     top: 25%;
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: white;
   }
 
   .middle {
-    position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translateX(-50%);
-    transition-duration: 175ms;
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: white;
   }
 
   .bottom {
-    position: absolute;
-    left: 0;
     top: 75%;
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: white;
   }
 }
 
-.burgerMenuClosed {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  cursor: pointer;
-
-  .top {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: white;
-    animation-duration: 175ms;
-    transform: rotate(-45deg);
-  }
-
-  .middle {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%);
-    transition-duration: 175ms;
-    width: 0 !important;
-    height: 2px;
-    border-radius: 2px;
-    background-color: white;
-  }
-
-  .bottom {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: white;
-    animation-duration: 175ms;
-    transform: rotate(45deg);
-  }
+.burgerMenuClosed .top {
+  top: 50%;
+  transform: rotate(-45deg);
 }
+
+.burgerMenuClosed .middle {
+  width: 0;
+}
+
+.burgerMenuClosed .bottom {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+
 
 .activeLangBtn {
   text-decoration: underline;

@@ -3,9 +3,9 @@
         <span class="firstLetter">M</span><span class="other">anue</span><span class="lastLetter">l</span>
     </a>
     <div (click)="toggleSidebar()" class="burgerMenu" [ngClass]="!showSidebar ? 'burgerMenu' : 'burgerMenuClosed'">
-        <span class="top"></span>
-        <span class="middle"></span>
-        <span class="bottom"></span>
+        <span class="line top"></span>
+        <span class="line middle"></span>
+        <span class="line bottom"></span>
     </div>
 
     <div class="sidebar" [ngClass]="{'hideSidebar': !showSidebar, 'showSidebar': showSidebar}">
