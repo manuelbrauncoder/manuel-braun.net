@@ -26,15 +26,7 @@ section {
   transform: translateX(100%);
   background-color: rgba(20, 29, 47, 0.8);
   transition: transform 300ms ease;
-  nav {
-    @include dFlex($fd: column, $g: 29px);
-    margin-top: auto;
-    height: 50%;
-    span {
-      @include fontPoppins($fs: 23px, $fw: 400);
-      cursor: pointer;
-    }
-  }
+  
 }
 
 .hideSidebar{
@@ -90,16 +82,4 @@ section {
 
 
 
-.activeLangBtn {
-  text-decoration: underline;
-  text-decoration-color: $cyan-blue;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 2px;
-}
 
-.languageBtns {
-  @include dFlex($g: 8px);
-  span {
-    font-size: 16px !important;
-  }
-}

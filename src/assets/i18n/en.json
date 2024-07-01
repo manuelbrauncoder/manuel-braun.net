@@ -5,7 +5,12 @@
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
-
+  "sidebar": {
+    "about": "About me",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
   "atf": {
     "iam": "I am",
     "dev": "FRONTEND DEVELOPER",
@@ -26,10 +31,10 @@
     "headline": "Portfolio",
     "text": "Explore a selection of my work here - interact with projects to see my skills in action.",
     "project1": {
-        "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     },
     "project2": {
-        "text": "A simple Jump-and-Run game based on an object-oriented approach. Help pepe to find coins and salsa bottles to fight against the killer chicken."
+      "text": "A simple Jump-and-Run game based on an object-oriented approach. Help pepe to find coins and salsa bottles to fight against the killer chicken."
     }
   },
   "contact": {

@@ -5,6 +5,12 @@
     "portfolio": "Portfolio",
     "contact": "Kontakt"
   },
+  "sidebar": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
   "atf": {
     "iam": "Ich bin",
     "dev": "FRONTEND ENTWICKLER",

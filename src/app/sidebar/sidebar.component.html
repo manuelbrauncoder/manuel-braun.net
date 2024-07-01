@@ -1,0 +1,14 @@
+
+<nav>
+    <span (click)="scrollToElement('aboutMe')">{{'sidebar.about' | translate}}</span>
+    <span (click)="scrollToElement('skills')">{{'sidebar.skills' | translate}}</span>
+    <span (click)="scrollToElement('portfolio')">{{'sidebar.portfolio' | translate}}</span>
+    <span (click)="scrollToElement('contact')">{{'sidebar.contact' | translate}}</span>
+    <div class="languageBtns">
+        <span [ngClass]="{'activeLangBtn': currentLanguage === 'de'}"
+            (click)="changeLanguage('de')">DE</span>
+        <span>|</span>
+        <span [ngClass]="{'activeLangBtn': currentLanguage === 'en'}"
+            (click)="changeLanguage('en')">EN</span>
+    </div>
+</nav>
