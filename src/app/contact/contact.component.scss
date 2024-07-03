@@ -249,4 +249,11 @@ select:-webkit-autofill:focus {
   }
 }
 
-
+.blur{
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 750px;
+  height: 900px;
+}
