@@ -190,3 +190,13 @@ section {
     }
   }
 }
+
+.blur{
+  z-index: -1;
+  position: absolute;
+  bottom: 400px;
+  right: 0;
+  width: 400px;
+}
+
+// fix img .blur!!
