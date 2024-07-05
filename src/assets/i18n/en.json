@@ -59,7 +59,7 @@
     "imprint": "Imprint"
   },
   "popup": {
-    "headline": "Message Sent",
-    "text": "Your message has been successfully sent. We will contact you soon."
+    "headline": "Thank you for your message.",
+    "text": "I will contact you as soon as possible."
   }
 }

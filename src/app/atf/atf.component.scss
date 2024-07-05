@@ -11,13 +11,12 @@
 }
 
 .shape {
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   transform: translateY(15%);
-  max-width: 100%;
   @media (max-width: 599px) {
     transform: translateY(-40%);
   }
@@ -70,8 +69,6 @@ section {
   }
 }
 
-
-
 .introduction {
   z-index: 2;
   @include dFlex($fd: column, $g: 32px);
@@ -79,8 +76,13 @@ section {
 
 .name {
   @include dFlex();
+  height: fit-content;
+  @media(max-width: 599px){
+    height: 90px;
+  }
   div {
-    @include dFlex($fd: column);
+    height: 100%;
+    @include dFlex($fd: column, $jc: space-between);
     span {
       white-space: nowrap;
     }
@@ -116,8 +118,8 @@ section {
     letter-spacing: 5px;
   }
   @media (max-width: 599px) {
-    font-size: 25px;
-    letter-spacing: 0;
+    font-size: 28px;
+    letter-spacing: 3px;
   }
 }
 
@@ -125,10 +127,10 @@ section {
   writing-mode: vertical-rl;
   letter-spacing: 0;
   transform: rotate(180deg);
-  @include fontPoppins($fs: 64px, $fw: 400);
+  @include fontPoppins($fs: 54px, $fw: 400);
   @media (max-width: 1299px) {
-    font-size: 48px;
-    letter-spacing: 5px;
+    font-size: 32px;
+    letter-spacing: 2px;
   }
   @media (max-width: 599px) {
     font-size: 25px;
