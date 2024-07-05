@@ -4,10 +4,22 @@
   position: relative;
   background-color: $bgColor2;
   padding: 0 64px;
+  .blur{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 600px;
+    transform: translateX(30%);
+    @media(max-width: 899px){
+      width: 80%;
+    }
+  }
 }
 
 section {
-  z-index: inherit;
+  position: relative;
+  z-index: 2;
   max-width: $contentLimit;
   margin-inline: auto;
   @include dFlex($jc: space-between);

@@ -2,21 +2,21 @@
 
 
 .background {
-  z-index: 0;
   position: relative;
+  @include dFlex();
+  z-index: 0;
+  width: 100vw;
   background-color: $bgColor2;
   padding: 0 64px;
   @media (max-width: 599px) {
     padding: 0 32px 0 16px;
   }
-  .shadow {
+  .blur{
     z-index: 1;
     position: absolute;
-    bottom: 0;
+    bottom: -120px;
     left: 0;
-    transform: translate(-50%, 50%);
-    width: 800px;
-    height: 800px;
+    width: 400px;
   }
 }
 
@@ -35,9 +35,9 @@
 
 section {
   @include dFlex();
+  max-width: $contentLimit;
   > div {
     z-index: 2;
-    max-width: $contentLimit;
     margin-inline: auto;
     @include dFlex($fd: column, $ai: normal, $g: 64px);
     h1 {
@@ -249,10 +249,3 @@ select:-webkit-autofill:focus {
   }
 }
 
-.blur{
-  z-index: -1;
-  position: absolute;
-  bottom: -120px;
-  left: 0;
-  width: 400px;
-}
