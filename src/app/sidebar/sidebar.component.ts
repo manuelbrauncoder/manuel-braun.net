@@ -3,6 +3,7 @@ import { ScrollToAnchorService } from '../shared/services/scroll-to-anchor.servi
 import { TsNgxService } from '../shared/services/ts-ngx.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,7 +19,8 @@ export class SidebarComponent {
 
   constructor(
     private ScrollToAnchorService: ScrollToAnchorService,
-    public translationService: TsNgxService
+    public translationService: TsNgxService,
+    private router: Router
   ) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {
@@ -26,11 +28,24 @@ export class SidebarComponent {
     });
   }
 
+  /**
+   * open route ''
+   * then scroll to element with id
+   * @param element to scroll to
+   */
   scrollToElement(element: string) {
-    this.ScrollToAnchorService.scrollToAnchor(element, -100);
-    this.showSidebar.emit(false);
+    this.router.navigate(['']);
+    setTimeout(() => {
+      this.ScrollToAnchorService.scrollToAnchor(element, -100);
+      this.showSidebar.emit(false);
+    }, 50);
+
   }
 
+  /**
+   * change language
+   * @param lang string for language
+   */
   changeLanguage(lang: string) {
     this.translationService.changeLanguage(lang);
     this.showSidebar.emit(false);

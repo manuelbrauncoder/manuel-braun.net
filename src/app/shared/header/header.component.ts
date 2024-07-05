@@ -3,6 +3,7 @@ import { ScrollToAnchorService } from '../services/scroll-to-anchor.service';
 import { TsNgxService } from './../services/ts-ngx.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,8 @@ export class HeaderComponent {
 
   constructor(
     private ScrollToAnchorService: ScrollToAnchorService,
-    public translationService: TsNgxService
+    public translationService: TsNgxService,
+    private router: Router
   ) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {
@@ -24,7 +26,15 @@ export class HeaderComponent {
     });
   }
 
+  /**
+   * open route ''
+   * then scroll to element with id
+   * @param element to scroll to
+   */
   scrollToElement(element: string) {
-    this.ScrollToAnchorService.scrollToAnchor(element, -100);
+    this.router.navigate(['']);
+    setTimeout(() => {
+      this.ScrollToAnchorService.scrollToAnchor(element, -100);
+    }, 50);
   }
 }

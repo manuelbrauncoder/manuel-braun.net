@@ -24,6 +24,8 @@
 }
 
 section {
+  position: relative;
+  z-index: 2;
   max-width: $contentLimit;
   margin-inline: auto;
   @include dFlex($fd: column);
