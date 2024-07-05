@@ -36,10 +36,12 @@ section {
   }
 }
 
+// atf img width and height anpassen wenn finale Fotos da Sind!!!
+
 .imgContainer{
   position: relative;
   .atfImg {
-    height: 500px;
+    height: 700px;
     width: auto;
     @media (max-width: 1299px) {
       height: 400px;
