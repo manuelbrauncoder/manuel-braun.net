@@ -56,6 +56,9 @@ a {
   padding: 15px 30px;
   border-radius: 10px;
   @include fontPoppins($fs: 23px, $fw: 400);
+  @media(max-width: 599px){
+    @include fontPoppins($fs: 16px, $fw: 400)
+  }
 }
 
 .defaultBtn1 {

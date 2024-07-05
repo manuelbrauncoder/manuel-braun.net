@@ -33,27 +33,44 @@
 }
 
 section {
-  //width: 100vw;
   margin-top: auto;
   margin-bottom: auto;
   @include dFlex($jc: space-between);
   padding: 32px 0 0 0;
   @media (max-width: 899px) {
-    //width: 100vw;
     @include dFlex($fd: column, $g: 32px, $jc: space-around);
   }
 }
 
-.atfImg {
-  height: 500px;
-  width: auto;
-  @media (max-width: 1299px) {
-    height: 400px;
+.imgContainer{
+  position: relative;
+  .atfImg {
+    height: 500px;
+    width: auto;
+    @media (max-width: 1299px) {
+      height: 400px;
+    }
+    @media (max-width: 599px) {
+      height: 250px;
+    }
   }
-  @media (max-width: 599px) {
-    height: 250px;
+  .blur{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translate(-20%, 0);
+    width: 600px;
+    @media(max-width: 899px){
+      width: 500px;
+    }
+    @media(max-width: 599px){
+      width: 300px;
+    }
   }
 }
+
+
 
 .introduction {
   z-index: 2;
