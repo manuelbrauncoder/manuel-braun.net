@@ -74,7 +74,7 @@
                             }
                             <label for="privacy">
                                 <span>{{ 'contact.privacy1' | translate }} </span>
-                                <a href="privacy">{{ 'contact.privacy2' | translate }} </a>
+                                 <a (click)="scrollToAnchorService.goToComponent('privacy', 0)">{{ 'contact.privacy2' | translate }} </a>
                                 <span>{{ 'contact.privacy3' | translate }}</span>
                             </label>
                         </div>
@@ -97,3 +97,5 @@
     </section>
 
 </div>
+
+<!-- Change Links to goToComponent Method from scrollToAnchorService!!! -->

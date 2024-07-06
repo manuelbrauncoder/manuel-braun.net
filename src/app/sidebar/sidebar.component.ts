@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
   currentLanguage: string;
@@ -18,7 +18,7 @@ export class SidebarComponent {
   @Output() showSidebar = new EventEmitter<boolean>();
 
   constructor(
-    private ScrollToAnchorService: ScrollToAnchorService,
+    private scrollToAnchorService: ScrollToAnchorService,
     public translationService: TsNgxService,
     private router: Router
   ) {
@@ -36,10 +36,9 @@ export class SidebarComponent {
   scrollToElement(element: string) {
     this.router.navigate(['']);
     setTimeout(() => {
-      this.ScrollToAnchorService.scrollToAnchor(element, -100);
+      this.scrollToAnchorService.scrollToAnchor(element, -100);
       this.showSidebar.emit(false);
     }, 50);
-
   }
 
   /**

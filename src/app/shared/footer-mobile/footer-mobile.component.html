@@ -11,5 +11,5 @@
     <div>
         <span>© Manuel Braun 2024</span>
     </div>
-    <a href="imprint">{{ 'footer.imprint' | translate }}</a>
+    <a (click)="scrollToAnchorService.goToComponent('imprint', 0)">{{ 'footer.imprint' | translate }}</a>
 </section>

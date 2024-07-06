@@ -1,7 +1,5 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
-
-
 $bgColor1: rgb(27, 37, 57);
 $bgColor2: rgb(20, 29, 47);
 $cyan-blue: rgb(0, 190, 232);
@@ -47,6 +45,11 @@ body {
 a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
+}
+
+.spanLink{
+  color: $blue;
   cursor: pointer;
 }
 
