@@ -6,9 +6,9 @@
     padding: 16px 32px;
     background-color: $bgColor2;
     h1{
-        @include fontPoppins($fs: 64px, $fw: 700);
+        @include fontPoppins($fs: 54px, $fw: 700);
         @media(max-width: 899px) {
-            @include fontPoppins($fs: 32px, $fw: 700);
+            @include fontPoppins($fs: 24px, $fw: 700);
         }   
     }
     p{

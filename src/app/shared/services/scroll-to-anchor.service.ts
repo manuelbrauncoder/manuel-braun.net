@@ -7,18 +7,26 @@ import { Router } from '@angular/router';
 })
 export class ScrollToAnchorService {
 
-  constructor(private scroller: ViewportScroller, private router: Router){
+  constructor(private scroller: ViewportScroller, private router: Router){}
 
-  }
-
+  /**
+   * scroll to position with offset
+   * @param section in DOM
+   * @param offset in px
+   */
   scrollToAnchor(section: string, offset: number){
     let element = document.getElementById(section);
     if(element){
-      let yPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
+      let yPosition = element.getBoundingClientRect().top + window.scrollY + offset;
       this.scroller.scrollToPosition([0, yPosition]);
     }
   }
 
+  /**
+   * navigate to component and scroll to position
+   * @param component 
+   * @param position 
+   */
   goToComponent(component: string, position: number){
     this.router.navigate([component]);
     setTimeout(() => {

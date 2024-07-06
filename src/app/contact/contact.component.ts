@@ -58,11 +58,19 @@ export class ContactComponent {
     });
   }
 
+  /**
+   * navigate to component and scroll to top
+   * @param component 
+   * @param position 
+   */
   goToComponent(component: string, position: number) {
     this.router.navigate([component]);
     window.scrollTo({ top: position });
   }
 
+  /**
+   * open dialog and close after timeout
+   */
   showDialog() {
     this.dialog.open(EmailPopupComponent, {
       enterAnimationDuration: '300ms',
@@ -84,33 +92,71 @@ export class ContactComponent {
     },
   };
 
+  /**
+   * handle form submit
+   * @param ngForm 
+   */
   onSubmit(ngForm: NgForm) {
-    if (
+    if (this.isFormSubmitted(ngForm)) {
+      this.handleSendMail(ngForm);
+    } else if (this.isMailTest(ngForm)) {
+      this.handleMailTest(ngForm);
+    }
+  }
+
+  /**
+   * 
+   * @param ngForm 
+   * @returns true after form is submitted
+   */
+  isFormSubmitted(ngForm: NgForm) {
+    return (
       ngForm.submitted &&
       ngForm.form.valid &&
       !this.mailTest &&
       this.contactData.privacy
-    ) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (
+    );
+  }
+
+  /**
+   * 
+   * @param ngForm 
+   * @returns true after submit and mailtest = true
+   */
+  isMailTest(ngForm: NgForm) {
+    return (
       ngForm.submitted &&
       ngForm.form.valid &&
       this.mailTest &&
       this.contactData.privacy
-    ) {
-      this.showDialog();
-      console.log('send');
-      ngForm.resetForm();
-    }
+    );
+  }
+
+  /**
+   * handle mail test
+   * @param ngForm 
+   */
+  handleMailTest(ngForm: NgForm) {
+    this.showDialog();
+    console.log('mail test complete!');
+    ngForm.resetForm();
+  }
+
+  /**
+   * send mail to endpoint
+   * @param ngForm 
+   */
+  handleSendMail(ngForm: NgForm) {
+    this.http
+      .post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
+          ngForm.resetForm();
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => this.showDialog(),
+      });
   }
 }
