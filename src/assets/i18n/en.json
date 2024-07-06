@@ -14,12 +14,12 @@
   "atf": {
     "iam": "I am",
     "dev": "FRONTEND DEVELOPER",
-    "btn": "Let´s talk!"
+    "btn": "Contact me"
   },
   "about": {
     "headline": "About me",
     "text1": "Hi, I'm Manuel, a frontend developer from Partenstein. Through working on numerous projects, I have acquired the skills to program both static websites and complex business applications.",
-    "text2": "I love engaging with new technologies and learning about them. As a developer, I can now integrate this passion into my professional daily life.",
+    "text2": "I love engaging with new technologies and learning about them. As a developer, I can now integrate this passion into my daily professional life.",
     "text3": "Below, you will find an overview of my skills and some projects where I have applied them. I am pleased that you have found your way to my site."
   },
   "skills": {
@@ -34,13 +34,13 @@
       "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     },
     "project2": {
-      "text": "A simple Jump-and-Run game based on an object-oriented approach. Help pepe to find coins and salsa bottles to fight against the killer chicken."
+      "text": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
     }
   },
   "contact": {
     "headline": "Contact",
     "subheadline": "Got a problem to solve?",
-    "text1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "text1": "Contact me through this form. I am looking forward to hearing from you, knowing your ideas and contributing to your projects with my work.",
     "text2": "Need a Frontend developer?",
     "text3": "Contact me",
     "ph-name": "Your name",

@@ -1,8 +1,7 @@
 @import './../../styles.scss';
 
 section{
-    @include dFlex($fd: column, $g: 120px);
+    @include dFlex($fd: column, $g: 160px);
     background-color: $bgColor2;
     padding-bottom: 120px;
-    // width: 100vw;
 }
