@@ -1,22 +1,59 @@
 <header>
-    <div class="contentWrapper">
-        <a href="#top">
-            <span class="firstLetter">M</span><span class="other">anue</span><span class="lastLetter">l</span>
-        </a>
+  <div class="contentWrapper">
+    <a href="#top">
+      <span class="firstLetter">M</span><span class="other">anue</span
+      ><span class="lastLetter">l</span>
+    </a>
 
-        <nav>
-            <span (click)="scrollToElement('aboutMe')">{{'header.about' | translate}}</span>
-            <span (click)="scrollToElement('skills')">{{'header.skills' | translate}}</span>
-            <span (click)="scrollToElement('portfolio')">{{'header.portfolio' | translate}}</span>
-            <div class="languageBtns">
-                <span [ngClass]="{'activeLangBtn': currentLanguage === 'de'}"
-                    (click)="this.translationService.changeLanguage('de')">DE</span>
-                <span>|</span>
-                <span [ngClass]="{'activeLangBtn': currentLanguage === 'en'}"
-                    (click)="this.translationService.changeLanguage('en')">EN</span>
-            </div>
+    <nav>
+      <div class="linkWrapper">
+        <span
+          [ngClass]="{ activeLink: intersectionObserverService.aboutMeInView }"
+          (click)="scrollToElement('aboutMe')"
+          >{{ "header.about" | translate }}</span
+        >
+        @if(intersectionObserverService.aboutMeInView) {
+        <hr class="underline" />
+        }
+      </div>
 
+      <div class="linkWrapper">
+        <span
+          [ngClass]="{ activeLink: intersectionObserverService.skillsInView }"
+          (click)="scrollToElement('skills')"
+          >{{ "header.skills" | translate }}</span
+        >
+        @if(intersectionObserverService.skillsInView) {
+        <hr class="underline" />
+        }
+      </div>
 
-        </nav>
-    </div>
+      <div class="linkWrapper">
+        <span
+          [ngClass]="{
+            activeLink: intersectionObserverService.portfolioInView
+          }"
+          (click)="scrollToElement('portfolio')"
+          >{{ "header.portfolio" | translate }}</span
+        >
+        @if(intersectionObserverService.portfolioInView) {
+        <hr class="underline" />
+        }
+      </div>
+
+      <div class="languageBtns">
+        <span
+          [ngClass]="{ activeLangBtn: currentLanguage === 'de' }"
+          (click)="this.translationService.changeLanguage('de')"
+          >DE</span
+        >
+        <span>|</span>
+        <span
+          [ngClass]="{ activeLangBtn: currentLanguage === 'en' }"
+          (click)="this.translationService.changeLanguage('en')"
+          >EN</span
+        >
+      </div>
+    </nav>
+  </div>
 </header>

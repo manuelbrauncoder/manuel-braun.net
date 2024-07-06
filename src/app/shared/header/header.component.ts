@@ -4,6 +4,7 @@ import { TsNgxService } from './../services/ts-ngx.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { IntersectionObserverService } from '../services/intersection-observer.service';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,8 @@ export class HeaderComponent {
   constructor(
     private ScrollToAnchorService: ScrollToAnchorService,
     public translationService: TsNgxService,
-    private router: Router
+    private router: Router,
+    public intersectionObserverService: IntersectionObserverService
   ) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {

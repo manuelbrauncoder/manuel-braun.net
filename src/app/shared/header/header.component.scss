@@ -31,6 +31,25 @@ header {
     }
   }
 
+  .activeLink{
+    color: $cyan-blue !important;
+  }
+
+  .linkWrapper{
+    position: relative;
+  }
+
+  .underline{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    border: unset;
+    border-radius: 100vw;
+    background-color: $blue;
+  }
+
   .activeLangBtn {
     text-decoration: underline;
     text-decoration-color: $cyan-blue;
