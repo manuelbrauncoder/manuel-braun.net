@@ -6,11 +6,14 @@ import {
   Renderer2,
   OnDestroy,
   HostListener,
+  OnChanges,
+  SimpleChanges,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TsNgxService } from '../shared/services/ts-ngx.service';
 import { ScrollToAnchorService } from '../shared/services/scroll-to-anchor.service';
+import { IntersectionObserverService } from '../shared/services/intersection-observer.service';
 
 @Component({
   selector: 'app-atf',
@@ -19,7 +22,7 @@ import { ScrollToAnchorService } from '../shared/services/scroll-to-anchor.servi
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss',
 })
-export class AtfComponent implements AfterViewInit, OnDestroy {
+export class AtfComponent implements AfterViewInit, OnDestroy, OnChanges {
   currentLanguage: string;
   @ViewChild('myImg') myImg!: ElementRef;
   @ViewChild('shapeImg') shapeImg!: ElementRef;
@@ -28,7 +31,8 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
   constructor(
     public translationService: TsNgxService,
     private scrollToAnchorService: ScrollToAnchorService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private intersectionObserverService: IntersectionObserverService
   ) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {
@@ -68,6 +72,14 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
       'top',
       `${bottomOfReference}px`
     );
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(this.intersectionObserverService.atfInView){
+      console.log('test');
+      
+      this.calculatePosition();
+    }
   }
 
   ngOnDestroy(): void {

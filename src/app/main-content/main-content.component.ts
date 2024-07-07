@@ -23,10 +23,17 @@ export class MainContentComponent implements OnInit, OnDestroy {
   @ViewChild('aboutMe', { static: true }) aboutMeSection!: ElementRef;
   @ViewChild('skills', { static: true }) skillsSection!: ElementRef;
   @ViewChild('portfolio', { static: true }) portfolioSection!: ElementRef;
+  @ViewChild('atf', { static: true}) atfSection!: ElementRef;
 
   private aboutMeObserver!: IntersectionObserver;
   private skillsObserver!: IntersectionObserver;
   private portfolioObserver!: IntersectionObserver;
+  private atfObserver!: IntersectionObserver;
+
+  atfOptions = {
+    root: null,
+    threshold: 0.3
+  }
 
   aboutMeOptions = {
     root: null,
@@ -51,6 +58,25 @@ export class MainContentComponent implements OnInit, OnDestroy {
     this.observeAboutMe();
     this.observeSkills();
     this.observePortfolio();
+    this.observeAtf();
+  }
+
+  /**
+   * Initializes the IntersectionObserver for the atf section.
+   */
+  observeAtf() {
+    this.atfObserver = this.intersectionObserverService.observe(
+      this.atfSection.nativeElement,
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.intersectionObserverService.atfInView = true;            
+          } else {
+            this.intersectionObserverService.atfInView = false;            
+          }
+        });
+      },this.atfOptions
+    );
   }
 
   /**
@@ -111,5 +137,6 @@ export class MainContentComponent implements OnInit, OnDestroy {
     this.intersectionObserverService.disconnect(this.aboutMeObserver);
     this.intersectionObserverService.disconnect(this.skillsObserver);
     this.intersectionObserverService.disconnect(this.portfolioObserver);
+    this.intersectionObserverService.disconnect(this.atfObserver);
   }
 }

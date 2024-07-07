@@ -8,6 +8,7 @@ export class IntersectionObserverService  {
   aboutMeInView: boolean = false;
   skillsInView: boolean = false;
   portfolioInView: boolean = false;
+  atfInView: boolean = false;
 
   constructor() { }
 
