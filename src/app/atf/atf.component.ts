@@ -6,8 +6,6 @@ import {
   Renderer2,
   OnDestroy,
   HostListener,
-  OnChanges,
-  SimpleChanges,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
@@ -22,7 +20,7 @@ import { IntersectionObserverService } from '../shared/services/intersection-obs
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss',
 })
-export class AtfComponent implements AfterViewInit, OnDestroy, OnChanges {
+export class AtfComponent implements AfterViewInit, OnDestroy {
   currentLanguage: string;
   @ViewChild('myImg') myImg!: ElementRef;
   @ViewChild('shapeImg') shapeImg!: ElementRef;
@@ -72,14 +70,6 @@ export class AtfComponent implements AfterViewInit, OnDestroy, OnChanges {
       'top',
       `${bottomOfReference}px`
     );
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if(this.intersectionObserverService.atfInView){
-      console.log('test');
-      
-      this.calculatePosition();
-    }
   }
 
   ngOnDestroy(): void {
