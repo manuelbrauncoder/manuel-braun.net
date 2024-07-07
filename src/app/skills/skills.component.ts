@@ -24,10 +24,11 @@ export class SkillsComponent {
 
   skills = inject(SkillsService);
 
+  /**
+   * scroll to element
+   * @param element 
+   */
   scrollToElement(element: string) {
     this.ScrollToAnchorService.scrollToAnchor(element, -100);
   }
 }
-
-
-// implement sroll service

@@ -34,6 +34,9 @@ export class AppComponent implements OnInit {
     this.initAos();
   }
 
+  /**
+   * init breakpoint observer for responsiveness
+   */
   initObserver(){
     this.responsive.observe(this.breakpointsToObserve).subscribe((result) => {
       if (result.breakpoints[Breakpoints.TabletPortrait] || result.breakpoints[Breakpoints.HandsetPortrait]) {
@@ -49,6 +52,9 @@ export class AppComponent implements OnInit {
     });
   }
 
+  /**
+   * init animate on scroll library
+   */
   initAos(){
     AOS.init({
       duration: 500,

@@ -1,8 +1,16 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, Renderer2, OnDestroy, HostListener } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  OnDestroy,
+  HostListener,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TsNgxService } from '../shared/services/ts-ngx.service';
-import { ScrollToAnchorService } from "../shared/services/scroll-to-anchor.service";
+import { ScrollToAnchorService } from '../shared/services/scroll-to-anchor.service';
 
 @Component({
   selector: 'app-atf',
@@ -17,7 +25,8 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
   @ViewChild('shapeImg') shapeImg!: ElementRef;
   offset: number = 500;
 
-  constructor(public translationService: TsNgxService,
+  constructor(
+    public translationService: TsNgxService,
     private scrollToAnchorService: ScrollToAnchorService,
     private renderer: Renderer2
   ) {
@@ -27,11 +36,19 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
     });
   }
 
+  /**
+   * call method on resizing
+   * @param event 
+   */
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    this.calculatePosition();    
+    this.calculatePosition();
   }
 
+  /**
+   * scroll to element with offset
+   * @param element 
+   */
   scrollToElement(element: string) {
     this.scrollToAnchorService.scrollToAnchor(element, -100);
   }
@@ -40,10 +57,17 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
     this.calculatePosition();
   }
 
-  calculatePosition(){
+  /**
+   * calculate position from shape image
+   */
+  calculatePosition() {
     const referenceRect = this.myImg.nativeElement.getBoundingClientRect();
     const bottomOfReference = referenceRect.bottom - this.offset;
-    this.renderer.setStyle(this.shapeImg.nativeElement, 'top', `${bottomOfReference}px`);
+    this.renderer.setStyle(
+      this.shapeImg.nativeElement,
+      'top',
+      `${bottomOfReference}px`
+    );
   }
 
   ngOnDestroy(): void {

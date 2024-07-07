@@ -22,10 +22,17 @@ export class HeaderMobileComponent {
     });
   }
 
+  /**
+   * change sidebar visibility boolean
+   * @param state 
+   */
   changeSidebarState(state: boolean) {
     this.showSidebar = state;
   }
 
+  /**
+   * toggle sidebar
+   */
   toggleSidebar() {
     if (this.showSidebar) {
       this.showSidebar = false;

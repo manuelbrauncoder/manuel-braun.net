@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { AtfComponent } from '../atf/atf.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { SkillsComponent } from '../skills/skills.component';
@@ -19,7 +19,7 @@ import { IntersectionObserverService } from '../shared/services/intersection-obs
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
-export class MainContentComponent implements OnInit {
+export class MainContentComponent implements OnInit, OnDestroy {
   @ViewChild('aboutMe', { static: true }) aboutMeSection!: ElementRef;
   @ViewChild('skills', { static: true }) skillsSection!: ElementRef;
   @ViewChild('portfolio', { static: true }) portfolioSection!: ElementRef;
@@ -27,6 +27,21 @@ export class MainContentComponent implements OnInit {
   private aboutMeObserver!: IntersectionObserver;
   private skillsObserver!: IntersectionObserver;
   private portfolioObserver!: IntersectionObserver;
+
+  aboutMeOptions = {
+    root: null,
+    threshold: 0.9,
+  }
+
+  skillsOptions = {
+    root: null,
+    threshold: 0.9,
+  }
+
+  portfolioOptions = {
+    root: null,
+    threshold: 0.4,
+  }
 
   constructor(
     private intersectionObserverService: IntersectionObserverService
@@ -38,6 +53,9 @@ export class MainContentComponent implements OnInit {
     this.observePortfolio();
   }
 
+  /**
+   * Initializes the IntersectionObserver for the aboutMe section.
+   */
   observeAboutMe() {
     this.aboutMeObserver = this.intersectionObserverService.observe(
       this.aboutMeSection.nativeElement,
@@ -49,14 +67,13 @@ export class MainContentComponent implements OnInit {
             this.intersectionObserverService.aboutMeInView = false;
           }
         });
-      },
-      {
-        root: null,
-        threshold: 0.9,
-      }
+      },this.aboutMeOptions
     );
   }
 
+  /**
+   * Initializes the IntersectionObserver for the skills section.
+   */
   observeSkills(){
     this.skillsObserver = this.intersectionObserverService.observe(
       this.skillsSection.nativeElement,
@@ -68,14 +85,13 @@ export class MainContentComponent implements OnInit {
             this.intersectionObserverService.skillsInView = false;
           }
         });
-      },
-      {
-        root: null,
-        threshold: 0.9,
-      }
+      }, this.skillsOptions
     );
   }
 
+  /**
+   * Initializes the IntersectionObserver for the portfolio section.
+   */
   observePortfolio(){
     this.portfolioObserver = this.intersectionObserverService.observe(
       this.portfolioSection.nativeElement,
@@ -87,11 +103,7 @@ export class MainContentComponent implements OnInit {
             this.intersectionObserverService.portfolioInView = false;
           }
         });
-      },
-      {
-        root: null,
-        threshold: 0.4,
-      }
+      }, this.portfolioOptions
     );
   }
 

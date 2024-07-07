@@ -17,7 +17,7 @@
     transform: translateY(50%);
     right: 0;
     width: 30%;
-    @media(max-width: 899px){
+    @media (max-width: 899px) {
       width: 60%;
     }
   }
@@ -39,7 +39,7 @@ section {
   width: 33%;
   @include dFlex($jc: flex-end);
 
-  @media(max-width: 599px) {
+  @media (max-width: 599px) {
     width: 15%;
   }
 }
@@ -48,7 +48,7 @@ section {
   width: 33%;
   min-width: fit-content;
 
-  @media(max-width: 599px) {
+  @media (max-width: 599px) {
     width: 70%;
   }
 }
@@ -58,7 +58,7 @@ section {
   @include dFlex();
   margin-right: -16px;
 
-  @media(max-width: 599px) {
+  @media (max-width: 599px) {
     width: 15%;
     margin-left: 8px;
   }
@@ -68,7 +68,7 @@ section {
   @include dFlex($jc: flex-end, $g: 32px);
   width: 100%;
 
-  @media(max-width: 599px) {
+  @media (max-width: 599px) {
     gap: 16px;
   }
 
@@ -103,6 +103,9 @@ section {
   flex-grow: 1;
   min-width: 100px;
   max-width: 100%;
+  @media (max-width: 599px) {
+    min-width: 50px;
+  }
 }
 
 .projectImg {
@@ -114,8 +117,9 @@ section {
 }
 
 .projects {
+  width: 100%;
   app-project:nth-child(even) {
-    @include dFlex($g: 35px, $jc: space-between);
+    @include dFlex($g: 35px, $jc: space-around);
 
     @media (max-width: 1299px) {
       @include dFlex($fd: column);
@@ -170,7 +174,7 @@ section {
   }
 
   app-project:first-child {
-    @include dFlex($fd: row-reverse, $g: 35px, $jc: space-between);
+    @include dFlex($fd: row-reverse, $g: 35px, $jc: space-around);
 
     .project {
       @include dFlex($fd: column, $ai: flex-start, $g: 35px);
