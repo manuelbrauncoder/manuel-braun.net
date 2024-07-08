@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TsNgxService } from '../shared/services/ts-ngx.service';
 import { ScrollToAnchorService } from '../shared/services/scroll-to-anchor.service';
-import { IntersectionObserverService } from '../shared/services/intersection-observer.service';
 
 @Component({
   selector: 'app-atf',
@@ -29,8 +28,7 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
   constructor(
     public translationService: TsNgxService,
     private scrollToAnchorService: ScrollToAnchorService,
-    private renderer: Renderer2,
-    private intersectionObserverService: IntersectionObserverService
+    private renderer: Renderer2
   ) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {
@@ -42,10 +40,10 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
    * call method on resizing
    * @param event 
    */
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.calculatePosition();
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: Event) {
+  //   this.calculatePosition();
+  // }
 
   /**
    * scroll to element with offset
@@ -56,7 +54,7 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.calculatePosition();
+    //this.calculatePosition();
   }
 
   /**
@@ -73,6 +71,8 @@ export class AtfComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    window.removeEventListener('resize', this.onResize.bind(this));
+    //window.removeEventListener('resize', this.onResize.bind(this));
   }
 }
+
+

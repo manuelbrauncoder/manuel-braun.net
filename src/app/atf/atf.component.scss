@@ -13,8 +13,13 @@
 .shape {
   z-index: 1;
   position: absolute;
-  left: 0;
-  right: 0;
+  bottom: 0;
+
+  svg {
+    height: calc((100dvh - 100px) / 1.5);
+    width: 100vw;
+    transform: scale(1.5);
+  }
 }
 
 .outerDiv {
@@ -38,29 +43,23 @@ section {
 
 // atf img width and height anpassen wenn finale Fotos da Sind!!!
 
-.imgContainer{
+.imgContainer {
   position: relative;
   .atfImg {
-    height: 700px;
+    height: calc((100dvh - 100px) / 2);
     width: auto;
-    @media (max-width: 1299px) {
-      height: 400px;
-    }
-    @media (max-width: 599px) {
-      height: 250px;
-    }
   }
-  .blur{
+  .blur {
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
     transform: translate(-20%, 0);
     width: 600px;
-    @media(max-width: 899px){
+    @media (max-width: 899px) {
       width: 500px;
     }
-    @media(max-width: 599px){
+    @media (max-width: 599px) {
       width: 300px;
     }
   }
@@ -69,12 +68,15 @@ section {
 .introduction {
   z-index: 2;
   @include dFlex($fd: column, $g: 32px);
+  @media (max-width: 599px) {
+    gap: 16px;
+  }
 }
 
 .name {
   @include dFlex();
   height: fit-content;
-  @media(max-width: 599px){
+  @media (max-width: 599px) {
     height: 90px;
   }
   div {
@@ -170,26 +172,26 @@ nav {
   }
 }
 
-@keyframes upAndDown{
-  0%{
+@keyframes upAndDown {
+  0% {
     transform: none;
   }
-  15%{
+  15% {
     transform: translateY(-20px);
   }
-  30%{
+  30% {
     transform: none;
   }
-  45%{
+  45% {
     transform: translateY(-20px);
   }
-  60%{
+  60% {
     transform: none;
   }
-  80%{
+  80% {
     transform: translateY(-20px);
   }
-  100%{
+  100% {
     transform: none;
   }
 }
@@ -212,9 +214,9 @@ nav {
   }
 }
 
-.mailLink{
+.mailLink {
   cursor: pointer;
-  &:hover{
+  &:hover {
     color: $cyan-blue;
   }
 }
