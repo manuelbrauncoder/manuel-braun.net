@@ -131,7 +131,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $bgColor2;
+  background: linear-gradient($bgColor1, $bgColor2, $cyan-blue);
   border-radius: 100vw;
   border: 1px solid #ccc;
   &:hover {
@@ -144,6 +144,3 @@ a {
   background: #ccc;
 }
 
-::-webkit-scrollbar-corner {
-  background: red;
-}

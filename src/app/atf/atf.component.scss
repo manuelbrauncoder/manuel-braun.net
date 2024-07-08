@@ -14,11 +14,14 @@
   z-index: 1;
   position: absolute;
   bottom: 0;
-
   svg {
-    height: calc((100dvh - 100px) / 1.5);
+    height: calc((100dvh - 100px) / 2.5);
     width: 100vw;
-    transform: scale(1.5);
+    transform: scale(4);
+    @media(max-width: 899px){
+      transform: scale(1.5);
+      height: calc((100dvh - 100px) / 1.5);
+    }
   }
 }
 

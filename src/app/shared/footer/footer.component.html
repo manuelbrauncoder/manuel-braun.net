@@ -4,7 +4,10 @@
             <a href="#top" class="logoName">
                 <span class="firstLetter">M</span><span class="other">anue</span><span class="lastLetter">l</span>
             </a>
-            <a (click)="scrollToAnchorService.goToComponent('imprint', 0)">{{ 'footer.imprint' | translate }}</a>
+            <div class="imprintWrapper">
+                <a (click)="scrollToAnchorService.goToComponent('imprint', 0)">{{ 'footer.imprint' | translate }}</a>
+                <hr class="underline">
+            </div>
 
         </div>
         <div>

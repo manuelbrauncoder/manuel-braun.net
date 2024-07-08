@@ -4,7 +4,7 @@ section {
   border-top: 4px solid $cyan-blue;
   min-height: 290px;
   background-color: $bgColor2;
-  @include dFlex($fd: column, $g: 64px);
+  @include dFlex($fd: column, $g: 32px);
   padding: 64px 16px;
   .logoName {
     @include dFlex();
@@ -22,15 +22,26 @@ section {
       width: 30px;
     }
   }
+}
+
+.imprintWrapper {
+  position: relative;
+  &:hover .underline {
+    display: block;
+  }
   a {
     @include fontPoppins($fs: 16px, $fw: 400);
-    &:hover{
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      text-decoration-thickness: 2px;
-      text-decoration-color: $cyan-blue;
-    }
   }
+}
+
+.underline {
+  position: absolute;
+  display: none;
+  width: 50%;
+  height: 2px;
+  border: unset;
+  border-bottom: 100vw;
+  background-color: $cyan-blue;
 }
 
 .socialLinks {
