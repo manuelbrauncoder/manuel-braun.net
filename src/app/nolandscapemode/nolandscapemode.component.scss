@@ -5,11 +5,19 @@
     width: 100vw;
     background-color: $bgColor2;
     padding: 16px 24px;
+    @include dFlex();
 }
 
 .notSupported{
-    width: 100%;
-    height: 100%;
-    @include dFlex();
-    @include fontPoppins($fs: 40px, $fw: 700);
+    border: 2px solid $cyan-blue;
+    border-radius: 16px;
+    padding: 15px 30px;
+    @include dFlex($g: 16px);
+    h1{
+        @include fontPoppins($fs: 32px, $fw: 700);
+    }
+    img{
+        height: 60px;
+        width: 60px;
+    }
 }

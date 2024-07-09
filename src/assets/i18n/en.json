@@ -61,5 +61,8 @@
   "popup": {
     "headline": "Thank you for your message.",
     "text": "I will contact you as soon as possible."
+  },
+  "noLandscape": {
+    "text": "Landscape mode is not supported on mobile devices. Please rotate your device."
   }
 }

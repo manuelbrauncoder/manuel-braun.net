@@ -61,5 +61,8 @@
   "popup": {
     "headline": "Vielen Dank für Ihre Nachricht.",
     "text": "Sie werden in Kürze von mir hören."
+  },
+  "noLandscape": {
+    "text": "Querformat wird auf mobilen Geräten nicht unterstützt. Bitte drehen Sie Ihr Gerät."
   }
 }
