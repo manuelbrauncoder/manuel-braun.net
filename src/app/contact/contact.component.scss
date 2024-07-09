@@ -1,6 +1,5 @@
 @import "./../../styles.scss";
 
-
 .background {
   position: relative;
   @include dFlex();
@@ -61,7 +60,6 @@ section {
   margin-bottom: auto;
   max-width: 600px;
   @include dFlex($fd: column, $g: 32px, $ai: flex-start);
-
   h2 {
     @include fontPoppins($fs: 32px, $fw: 700);
   }
@@ -90,7 +88,6 @@ section {
         text-decoration: underline;
       }
     }
-
     input,
     textarea {
       background-color: $bgColor1;
@@ -102,7 +99,6 @@ section {
         outline: none;
       }
     }
-
     textarea {
       min-height: 200px;
       resize: vertical;
@@ -189,7 +185,6 @@ select:-webkit-autofill:focus {
 .emailWrapper {
   position: relative;
   width: 100%;
-
   .sign {
     width: 25px;
     height: 25px;
@@ -198,7 +193,6 @@ select:-webkit-autofill:focus {
     right: 12px;
     transform: translateY(50%);
   }
-
   span {
     color: $errorRed !important;
     position: absolute;

@@ -5,11 +5,9 @@
   background-color: $bgColor2;
   width: 100vw;
   padding: 0 64px;
-
   @media (max-width: 599px) {
     padding: 0 16px;
   }
-
   .blur {
     z-index: 1;
     position: absolute;
@@ -29,7 +27,6 @@ section {
   max-width: $contentLimit;
   margin-inline: auto;
   @include dFlex($fd: column);
-
   p {
     @include fontPoppins($fs: 16px, $fw: 400);
   }
@@ -67,15 +64,12 @@ section {
 .headline {
   @include dFlex($jc: flex-end, $g: 32px);
   width: 100%;
-
   @media (max-width: 599px) {
     gap: 16px;
   }
-
   h1 {
     @include fontPoppins($fs: 90px, $fw: 700);
     text-align: center;
-
     @media (max-width: 899px) {
       @include fontPoppins($fs: 45px, $fw: 700);
     }
@@ -92,7 +86,6 @@ section {
 .shortLine {
   @extend .line;
   width: 100px;
-
   @media (max-width: 599px) {
     width: 30px;
   }
@@ -110,7 +103,6 @@ section {
 
 .projectImg {
   width: 500px;
-
   @media (max-width: 899px) {
     width: calc(100% - 32px);
   }
@@ -120,52 +112,41 @@ section {
   width: 100%;
   app-project:nth-child(even) {
     @include dFlex($g: 35px, $jc: space-around);
-
     @media (max-width: 1299px) {
       @include dFlex($fd: column);
     }
-
     .project {
       @include dFlex($fd: column, $ai: flex-end, $g: 35px);
-
       @media (max-width: 1299px) {
         @include dFlex($fd: column, $ai: flex-start, $g: 35px);
       }
     }
-
     .portfolioDescription {
       max-width: 60ch;
       @include dFlex($fd: column, $ai: flex-start, $g: 35px);
-
       @media (max-width: 1299px) {
         width: 100%;
         align-items: center;
       }
-
       h1 {
         @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
         text-align: end;
         width: 100%;
-
         @media (max-width: 1299px) {
           text-align: center;
         }
       }
-
       h2 {
         @include fontPoppins($c: $cyan-blue, $fs: 23px, $fw: 400);
         text-align: end;
         width: 100%;
-
         @media (max-width: 1299px) {
           text-align: center;
         }
       }
-
       p {
         @include fontPoppins($fs: 16px, $fw: 400);
         text-align: end;
-
         @media (max-width: 1299px) {
           text-align: center;
         }
@@ -175,48 +156,38 @@ section {
 
   app-project:first-child {
     @include dFlex($fd: row-reverse, $g: 35px, $jc: space-around);
-
     .project {
       @include dFlex($fd: column, $ai: flex-start, $g: 35px);
     }
-
     @media (max-width: 1299px) {
       @include dFlex($fd: column);
     }
-
     .portfolioDescription {
       max-width: 60ch;
       @include dFlex($fd: column, $ai: flex-start, $g: 35px);
-
       @media (max-width: 1299px) {
         width: 100%;
         align-items: center;
       }
-
       h1 {
         @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
         text-align: start;
         width: 100%;
-
         @media (max-width: 1299px) {
           text-align: center;
         }
       }
-
       h2 {
         @include fontPoppins($c: $cyan-blue, $fs: 23px, $fw: 400);
         text-align: start;
         width: 100%;
-
         @media (max-width: 1299px) {
           text-align: center;
         }
       }
-
       p {
         @include fontPoppins($fs: 16px, $fw: 400);
         text-align: start;
-
         @media (max-width: 1299px) {
           text-align: center;
         }
@@ -227,15 +198,12 @@ section {
 
 .btns {
   @include dFlex($g: 86px);
-
   @media (max-width: 1299px) {
     width: 100%;
   }
-
   @media (max-width: 599px) {
     gap: 24px;
   }
-
   button {
     @media (max-width: 599px) {
       padding: 10px 20px;

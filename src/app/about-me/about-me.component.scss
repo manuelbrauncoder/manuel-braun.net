@@ -53,9 +53,6 @@ section {
 }
 
 .line {
-  // position: absolute;
-  // top: 50%;
-  // right: 0;
   @extend .blueLine;
   margin-left: -2px !important;
   background-color: $cyan-blue !important;
