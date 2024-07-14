@@ -39,6 +39,8 @@ section {
   border: 4px solid $cyan-blue;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 30% 7%;
+  filter: brightness(0.9);
   @media (max-width: 1299px) {
     display: none;
   }
