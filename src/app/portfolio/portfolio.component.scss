@@ -154,7 +154,7 @@ section {
     }
   }
 
-  app-project:first-child {
+  app-project:nth-child(odd) {
     @include dFlex($fd: row-reverse, $g: 35px, $jc: space-around);
     .project {
       @include dFlex($fd: column, $ai: flex-start, $g: 35px);

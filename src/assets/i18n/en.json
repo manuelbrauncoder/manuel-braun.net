@@ -18,7 +18,7 @@
   },
   "about": {
     "headline": "About me",
-    "text1": "Hi, I'm Manuel, a Frontend Developer from Partenstein. Through working on numerous projects, I have acquired the skills to program both static websites and complex business applications.",
+    "text1": "Hi, I’m Manuel. As a front-end developer specializing in web development, I have successfully completed numerous projects.",
     "text2": "I love engaging with new technologies and learning about them. As a developer, I can now integrate this passion into my daily professional life.",
     "text3": "Below, is an overview of my skills and some projects where I have applied them. I am pleased that you have found your way to my site."
   },
@@ -35,6 +35,9 @@
     },
     "project2": {
       "text": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
+    },
+    "project3": {
+      "text": "A Pokedex Web App build with Angular. Click on a Pokemon for more Details. Filter by Types or search by Pokemon Name."
     }
   },
   "contact": {
