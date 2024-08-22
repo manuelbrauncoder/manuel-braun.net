@@ -24,7 +24,7 @@
   },
   "skills": {
     "headline": "Meine Skills",
-    "text": "Ich habe meine Fähigkeiten in der Webentwicklung weiter ausgebaut, was es mir ermöglicht hat, verschiedene Projekte erfolgreich umzusetzen.",
+    "text": "Meine Erfahrung mit verschiedenen Technologien, ermöglicht es mir anspruchsvolle Projekte umzusetzen.",
     "btn": "Kontakt aufnehmen"
   },
   "portfolio": {
@@ -37,7 +37,7 @@
         "text": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Salsa-Flaschen zu finden, um gegen die Killerhühner zu kämpfen."
     },
     "project3": {
-      "text": "Eine Pokedex Web App erstellt mit Angular. Klicken Sie auf einen Pokemon um mehr Details zu sehen. Die Liste kann nach Namen durchsucht werden, oder nach Typen gefiltert werden."
+      "text": "Eine Pokedex Web App, die Daten von einer API abruf und visualisiert. Klicken Sie auf einen Pokemon um mehr Details zu sehen. Die Liste kann nach Namen durchsucht, oder nach Typen gefiltert werden."
     }
   },
   "contact": {

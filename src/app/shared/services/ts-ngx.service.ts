@@ -8,7 +8,7 @@ export class TsNgxService {
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['en', 'de']);
     this.translate.setDefaultLang('en');
-    this.changeLanguage('en');
+    this.changeLanguage('de');
   }
 
   /**

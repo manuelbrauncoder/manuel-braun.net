@@ -24,7 +24,7 @@
   },
   "skills": {
     "headline": "My skills",
-    "text": "I have grown my frontend development skills, allowing me to create different real projects.",
+    "text": "My experience with various technologies enables me to implement challenging projects.",
     "btn": "Get in touch"
   },
   "portfolio": {
@@ -37,7 +37,7 @@
       "text": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
     },
     "project3": {
-      "text": "A Pokedex Web App build with Angular. Click on a Pokemon for more Details. Filter by Types or search by Pokemon Name."
+      "text": "A Pokedex web app that retrieves and visualizes data from an API. Click on a Pokemon to see more details. The list can be searched by name or filtered by type."
     }
   },
   "contact": {
