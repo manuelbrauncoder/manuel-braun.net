@@ -1,33 +1,68 @@
 @import "./../../styles.scss";
 
+
+.gradient-container {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 55vh;
+  background: linear-gradient($bgColor1, $bgColor2);
+}
+
+.border-container {
+  background-color: $bgColor2;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 63vh;
+  border-bottom-right-radius: 85% 25%;
+}
+
 .background {
   z-index: 1;
   position: relative;
   background-color: $bgColor2;
   padding: 100px 64px 0 64px;
+
   @media (max-width: 599px) {
     padding: 100px 16px 0 16px;
   }
 }
 
-.shape {
-  z-index: 1;
+.blur {
   position: absolute;
-  bottom: 0;
-  svg {
-    height: calc((100dvh - 100px) / 2.5);
-    width: 100vw;
-    transform: scale(5, 3);
-    @media(max-width: 899px){
-      transform: scale(1.5);
-      height: calc((100dvh - 100px) / 1.5);
-    }
-    @media(min-width: 1699px) {
-      transform: scale(18, 6);
-      height: calc((100dvh - 100px) / 4);
-    }
-  }
+  z-index: 1;
+  object-fit: cover;
+  height: 700px;
+  transform: translate(-52%, 28%);
+  
+  //width: 600px;
+  // @media (max-width: 899px) {
+  //   width: 500px;
+  // }
+  // @media (max-width: 599px) {
+  //   width: 300px;
+  // }
 }
+
+// .shape {
+//   z-index: 1;
+//   position: absolute;
+//   bottom: 0;
+//   svg {
+//     height: calc((100dvh - 100px) / 2.5);
+//     width: 100vw;
+//     transform: scale(5, 3);
+//     @media(max-width: 899px){
+//       transform: scale(1.5);
+//       height: calc((100dvh - 100px) / 1.5);
+//     }
+//     @media(min-width: 1699px) {
+//       transform: scale(18, 6);
+//       height: calc((100dvh - 100px) / 4);
+//     }
+//   }
+// }
 
 .outerDiv {
   z-index: 2;
@@ -43,6 +78,7 @@ section {
   margin-bottom: auto;
   @include dFlex($jc: space-between);
   padding: 32px 0 0 0;
+
   @media (max-width: 899px) {
     @include dFlex($fd: column, $g: 32px, $jc: space-around);
   }
@@ -50,29 +86,20 @@ section {
 
 .imgContainer {
   position: relative;
+
   .atfImg {
+    position: relative;
+    z-index: 2;
     height: calc((100dvh - 100px) / 2);
     width: auto;
   }
-  .blur {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    transform: translate(-20%, 0);
-    width: 600px;
-    @media (max-width: 899px) {
-      width: 500px;
-    }
-    @media (max-width: 599px) {
-      width: 300px;
-    }
-  }
+
 }
 
 .introduction {
   z-index: 2;
   @include dFlex($fd: column, $g: 32px);
+
   @media (max-width: 599px) {
     gap: 16px;
     margin-bottom: 32px;
@@ -82,31 +109,40 @@ section {
 .name {
   @include dFlex();
   height: fit-content;
+
   @media (max-width: 599px) {
     height: 90px;
   }
+
   div {
     height: 100%;
     @include dFlex($fd: column, $jc: space-between);
+
     span {
       white-space: nowrap;
     }
   }
+
   .manbra {
     @include fontPoppins($fs: 90px, $fw: 700);
+
     @media (max-width: 1299px) {
       font-size: 64px;
     }
+
     @media (max-width: 599px) {
       font-size: 32px;
     }
   }
+
   .frontEnd {
     @include fontPoppins($fs: 58px, $fw: 400, $c: $blue);
     letter-spacing: 1px;
+
     @media (max-width: 1299px) {
       font-size: 40px;
     }
+
     @media (max-width: 599px) {
       font-size: 20px;
     }
@@ -118,10 +154,12 @@ section {
   letter-spacing: 9px;
   transform: rotate(180deg);
   @include fontPoppins($fs: 64px, $fw: 400);
+
   @media (max-width: 1299px) {
     font-size: 48px;
     letter-spacing: 5px;
   }
+
   @media (max-width: 599px) {
     font-size: 28px;
     letter-spacing: 3px;
@@ -133,10 +171,12 @@ section {
   letter-spacing: 0;
   transform: rotate(180deg);
   @include fontPoppins($fs: 54px, $fw: 400);
+
   @media (max-width: 1299px) {
     font-size: 32px;
     letter-spacing: 2px;
   }
+
   @media (max-width: 599px) {
     font-size: 25px;
     letter-spacing: 0;
@@ -148,30 +188,37 @@ nav {
   padding: 0 32px 0 0;
   @include dFlex($jc: space-between, $ai: flex-end);
   width: 100%;
+
   @media (max-width: 899px) {
     width: 100%;
     padding: 0;
     justify-content: flex-start;
   }
+
   div:first-of-type {
     @include dFlex($jc: flex-start, $g: 32px);
+
     a:nth-of-type(4) {
       @media (max-width: 899px) {
         display: none;
       }
     }
   }
+
   div:nth-of-type(2) {
     animation: upAndDown 5000ms ease;
     @include dFlex($fd: column, $g: 3px);
+
     img {
       width: 16px;
       height: 16px;
     }
+
     span {
       writing-mode: vertical-lr;
       @include fontPoppins($fs: 23px, $fw: 400);
     }
+
     @media (max-width: 899px) {
       display: none;
     }
@@ -182,21 +229,27 @@ nav {
   0% {
     transform: none;
   }
+
   15% {
     transform: translateY(-20px);
   }
+
   30% {
     transform: none;
   }
+
   45% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: none;
   }
+
   80% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: none;
   }
@@ -208,6 +261,7 @@ nav {
   border-radius: 4px;
   background-color: $blue;
   width: 100px;
+
   @media (max-width: 599px) {
     margin-left: -16px;
   }
@@ -215,6 +269,7 @@ nav {
 
 .socialLinks {
   transition: transform 125ms ease-out;
+
   &:hover {
     transform: scale(1.2, 1.2) translateX(5px);
   }
@@ -222,6 +277,7 @@ nav {
 
 .mailLink {
   cursor: pointer;
+
   &:hover {
     color: $cyan-blue;
   }
