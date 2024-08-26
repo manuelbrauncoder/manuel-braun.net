@@ -36,8 +36,9 @@
                     'inputError': !email.valid && email.touched,
                     'inputDone': email.valid,
                     'inputNormal': email.untouched
-                    }" #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email" 
-                                placeholder="{{ 'contact.ph-email' | translate }}" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    }" #email="ngModel" [(ngModel)]="contactData.email" required id="email" name="email"
+                                placeholder="{{ 'contact.ph-email' | translate }}"
+                                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                             @if(!email.valid && email.touched){
                             <span>{{ 'contact.err-email' | translate }}</span>
                             <img class="sign" src="assets/img/errorSign.png" alt="">
@@ -70,7 +71,8 @@
                             }
                             <label for="privacy">
                                 <span>{{ 'contact.privacy1' | translate }} </span>
-                                 <a (click)="scrollToAnchorService.goToComponent('privacy', 0)">{{ 'contact.privacy2' | translate }} </a>
+                                <a (click)="scrollToAnchorService.goToComponent('privacy', 0)">{{ 'contact.privacy2' |
+                                    translate }} </a>
                                 <span>{{ 'contact.privacy3' | translate }}</span>
                             </label>
                         </div>
