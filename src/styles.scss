@@ -58,6 +58,10 @@ a {
   padding: 15px 30px;
   border-radius: 10px;
   @include fontPoppins($fs: 23px, $fw: 400);
+  @media(max-width: 1399px){
+    padding: 10px 20px;
+    @include fontPoppins($fs: 20px, $fw: 400)
+  }
   @media(max-width: 599px){
     padding: 10px 20px;
     @include fontPoppins($fs: 16px, $fw: 400)
