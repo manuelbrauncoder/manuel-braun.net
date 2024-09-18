@@ -14,10 +14,16 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent {
   currentLanguage: string;
 
+  joinVersion: 'js' | 'angular' = 'angular';
+
   constructor(public translationService: TsNgxService) {
     this.currentLanguage = this.translationService.currentLang;
     this.translationService.onLangChange.subscribe((event) => {
       this.currentLanguage = event.lang;
     });
+  }
+
+  changeVersion(version: 'js' | 'angular'){
+    this.joinVersion = version;
   }
 }

@@ -2,24 +2,71 @@
     <img src="assets/img/blur1-portfolio.png" class="blur" alt="">
     <section>
         <div class="headline">
-            <div class="firstWrapper"><hr class="shortLine"></div>
-            <div class="secondWrapper"><h1>{{ 'portfolio.headline' | translate }}</h1></div>
-            <div class="thirdWrapper"><hr class="longLine"></div>
+            <div class="firstWrapper">
+                <hr class="shortLine">
+            </div>
+            <div class="secondWrapper">
+                <h1>{{ 'portfolio.headline' | translate }}</h1>
+            </div>
+            <div class="thirdWrapper">
+                <hr class="longLine">
+            </div>
         </div>
         <p>{{ 'portfolio.text' | translate }}
         </p>
         <div class="projects">
             <app-project data-aos="fade-left">
-                <a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">
-                    <img class="projectImg" src="assets/img/join-mockup.webp" alt="">
-                </a>
-               
+                
+                    @if (joinVersion === 'js') {
+                        <a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">
+                            <img class="projectImg" src="assets/img/join-mockup.webp" alt="">
+                        </a>
+                    } @else {
+                        <a href="https://join-360.manuel-braun.net/" target="_blank" class="noLineBreak">
+                            <img class="projectImg" src="assets/img/join-2.webp" alt="">
+                        </a>
+                    }
+
                 <div class="project">
+                    @if (joinVersion === 'js') {
                     <div class="portfolioDescription">
-                        <h1>Join</h1>
+                        <div class="join-selection">
+                            <h1>Join</h1>
+                            <div>
+                                <div class="version-wrapper">
+                                    <span (click)="changeVersion('angular')">Angular</span>
+                                </div>
+                                <div class="version-wrapper">
+                                    <span class="active-join" (click)="changeVersion('js')">JavaScript</span>
+                                        <hr class="underline">
+                                </div>
+                            </div>
+
+                        </div>
                         <h2>JavaScript | HTML | CSS</h2>
                         <p>{{ 'portfolio.project1.text' | translate }} </p>
                     </div>
+                    } @else {
+                    <div class="portfolioDescription">
+                        <div class="join-selection">
+                            <h1>Join</h1>
+                            <div>
+                                <div class="version-wrapper">
+                                    <span class="active-join" (click)="changeVersion('angular')">Angular</span>
+                                    <hr class="underline">
+                                </div>
+                                <div class="version-wrapper">
+                                    <span (click)="changeVersion('js')">JavaScript</span>  
+                                </div>
+                            </div>
+
+                        </div>
+                        <h2>Angular | TypeScript | Firebase | HTML | SCSS</h2>
+                        <p>{{ 'portfolio.project1.text' | translate }} </p>
+                    </div>
+                    }
+
+                    @if (joinVersion === 'js') {
                     <div class="btns">
                         <button class="defaultBtn3">
                             <a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">Live
@@ -29,6 +76,18 @@
                             <a href="https://github.com/manuelbrauncoder/Join" target="_blank">Github</a>
                         </button>
                     </div>
+                    } @else {
+                    <div class="btns">
+                        <button class="defaultBtn3">
+                            <a class="noLineBreak" href="https://join-360.manuel-braun.net/" target="_blank">Live
+                                test</a>
+                        </button>
+                        <button class="defaultBtn2">
+                            <a href="https://github.com/manuelbrauncoder/Join-2.0" target="_blank">Github</a>
+                        </button>
+                    </div>
+                    }
+
                 </div>
             </app-project>
             <app-project data-aos="fade-right">
