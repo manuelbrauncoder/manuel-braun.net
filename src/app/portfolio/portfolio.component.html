@@ -16,20 +16,14 @@
         </p>
         <div class="projects">
             <app-project data-aos="fade-left">
-                
-                    @if (joinVersion === 'js') {
-                        <a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">
+                        <a [ngStyle]="{'display': joinVersion === 'angular' ? 'none' : 'flex'}" class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">
                             <img class="projectImg" src="assets/img/join-mockup.webp" alt="">
                         </a>
-                    } @else {
-                        <a href="https://join-360.manuel-braun.net/" target="_blank" class="noLineBreak">
+                        <a [ngStyle]="{'display': joinVersion === 'js' ? 'none' : 'flex'}" href="https://join-360.manuel-braun.net/" target="_blank" class="noLineBreak">
                             <img class="projectImg" src="assets/img/join-2.webp" alt="">
                         </a>
-                    }
-
                 <div class="project">
-                    @if (joinVersion === 'js') {
-                    <div class="portfolioDescription">
+                    <div [ngStyle]="{'display': joinVersion === 'angular' ? 'none' : 'flex'}" class="portfolioDescription">
                         <div class="join-selection">
                             <h1>Join</h1>
                             <div>
@@ -46,8 +40,7 @@
                         <h2>JavaScript | HTML | CSS</h2>
                         <p>{{ 'portfolio.project1.text' | translate }} </p>
                     </div>
-                    } @else {
-                    <div class="portfolioDescription">
+                    <div [ngStyle]="{'display': joinVersion === 'js' ? 'none' : 'flex'}" class="portfolioDescription">
                         <div class="join-selection">
                             <h1>Join</h1>
                             <div>
@@ -64,29 +57,23 @@
                         <h2>Angular | TypeScript | Firebase | HTML | SCSS</h2>
                         <p>{{ 'portfolio.project1.text' | translate }} </p>
                     </div>
-                    }
 
-                    @if (joinVersion === 'js') {
-                    <div class="btns">
-                        <button class="defaultBtn3">
-                            <a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">Live
-                                test</a>
-                        </button>
-                        <button class="defaultBtn2">
-                            <a href="https://github.com/manuelbrauncoder/Join" target="_blank">Github</a>
-                        </button>
+                    <div [ngStyle]="{'display': joinVersion === 'angular' ? 'none' : 'flex'}" class="btns">
+                            <a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">
+                                <button class="defaultBtn3">Live test</button>
+                            </a>
+                            <a href="https://github.com/manuelbrauncoder/Join" target="_blank">
+                                <button class="defaultBtn2">Github</button>
+                            </a>
                     </div>
-                    } @else {
-                    <div class="btns">
-                        <button class="defaultBtn3">
-                            <a class="noLineBreak" href="https://join-360.manuel-braun.net/" target="_blank">Live
-                                test</a>
-                        </button>
-                        <button class="defaultBtn2">
-                            <a href="https://github.com/manuelbrauncoder/Join-2.0" target="_blank">Github</a>
-                        </button>
+                    <div [ngStyle]="{'display': joinVersion === 'js' ? 'none' : 'flex'}" class="btns">
+                            <a class="noLineBreak" href="https://join-360.manuel-braun.net/" target="_blank">
+                                <button class="defaultBtn3">Live
+                                    test</button></a>
+                            <a href="https://github.com/manuelbrauncoder/Join-2.0" target="_blank">
+                                <button class="defaultBtn2">Github</button>
+                            </a>
                     </div>
-                    }
 
                 </div>
             </app-project>
@@ -101,13 +88,12 @@
                         <p>{{ 'portfolio.project2.text' | translate }}</p>
                     </div>
                     <div class="btns">
-                        <button class="defaultBtn3">
-                            <a class="noLineBreak" href="https://el-pollo-loco.manuel-braun.net/" target="_blank">Live
-                                test</a>
-                        </button>
-                        <button class="defaultBtn2">
-                            <a href="https://github.com/manuelbrauncoder/El-Pollo-Loco" target="_blank">Github</a>
-                        </button>
+                            <a class="noLineBreak" href="https://el-pollo-loco.manuel-braun.net/" target="_blank">
+                                <button class="defaultBtn3">Live test</button>    
+                            </a>
+                            <a href="https://github.com/manuelbrauncoder/El-Pollo-Loco" target="_blank">
+                                <button class="defaultBtn2">Github</button>
+                            </a>
                     </div>
                 </div>
             </app-project>
@@ -122,13 +108,12 @@
                         <p>{{ 'portfolio.project3.text' | translate }}</p>
                     </div>
                     <div class="btns">
-                        <button class="defaultBtn3">
-                            <a class="noLineBreak" href="https://pokedex.manuel-braun.net/" target="_blank">Live
-                                test</a>
-                        </button>
-                        <button class="defaultBtn2">
-                            <a href="https://github.com/manuelbrauncoder/Pokedex" target="_blank">Github</a>
-                        </button>
+                            <a class="noLineBreak" href="https://pokedex.manuel-braun.net/" target="_blank">
+                                <button class="defaultBtn3">Live test</button>
+                                </a>
+                            <a href="https://github.com/manuelbrauncoder/Pokedex" target="_blank">
+                                <button class="defaultBtn2">Github</button>
+                            </a>
                     </div>
                 </div>
             </app-project>
