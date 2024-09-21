@@ -3,11 +3,14 @@ import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
 import { TsNgxService } from '../shared/services/ts-ngx.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { Project01Component } from "./projects/project-01/project-01.component";
+import { Project02Component } from "./projects/project-02/project-02.component";
+import { Project03Component } from "./projects/project-03/project-03.component";
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [ProjectComponent, CommonModule, TranslateModule],
+  imports: [ProjectComponent, CommonModule, TranslateModule, Project01Component, Project02Component, Project03Component],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
