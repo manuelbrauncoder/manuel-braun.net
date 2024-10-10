@@ -40,7 +40,7 @@
       "text": "A Pokedex-Web-App that retrieves and visualizes data from an API. Click on a Pokemon to see more details. The list can be searched by name or filtered by type."
     },
     "project4": {
-      "text": "Messaging-Web-App like Slack. Communicate with your team in a channel or send private messages. Realtime Updates with Google Firebase as Backend."
+      "text": "Communicate with your team in channels or send private messages to other users. A global search feature makes it easy to find messages. Share images or PDFs in the chat and update your profile."
     }
   },
   "contact": {
