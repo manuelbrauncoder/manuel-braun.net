@@ -38,6 +38,9 @@
     },
     "project3": {
       "text": "Eine Pokedex Web App, die Daten von einer API abruft und visualisiert. Klicken Sie auf einen Pokemon, um mehr Details zu sehen. Die Liste kann nach Namen durchsucht oder nach Typen gefiltert werden."
+    },
+    "project4": {
+      "text": "Messenger im Stile von Slack. Teamkommunikation in Channels oder private Nachrichten an Nutzer senden. Alles in Echtzeit mit Google Firebase als Backend Lösung."
     }
   },
   "contact": {

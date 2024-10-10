@@ -1,3 +1,5 @@
+
+
 @import '../../../../styles.scss';
 
 .projectImg {
@@ -9,71 +11,74 @@
 }
 
 .project-wrapper {
-    @include dFlex($fd: row-reverse, $g: 35px, $jc: space-around);
-
-    .project {
-      @include dFlex($fd: column, $ai: flex-start, $g: 35px);
-    }
+    @include dFlex($g: 35px, $jc: space-around);
 
     @media (max-width: 1299px) {
-      @include dFlex($fd: column);
+        @include dFlex($fd: column);
+    }
+
+    .project {
+        @include dFlex($fd: column, $ai: flex-end, $g: 35px);
+
+        @media (max-width: 1299px) {
+            @include dFlex($fd: column, $ai: flex-start, $g: 35px);
+        }
     }
 
     .portfolioDescription {
-      max-width: 60ch;
-      @include dFlex($fd: column, $ai: flex-start, $g: 35px);
-
-      @media (max-width: 1299px) {
-        width: 100%;
-        align-items: center;
-      }
-
-      h1 {
-        @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
-        text-align: start;
-        width: 100%;
+        max-width: 60ch;
+        @include dFlex($fd: column, $ai: flex-start, $g: 35px);
 
         @media (max-width: 1299px) {
-          text-align: center;
+            width: 100%;
+            align-items: center;
         }
-      }
 
-      h2 {
-        @include fontPoppins($c: $cyan-blue, $fs: 23px, $fw: 400);
-        text-align: start;
-        width: 100%;
+        h1 {
+            @include fontPoppins($c: $blue, $fs: 32px, $fw: 700);
+            text-align: end;
+            width: 100%;
 
-        @media (max-width: 1299px) {
-          text-align: center;
+            @media (max-width: 1299px) {
+                text-align: center;
+            }
         }
-      }
 
-      p {
-        @include fontPoppins($fs: 16px, $fw: 400);
-        text-align: start;
+        h2 {
+            @include fontPoppins($c: $cyan-blue, $fs: 23px, $fw: 400);
+            text-align: end;
+            width: 100%;
 
-        @media (max-width: 1299px) {
-          text-align: center;
+            @media (max-width: 1299px) {
+                text-align: center;
+            }
         }
-      }
+
+        p {
+            @include fontPoppins($fs: 16px, $fw: 400);
+            text-align: end;
+
+            @media (max-width: 1299px) {
+                text-align: center;
+            }
+        }
     }
-  }
-
+}
 
 .btns {
-  @include dFlex($g: 86px);
+    @include dFlex($g: 86px);
 
-  @media (max-width: 1299px) {
-    width: 100%;
-  }
-
-  @media (max-width: 599px) {
-    gap: 24px;
-  }
-
-  button {
-    @media (max-width: 599px) {
-      padding: 10px 20px;
+    @media (max-width: 1299px) {
+        width: 100%;
     }
-  }
+
+    @media (max-width: 599px) {
+        gap: 24px;
+    }
+
+    button {
+        @media (max-width: 599px) {
+            padding: 10px 20px;
+        }
+    }
 }

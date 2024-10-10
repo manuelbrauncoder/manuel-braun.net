@@ -47,6 +47,11 @@ a {
   cursor: pointer;
 }
 
+.center-jc {
+  display: flex;
+  justify-content: center;
+}
+
 .spanLink{
   color: $blue;
   cursor: pointer;
