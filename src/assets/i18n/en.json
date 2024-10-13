@@ -18,7 +18,7 @@
   },
   "about": {
     "headline": "About me",
-    "text1": "Hi, I’m Manuel. As a front-end developer specializing in web development, I have successfully completed numerous projects.",
+    "text1": "Hi, I’m Manuel. As a front-end developer specializing in Angular and TypeScript, I have successfully completed numerous projects.",
     "text2": "I love engaging with new technologies and learning about them. As a developer, I can now integrate this passion into my daily professional life.",
     "text3": "Below, is an overview of my skills and some projects where I have applied them. I am pleased that you have found your way to my site."
   },
@@ -31,7 +31,7 @@
     "headline": "Portfolio",
     "text": "Explore a selection of my work here - interact with projects to see my skills in action.",
     "project1": {
-      "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, and assign users and categories."
+      "text": "Task manager inspired by the Kanban System. Create and organize tasks, using drag and drop functions, and assign users and categories."
     },
     "project2": {
       "text": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
@@ -40,7 +40,7 @@
       "text": "A Pokedex-Web-App that retrieves and visualizes data from an API. Click on a Pokemon to see more details. The list can be searched by name or filtered by type."
     },
     "project4": {
-      "text": "Communicate with your team in channels or send private messages to other users. A global search feature makes it easy to find messages. Share images or PDFs in the chat and update your profile."
+      "text": "A Messenger like Slack. Communicate with your team through channels or send private messages to other users. A global search feature makes it easy to find messages, users or channels. Share images or PDFs directly in the chat."
     }
   },
   "contact": {
