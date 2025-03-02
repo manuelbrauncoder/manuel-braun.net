@@ -1,68 +1,21 @@
-<div data-aos="fade-left" data-aos-offset="500"  class="project-wrapper">
 
-
-    <a [ngStyle]="{'display': joinVersion === 'angular' ? 'none' : 'flex'}" class="noLineBreak center-jc"
-        href="https://join.manuel-braun.net/" target="_blank">
-        <img class="projectImg" src="assets/img/projects/join-js.png" alt="">
-    </a>
-    <a data-aos="fade-right" data-aos-offset="500" [ngStyle]="{'display': joinVersion === 'js' ? 'none' : 'flex'}" href="https://join-360.manuel-braun.net/"
-        target="_blank" class="noLineBreak center-jc">
+<div data-aos="fade-left" data-aos-offset="500" class="project-wrapper">
+    <a class="noLineBreak center-jc" href="https://join-360.manuel-braun.net/" target="_blank">
         <img class="projectImg" src="assets/img/projects/join-2.png" alt="">
     </a>
-    
     <div class="project">
-        <div [ngStyle]="{'display': joinVersion === 'angular' ? 'none' : 'flex'}" class="portfolioDescription">
-            <div class="join-selection">
-                <h1>Join</h1>
-                <div>
-                    <div class="version-wrapper">
-                        <span (click)="changeVersion('angular')">Angular</span>
-                    </div>
-                    <div class="version-wrapper">
-                        <span class="active-join" (click)="changeVersion('js')">JavaScript</span>
-                        <hr class="underline">
-                    </div>
-                </div>
-
-            </div>
-            <h2>JavaScript | HTML | CSS</h2>
-            <p>{{ 'portfolio.project1.text' | translate }} </p>
-        </div>
-        <div [ngStyle]="{'display': joinVersion === 'js' ? 'none' : 'flex'}" class="portfolioDescription">
-            <div class="join-selection">
-                <h1>Join</h1>
-                <div>
-                    <div class="version-wrapper">
-                        <span class="active-join" (click)="changeVersion('angular')">Angular</span>
-                        <hr class="underline">
-                    </div>
-                    <div class="version-wrapper">
-                        <span (click)="changeVersion('js')">JavaScript</span>
-                    </div>
-                </div>
-
-            </div>
+        <div class="portfolioDescription">
+            <h1>Join</h1>
             <h2>Angular | TypeScript | Firebase | HTML | SCSS</h2>
-            <p>{{ 'portfolio.project1.text' | translate }} </p>
+            <p>{{ 'portfolio.project1.text' | translate }}</p>
         </div>
-
-        <div [ngStyle]="{'display': joinVersion === 'angular' ? 'none' : 'flex'}" class="btns">
-            <a class="noLineBreak" href="https://join.manuel-braun.net/" target="_blank">
-                <button class="defaultBtn3">Live test</button>
-            </a>
-            <a href="https://github.com/manuelbrauncoder/Join" target="_blank">
-                <button class="defaultBtn2">Github</button>
-            </a>
+        <div class="btns">
+                <a class="noLineBreak" href="https://join-360.manuel-braun.net/" target="_blank">
+                    <button class="defaultBtn3">Live test</button>    
+                </a>
+                <a href="https://github.com/manuelbrauncoder/Join-2.0" target="_blank">
+                    <button class="defaultBtn2">Github</button>
+                </a>
         </div>
-        <div [ngStyle]="{'display': joinVersion === 'js' ? 'none' : 'flex'}" class="btns">
-            <a class="noLineBreak" href="https://join-360.manuel-braun.net/" target="_blank">
-                <button class="defaultBtn3">Live
-                    test</button></a>
-            <a href="https://github.com/manuelbrauncoder/Join-2.0" target="_blank">
-                <button class="defaultBtn2">Github</button>
-            </a>
-        </div>
-
     </div>
-
 </div>
